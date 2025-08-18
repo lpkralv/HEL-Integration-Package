@@ -98,10 +98,12 @@ public class HELCSVFile
                 Stat stat = new Stat
                 {
                     name = fields[0],
+                    displayname = fields.Length > 5 ? fields[5] : fields[0], // Use displayname if available, fallback to name  
                     desc = fields[1],
                     value = float.Parse(fields[2]),
                     min = float.Parse(fields[3]),
-                    max = float.Parse(fields[4])
+                    max = float.Parse(fields[4]),
+                    persistent = fields.Length > 6 ? bool.Parse(fields[6]) : false
                 };
 
                 statsDict[stat.name] = stat;

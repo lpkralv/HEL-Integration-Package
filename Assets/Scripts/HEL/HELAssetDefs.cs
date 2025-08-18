@@ -5,6 +5,7 @@
 
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 /// <summary>
 /// Represents a game modification with all its properties including values, ranges, colors, and equations.
@@ -170,34 +171,49 @@ public class ModsList
 
 /// <summary>
 /// Represents a game statistic with its current value and allowable range.
-/// Used for serialization/deserialization of stat data from asset files.
+/// Updated to match StatsData.cs structure with Unity serialization support.
 /// </summary>
+[System.Serializable]
 public class Stat
 {
     /// <summary>
     /// Gets or sets the name identifier of the stat.
     /// </summary>
-    public string name { get; set; } = string.Empty;
+    [Tooltip("Default fallback name")]
+    public string name = string.Empty;
+    
+    /// <summary>
+    /// Gets or sets the display name of the stat for UI purposes.
+    /// </summary>
+    public string displayname = string.Empty;
     
     /// <summary>
     /// Gets or sets the description of the stat.
     /// </summary>
-    public string desc { get; set; } = string.Empty;
+    [Tooltip("Default fallback description")]
+    [TextArea]
+    public string desc = string.Empty;
     
     /// <summary>
     /// Gets or sets the current value of the stat.
     /// </summary>
-    public float value { get; set; }
+    public float value;
     
     /// <summary>
     /// Gets or sets the minimum allowable value for the stat.
     /// </summary>
-    public float min { get; set; }
+    public float min = 0;
     
     /// <summary>
     /// Gets or sets the maximum allowable value for the stat.
     /// </summary>
-    public float max { get; set; }
+    public float max = 0;
+    
+    /// <summary>
+    /// If true, this stat persists through weapon switching and equipment changes.
+    /// </summary>
+    [Tooltip("If true, this stat persists through weapon switching and equipment changes")]
+    public bool persistent = false;
 
     /// <summary>
     /// Initializes a new instance of the Stat class with default values.
@@ -211,23 +227,32 @@ public class Stat
     /// <param name="other">The Stat instance to copy from</param>
     public Stat(Stat other)
     {
-        // Strings are immutable so a direct assignment is acceptable.
         name = other.name;
+        displayname = other.displayname;
         desc = other.desc;
         value = other.value;
         min = other.min;
         max = other.max;
+        persistent = other.persistent;
     }
+
+    // Runtime localization wrappers
+    #if UNITY_EDITOR
+    public UnityEngine.Localization.LocalizedString localizedName => new UnityEngine.Localization.LocalizedString("StatNames", name);
+    public UnityEngine.Localization.LocalizedString localizedDesc => new UnityEngine.Localization.LocalizedString("StatDescriptions", name);
+    #endif
 }
 
 /// <summary>
 /// Container class for a collection of Stat objects.
 /// Used for YAML/JSON serialization of stat collections.
 /// </summary>
+[System.Serializable]
 public class StatsList
 {
     /// <summary>
-    /// Gets or sets the list of stats contained in this collection.
+    /// Gets or sets the array of stats contained in this collection.
+    /// Updated to match StatsData.cs structure using array instead of List.
     /// </summary>
-    public List<Stat> stats { get; set; } = new List<Stat>();
+    public Stat[] stats;
 }

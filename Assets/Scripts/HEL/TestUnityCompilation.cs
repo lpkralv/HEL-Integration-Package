@@ -35,9 +35,12 @@ public class TestUnityCompilation : MonoBehaviour
             var healthStat = new Stat
             {
                 name = "HEALTH",
+                displayname = "Health",
+                desc = "Player health points",
                 value = 100f,
                 min = 0f,
-                max = 200f
+                max = 200f,
+                persistent = false
             };
             stats["HEALTH"] = healthStat;
             
