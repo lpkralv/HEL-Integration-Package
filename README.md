@@ -2,13 +2,35 @@
 
 ## Overview
 
-This package contains the C# implementation of the HIOX Equation Language (HEL) system, designed for Unity integration. HEL is a stateless equation evaluator that processes mathematical equations to modify game statistics through mods (modifications).
+This directory contains a minimal, standalone Unity project that demonstrates the C# implementation of the HIOX Equation Language (HEL) system. HEL is a stateless equation evaluator that processes mathematical equations to modify game statistics through mods (modifications).
+
+**This Unity project serves as:**
+- A testing environment for HEL code within Unity before integration into HIOX
+- A reference implementation showing proper Unity integration
+- A complete package ready for integration into your main project
 
 ## Integration Instructions
 
-### 1. File Integration
+### 1. Testing the HEL System
 
-Copy all `.cs` files from this package into your Unity project's `Assets/Scripts/` directory. You can organize them in a subfolder (e.g., `Assets/Scripts/HEL/`) to keep them organized.
+Before integrating into HIOX, you can test the HEL system using this standalone Unity project:
+
+1. Open this project directory in Unity Hub
+2. Launch the project in Unity 2022.3.4f1 or newer
+3. Open the test scene and run the `TestUnityCompilation.cs` script
+4. Check the Console for test results to verify functionality
+
+### 2. Integration into HIOX
+
+To integrate the HEL system into your HIOX project:
+
+**Copy the entire HEL directory:**
+```
+Copy: /Assets/Scripts/HEL/
+To:   YourProject/Assets/Scripts/HEL/
+```
+
+This approach preserves the complete file structure and ensures all dependencies are included.
 
 **Required Files:**
 - `HEL.cs` - Main entry point and static evaluation methods
@@ -17,65 +39,28 @@ Copy all `.cs` files from this package into your Unity project's `Assets/Scripts
 - `HELInterpreter.cs` - Executes parsed statements using coefficient system
 - `HELOrdering.cs` - Dependency analysis and cycle detection
 - `HELLangDefs.cs` - Language parsing structures (Token, Statement)
-- `HELCSVFile.cs` - CSV asset serialization (optional)
-- `HELYAMLFile.cs` - YAML asset serialization (currently disabled)
-- `TestUnityCompilation.cs` - Test script (optional, can be removed in production)
 
-### 2. Unity Requirements
+**Optional Files:**
+- `HELPicker.cs` - Weighted random selection using Alias method (editor-only utility)
+- `HELCSVFile.cs` - CSV asset serialization (for loading stats/mods from CSV files)
+- `HELYAMLFile.cs` - YAML asset serialization (currently disabled for Unity compatibility)
+- `TestUnityCompilation.cs` - Test script (can be removed in production)
+
+### 3. Unity Requirements
 
 - **Unity Version:** 2022.3.4f1 or newer
 - **Scripting Backend:** Mono or IL2CPP
 - **API Compatibility Level:** .NET Standard 2.1 or .NET Framework
 
-### 3. Dependencies
+### 4. Dependencies
 
 The HEL system has minimal dependencies:
 - Uses standard Unity namespaces (`UnityEngine`, `UnityEngine.Localization`)
 - No external package dependencies required
 - YamlDotNet functionality is currently disabled for Unity compatibility
 
-### 4. Basic Usage Example
+### 5. Basic Usage Example
 
-```csharp
-using System.Collections.Generic;
-using UnityEngine;
-
-public class HELExample : MonoBehaviour
-{
-    void Start()
-    {
-        // Create stats dictionary
-        var stats = new Dictionary<string, Stat>
-        {
-            ["HEALTH"] = new Stat 
-            { 
-                name = "HEALTH", 
-                displayname = "Health",
-                desc = "Player health points",
-                value = 100f, 
-                min = 0f, 
-                max = 200f,
-                persistent = false
-            }
-        };
-
-        // Create mods dictionary
-        var mods = new Dictionary<string, Mod>
-        {
-            ["HEALTH_BOOST"] = new Mod 
-            { 
-                name = "Health Boost",
-                equation = "#!1;S_HEALTH = S_HEALTH + VAL;",
-                val = 25f
-            }
-        };
-
-        // Evaluate mods against stats
-        var result = HEL.EvaluateMods(stats, mods);
-        
-        Debug.Log($"Final Health: {result["HEALTH"].value}"); // Should output 125
-    }
-}
 ```csharp
 using System.Collections.Generic;
 using UnityEngine;
@@ -148,7 +133,7 @@ HEL equations follow this format:
 - `S_HEALTH` - Target stat variable
 - `VAL` - Placeholder replaced with mod value during preparation
 
-## Potential Issues & Solutions## Potential Issues & Solutions
+## Potential Issues & Solutions
 
 ### 1. Compilation Errors
 
