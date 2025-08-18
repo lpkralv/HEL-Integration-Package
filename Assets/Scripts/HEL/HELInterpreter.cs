@@ -480,7 +480,7 @@ public class Interpreter
             {
                 var a = stmt.Values.Pop();
                 switch (next.Value) {
-                    case "CEIL":    { stmt.Values.Push(Mathf.Ceiling(a)); break; }
+                    case "CEIL":    { stmt.Values.Push(Mathf.Ceil(a)); break; }
                     case "FLOOR":   { stmt.Values.Push(Mathf.Floor(a)); break; }
                     case "NOT":     { stmt.Values.Push(a == 0.0f ? 1.0f : 0.0f); break; }
                     // Add new unary functions here
@@ -492,7 +492,7 @@ public class Interpreter
                 switch (next.Value) {
                     case "RAND":    
                     { 
-                        Random random = new Random();
+                        System.Random random = new System.Random();
                         stmt.Values.Push( (float)random.NextDouble() );
                         break;
                     }
