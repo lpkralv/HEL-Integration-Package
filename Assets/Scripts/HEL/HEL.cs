@@ -1,8 +1,10 @@
 //#define OLD_STUFF 
 //#define MYDEBUG         //Uncomment to output debugging info to the console.
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 // using UnityEditor.Localization; // Uncomment if building within Unity Editor environment
 using UnityEngine.Localization;

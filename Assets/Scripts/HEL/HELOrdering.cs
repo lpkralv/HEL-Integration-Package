@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Vertex = System.Tuple<int, int>;
 
 /// <summary>
@@ -150,7 +151,7 @@ public class Orderer
                 else
                 {
                     // Found a cycle: current → ... → neighbor
-                    var cycle = stack.Reverse().SkipWhile(s => s != neighbor).ToList();
+                    var cycle = stack.ToArray().Reverse().SkipWhile(s => s != neighbor).ToList();
 
                     if (cycle.Count > 1)
                     {

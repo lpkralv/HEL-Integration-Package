@@ -1,6 +1,8 @@
 //s#define MYDEBUG  //Uncomment line to output debug info to the console.
 
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using statsDictionary = System.Collections.Generic.Dictionary<string, Stat>;
 
 
@@ -148,7 +150,7 @@ public class Interpreter
         {
             statsDictionary outStats = new statsDictionary(inStats); // this shallow copy is ok, because values replaced
             foreach(var name in inStats.Keys) {
-                outStats[name].value = MathF.Min(   MathF.Max(  (dict[name].s + dict[name].b) * MathF.Max(0, 1.0f + dict[name].m) + 
+                outStats[name].value = Mathf.Min(   Mathf.Max(  (dict[name].s + dict[name].b) * Mathf.Max(0, 1.0f + dict[name].m) + 
                                                                  dict[name].a, inStats[name].min + dict[name].z
                                                              ),
                                                     inStats[name].max + dict[name].u
@@ -459,12 +461,12 @@ public class Interpreter
                             stmt.Values.Push(float.NaN);    //NaN result
                         break; 
                     }
-                    case "^":   { stmt.Values.Push(MathF.Pow(b, a)); break; }
+                    case "^":   { stmt.Values.Push(Mathf.Pow(b, a)); break; }
                     case "AND": { stmt.Values.Push(a * b == 0.0f ? 0.0f : 1.0f); break; }
                     case "OR":  { stmt.Values.Push(a + b == 0.0f ? 0.0f : 1.0f); break; }
-                    case "==":  { stmt.Values.Push(MathF.Equals(a, b) ? 1.0f : 0.0f); break; }
+                    case "==":  { stmt.Values.Push(Mathf.Equals(a, b) ? 1.0f : 0.0f); break; }
                     case "<>": 
-                    case "!=":  { stmt.Values.Push(MathF.Equals(a, b) ? 0.0f : 1.0f); break; }   
+                    case "!=":  { stmt.Values.Push(Mathf.Equals(a, b) ? 0.0f : 1.0f); break; }   
                     case "<":   { stmt.Values.Push(b < a ? 0.0f : 1.0f); break; }                //"1 4 <" is TRUE
                     case "<=":  { stmt.Values.Push(b <= a ? 0.0f : 1.0f); break; }               //"1 4 <=" is TRUE
                     case ">":   { stmt.Values.Push(b > a ? 0.0f : 1.0f); break; }                //"1 4 >" is FALSE
@@ -477,8 +479,8 @@ public class Interpreter
             {
                 var a = stmt.Values.Pop();
                 switch (next.Value) {
-                    case "CEIL":    { stmt.Values.Push(MathF.Ceiling(a)); break; }
-                    case "FLOOR":   { stmt.Values.Push(MathF.Floor(a)); break; }
+                    case "CEIL":    { stmt.Values.Push(Mathf.Ceiling(a)); break; }
+                    case "FLOOR":   { stmt.Values.Push(Mathf.Floor(a)); break; }
                     case "NOT":     { stmt.Values.Push(a == 0.0f ? 1.0f : 0.0f); break; }
                     // Add new unary functions here
                     default:        { stmt.Values.Push(float.NaN); break; }
