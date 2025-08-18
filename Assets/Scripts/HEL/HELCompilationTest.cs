@@ -46,7 +46,7 @@ public class HELCompilationTest : MonoBehaviour
             {
                 name = "Health Boost",
                 equation = "#!1;S_HEALTH = S_HEALTH + VAL;",
-                value = 25f
+                val = 25f
             };
             mods["HEALTH_BOOST"] = healthMod;
             
