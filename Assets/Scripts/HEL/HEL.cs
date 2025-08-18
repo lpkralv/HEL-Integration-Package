@@ -9,7 +9,7 @@ using UnityEngine;
 // using UnityEditor.Localization; // Uncomment if building within Unity Editor environment
 using UnityEngine.Localization;
 using statsDictionary = System.Collections.Generic.Dictionary<string, Stat>;
-using modsDictionary = System.Collections.Generic.Dictionary<string, Mod>;
+using modsDictionary = System.Collections.Generic.Dictionary<string, Modifier>;
 using System.Globalization;
 
 /// <summary>
@@ -62,7 +62,7 @@ public class HEL {
     /// For a mod with equation "S_HEALTH = S_HEALTH + VAL" and val=10, 
     /// returns "#!123;S_HEALTH = S_HEALTH + 10;" where 123 is the mod ID.
     /// </example>
-    public static string PrepareEquation(Mod mod) {
+    public static string PrepareEquation(Modifier mod) {
         string eqn = Token.EncodeComment(mod.modid) + ';' + mod.equation.ToUpper() + ';';      //Prepare equation for processing
         eqn = eqn.Replace("VAL1", FormatFloat(mod.val));         //Replace reference to VAL1 with it's value
         eqn = eqn.Replace("VAL2", FormatFloat(mod.val2));        //Replace reference to VAL2 with it's value

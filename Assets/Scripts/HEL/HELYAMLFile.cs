@@ -1,3 +1,4 @@
+#if HELYAML
 /*  HELYAMLFile.cs
 
     This class loads and saves the ".asset" files in YAML format. 
@@ -18,7 +19,7 @@ using System.Collections.Generic;
 // using YamlDotNet.Serialization;
 
 using statsDictionary = System.Collections.Generic.Dictionary<string, Stat>;
-using modsDictionary = System.Collections.Generic.Dictionary<string, Mod>;
+using modsDictionary = System.Collections.Generic.Dictionary<string, Modifier>;
 
 /// <summary>
 /// Handles loading and saving of asset files in YAML format for the HEL system.
@@ -110,3 +111,4 @@ public class HELYAMLFile
     }
 
 }
+#endif

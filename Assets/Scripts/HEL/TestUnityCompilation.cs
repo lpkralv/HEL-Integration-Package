@@ -29,7 +29,7 @@ public class TestUnityCompilation : MonoBehaviour
         {
             // Test 1: Create basic stat and mod dictionaries
             var stats = new Dictionary<string, Stat>();
-            var mods = new Dictionary<string, Mod>();
+            var mods = new Dictionary<string, Modifier>();
             
             // Test 2: Create a simple stat
             var healthStat = new Stat
@@ -45,7 +45,7 @@ public class TestUnityCompilation : MonoBehaviour
             stats["HEALTH"] = healthStat;
             
             // Test 3: Create a simple mod
-            var healthMod = new Mod
+            var healthMod = new Modifier
             {
                 name = "Health Boost",
                 equation = "#!1;S_HEALTH = S_HEALTH + VAL;",
@@ -106,7 +106,7 @@ public class TestUnityCompilation : MonoBehaviour
             
             // Test that static classes are accessible
             var testStats = new Dictionary<string, Stat>();
-            var testMods = new Dictionary<string, Mod>();
+            var testMods = new Dictionary<string, Modifier>();
             
             // This will test if HEL static class is accessible
             Debug.Log("✅ HEL static class accessible via EvaluateMods method");

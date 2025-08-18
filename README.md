@@ -34,11 +34,12 @@ This approach preserves the complete file structure and ensures all dependencies
 
 **Required Files:**
 - `HEL.cs` - Main entry point and static evaluation methods
-- `HELAssetDefs.cs` - Data models (Mod, Stat, ModColor, etc.)
+- `HELAssetDefs.cs` - Data models (Modifier, ModsList)
 - `HELLexer.cs` - Tokenizes equation strings
 - `HELInterpreter.cs` - Executes parsed statements using coefficient system
 - `HELOrdering.cs` - Dependency analysis and cycle detection
 - `HELLangDefs.cs` - Language parsing structures (Token, Statement)
+- `StatsData.cs` - Stat definitions and Unity ScriptableObject integration
 
 **Optional Files:**
 - `HELPicker.cs` - Weighted random selection using Alias method (editor-only utility)
@@ -85,9 +86,9 @@ public class HELExample : MonoBehaviour
         };
 
         // Create mods dictionary
-        var mods = new Dictionary<string, Mod>
+        var mods = new Dictionary<string, Modifier>
         {
-            ["HEALTH_BOOST"] = new Mod 
+            ["HEALTH_BOOST"] = new Modifier 
             { 
                 name = "Health Boost",
                 equation = "#!1;S_HEALTH = S_HEALTH + VAL;",
@@ -102,6 +103,20 @@ public class HELExample : MonoBehaviour
     }
 }
 ```
+
+## Recent Changes
+
+### Version Updates
+- **Mod class renamed to Modifier** throughout the codebase for better semantic clarity
+- **StatsData.cs** moved to `/Assets/Scripts/HEL/` directory for proper Unity integration
+- **Duplicate Stat class removed** from HELAssetDefs.cs - now uses StatsData.cs as single source
+- **YAML functionality** conditionally compiled with `#if HELYAML` to reduce dependencies
+- **StatsList class** conditionally compiled for YAML scenarios only
+
+### File Structure Changes
+- `StatsData.cs` - Now the canonical location for Stat class definition with Unity ScriptableObject support
+- `HELAssetDefs.cs` - Contains only Modifier and ModsList classes
+- `HELYAMLFile.cs` - Entire content wrapped in conditional compilation directives
 
 ## HEL System Architecture
 
@@ -177,12 +192,18 @@ HEL equations follow this format:
 - Check that stat names in equations match dictionary keys (case-insensitive)
 - Verify VAL/VAL1/VAL2 placeholders are properly replaced
 
-### 5. YAML/CSV File Loading
+### 5. YAML/CSV File Loading and Conditional Compilation
 
 **Current Status:**
-- YAML functionality is disabled (`NotImplementedException`)
+- YAML functionality is conditionally compiled with `#if HELYAML` directives
+- By default, YAML code is excluded from compilation to reduce dependencies
 - CSV loading works but may need adjustment for your data format
 - Consider implementing JSON serialization as an alternative
+
+**To Enable YAML Support:**
+1. Add `HELYAML` to your project's Scripting Define Symbols
+2. Install YamlDotNet package (currently commented out for Unity compatibility)
+3. Uncomment YamlDotNet using statements in HELYAMLFile.cs
 
 ## Testing
 

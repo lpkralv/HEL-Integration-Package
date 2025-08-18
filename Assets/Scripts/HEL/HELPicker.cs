@@ -1,6 +1,6 @@
 /*  HELPicker.cs
 
-    This class selects a random Mod from the modweight distribution. 
+    This class selects a random Modifier from the modweight distribution. 
     It is used by the Editor analysis, but is not needed for HEL evaluation.
 */
 

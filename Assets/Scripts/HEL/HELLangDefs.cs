@@ -189,7 +189,7 @@ public class Statement
     public Stack<float> Values;
 
     /// <summary>
-    /// Gets or sets the ID of the Mod (Equation) containing this statement.
+    /// Gets or sets the ID of the Modifier (Equation) containing this statement.
     /// </summary>
     public int ModID;
 

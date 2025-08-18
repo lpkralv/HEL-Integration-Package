@@ -11,7 +11,7 @@ using UnityEngine;
 /// Represents a game modification with all its properties including values, ranges, colors, and equations.
 /// Used for serialization/deserialization of mod data from asset files.
 /// </summary>
-public class Mod
+public class Modifier
 {
     /// <summary>
     /// Gets or sets the unique identifier for this mod.
@@ -86,7 +86,7 @@ public class Mod
     /// <summary>
     /// Gets or sets the color properties for visual representation of the mod.
     /// </summary>
-    public ModColor modColor { get; set; } = new ModColor();
+    public Color modColor { get; set; } = Color.white;
     
     /// <summary>
     /// Gets or sets the name of the armor effect associated with this mod.
@@ -99,16 +99,16 @@ public class Mod
     public string armorMeshName { get; set; } = string.Empty;
 
     /// <summary>
-    /// Initializes a new instance of the Mod class with default values.
+    /// Initializes a new instance of the Modifier class with default values.
     /// </summary>
-    public Mod() {}
+    public Modifier() {}
 
     /// <summary>
-    /// Initializes a new instance of the Mod class by copying values from another Mod instance.
+    /// Initializes a new instance of the Modifier class by copying values from another Modifier instance.
     /// Creates a deep copy of the source mod.
     /// </summary>
-    /// <param name="other">The Mod instance to copy from</param>
-    public Mod(Mod other)
+    /// <param name="other">The Modifier instance to copy from</param>
+    public Modifier(Modifier other)
     {
         modid = other.modid;
         uuid = other.uuid;
@@ -124,41 +124,14 @@ public class Mod
         type = other.type;
         hasProc = other.hasProc;
         equation = other.equation;
-        modColor = other.modColor; // this is shallow copy, but we're not using color
+        modColor = other.modColor;
         armorEffectName = other.armorEffectName;
         armorMeshName = other.armorMeshName;
     }
 }
 
 /// <summary>
-/// Represents RGBA color values for mod visual representation.
-/// Each color component is stored as an integer value.
-/// </summary>
-public class ModColor
-{
-    /// <summary>
-    /// Gets or sets the red color component.
-    /// </summary>
-    public int r { get; set; }
-    
-    /// <summary>
-    /// Gets or sets the green color component.
-    /// </summary>
-    public int g { get; set; }
-    
-    /// <summary>
-    /// Gets or sets the blue color component.
-    /// </summary>
-    public int b { get; set; }
-    
-    /// <summary>
-    /// Gets or sets the alpha (transparency) component.
-    /// </summary>
-    public int a { get; set; }
-}
-
-/// <summary>
-/// Container class for a collection of Mod objects.
+/// Container class for a collection of Modifier objects.
 /// Used for YAML/JSON serialization of mod collections.
 /// </summary>
 public class ModsList
@@ -166,83 +139,12 @@ public class ModsList
     /// <summary>
     /// Gets or sets the list of mods contained in this collection.
     /// </summary>
-    public List<Mod> mods { get; set; } = new List<Mod>();
+    public List<Modifier> mods { get; set; } = new List<Modifier>();
 }
 
-/// <summary>
-/// Represents a game statistic with its current value and allowable range.
-/// Updated to match StatsData.cs structure with Unity serialization support.
-/// </summary>
-[System.Serializable]
-public class Stat
-{
-    /// <summary>
-    /// Gets or sets the name identifier of the stat.
-    /// </summary>
-    [Tooltip("Default fallback name")]
-    public string name = string.Empty;
-    
-    /// <summary>
-    /// Gets or sets the display name of the stat for UI purposes.
-    /// </summary>
-    public string displayname = string.Empty;
-    
-    /// <summary>
-    /// Gets or sets the description of the stat.
-    /// </summary>
-    [Tooltip("Default fallback description")]
-    [TextArea]
-    public string desc = string.Empty;
-    
-    /// <summary>
-    /// Gets or sets the current value of the stat.
-    /// </summary>
-    public float value;
-    
-    /// <summary>
-    /// Gets or sets the minimum allowable value for the stat.
-    /// </summary>
-    public float min = 0;
-    
-    /// <summary>
-    /// Gets or sets the maximum allowable value for the stat.
-    /// </summary>
-    public float max = 0;
-    
-    /// <summary>
-    /// If true, this stat persists through weapon switching and equipment changes.
-    /// </summary>
-    [Tooltip("If true, this stat persists through weapon switching and equipment changes")]
-    public bool persistent = false;
 
-    /// <summary>
-    /// Initializes a new instance of the Stat class with default values.
-    /// </summary>
-    public Stat() {}
 
-    /// <summary>
-    /// Initializes a new instance of the Stat class by copying values from another Stat instance.
-    /// Creates a deep copy of the source stat.
-    /// </summary>
-    /// <param name="other">The Stat instance to copy from</param>
-    public Stat(Stat other)
-    {
-        name = other.name;
-        displayname = other.displayname;
-        desc = other.desc;
-        value = other.value;
-        min = other.min;
-        max = other.max;
-        persistent = other.persistent;
-    }
-
-    // Runtime localization wrappers
-    #if UNITY_EDITOR
-    public UnityEngine.Localization.LocalizedString localizedName => new UnityEngine.Localization.LocalizedString("StatNames", name);
-    public UnityEngine.Localization.LocalizedString localizedDesc => new UnityEngine.Localization.LocalizedString("StatDescriptions", name);
-    #endif
-}
-
+#if HELYAML
 /// <summary>
 /// Container class for a collection of Stat objects.
 /// Used for YAML/JSON serialization of stat collections.
@@ -256,3 +158,4 @@ public class StatsList
     /// </summary>
     public Stat[] stats;
 }
+#endif

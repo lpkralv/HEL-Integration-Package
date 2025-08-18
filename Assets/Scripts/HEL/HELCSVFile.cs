@@ -8,9 +8,10 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Collections.Generic;
+using UnityEngine;
 
 using statsDictionary = System.Collections.Generic.Dictionary<string, Stat>;
-using modsDictionary = System.Collections.Generic.Dictionary<string, Mod>;
+using modsDictionary = System.Collections.Generic.Dictionary<string, Modifier>;
 
 public class HELCSVFile
 {
@@ -52,7 +53,7 @@ public class HELCSVFile
                     continue;
 
                 string[] fields = ParseCsvLine(line);
-                Mod mod = new Mod
+                Modifier mod = new Modifier
                 {
                     modid = int.Parse(fields[0]),
                     val = float.Parse(fields[1]),
@@ -67,13 +68,12 @@ public class HELCSVFile
                     type = int.Parse(fields[10]),
                     hasProc = int.Parse(fields[11]),
                     equation = fields[12],
-                    modColor = new ModColor
-                    {
-                        r = int.Parse(fields[13]),
-                        g = int.Parse(fields[14]),
-                        b = int.Parse(fields[15]),
-                        a = int.Parse(fields[16])
-                    },
+                    modColor = new Color(
+                        int.Parse(fields[13]) / 255f,
+                        int.Parse(fields[14]) / 255f,
+                        int.Parse(fields[15]) / 255f,
+                        int.Parse(fields[16]) / 255f
+                    ),
                     armorEffectName = fields[17],
                     armorMeshName = fields[18]
                 };
