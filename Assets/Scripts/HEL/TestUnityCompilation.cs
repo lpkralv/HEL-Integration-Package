@@ -5,7 +5,7 @@ using UnityEngine;
 /// Simple test script to verify HEL system compiles and basic functionality works.
 /// This script exercises core HEL classes to ensure proper compilation in Unity.
 /// </summary>
-public class HELCompilationTest : MonoBehaviour
+public class TestUnityCompilation : MonoBehaviour
 {
     [Header("HEL Compilation Test")]
     [SerializeField] private bool runTestOnStart = true;
