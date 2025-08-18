@@ -1,6 +1,6 @@
 //s#define MYDEBUG  //Uncomment line to output debug info to the console.
 
-using System.Reflection.Metadata.Ecma335;
+using System.Collections.Generic;
 using statsDictionary = System.Collections.Generic.Dictionary<string, Stat>;
 
 

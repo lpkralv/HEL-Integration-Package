@@ -1,5 +1,7 @@
 //#define MYDEBUG   //Uncomment to activate debugging
 
+using System;
+using System.Collections.Generic;
 using Vertex = System.Tuple<int, int>;
 
 /// <summary>

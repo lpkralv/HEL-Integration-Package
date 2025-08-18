@@ -4,6 +4,9 @@
     It is used by the Editor analysis, but is not needed for HEL evaluation.
 */
 
+using System;
+using System.Collections.Generic;
+
 /// <summary>
 /// This is an amazing algorithm for defining a probability distribution of items
 /// with a weight for each and sampling a random item from this distribution.

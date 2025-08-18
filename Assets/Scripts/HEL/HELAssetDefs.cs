@@ -2,7 +2,9 @@
 
 // object classes corresponding to Stats and Mods (for the purposes of deserialization).
 // These don't need to match corresponding classes elsewhere, but they could.
-using System.Security.Cryptography.X509Certificates;
+
+using System;
+using System.Collections.Generic;
 
 /// <summary>
 /// Represents a game modification with all its properties including values, ranges, colors, and equations.

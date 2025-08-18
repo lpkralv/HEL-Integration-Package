@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 /// <summary>
 /// HEL Lexical Analyzer - converts HEL equation text into a stream of tokens for parsing.
 /// The lexer scans input text and identifies numbers, variables, operators, keywords, and other language elements.
