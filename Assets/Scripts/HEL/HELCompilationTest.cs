@@ -98,7 +98,7 @@ public class HELCompilationTest : MonoBehaviour
         try 
         {
             // Test lexer
-            var lexer = new HELLexer();
+            var lexer = new HELLexer("test input");
             Debug.Log("✅ HELLexer accessible");
             
             // Test that static classes are accessible
