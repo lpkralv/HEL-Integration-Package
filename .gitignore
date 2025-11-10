@@ -75,3 +75,6 @@ crashlytics-build.properties
 # Claude Code and Serena directories
 .claude/
 .serena/
+
+# HEL4Unity subdirectory (separate git repository)
+/HEL4Unity/

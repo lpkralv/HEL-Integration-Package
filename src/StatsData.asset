@@ -1,0 +1,214 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09dbea449d423d24c9e3cc308f3a5c62, type: 3}
+  m_Name: StatsData
+  m_EditorClassIdentifier: 
+  stats:
+  - name: PLAYERSPEED
+    desc: How fast you run
+    value: 130
+    min: 0
+    max: 5000
+  - name: SPRINTSPEED
+    desc: How much speed is added to player when sprinting
+    value: 100
+    min: 0
+    max: 5000
+  - name: SWIMSPEED
+    desc: How fast the player swims as a percentage of run speed
+    value: 30
+    min: 0
+    max: 5000
+  - name: JUMPSTRENGTH
+    desc: The force of your jump, determines how high you jump
+    value: 750
+    min: 0
+    max: 5000
+  - name: HP
+    desc: Your max HP points
+    value: 100
+    min: 0
+    max: 5000
+  - name: HPREGEN
+    desc: Percentage of HP regenerated per second
+    value: 0.002
+    min: 0
+    max: 1
+  - name: MAXSTAMINA
+    desc: Your max stamina points
+    value: 100
+    min: 0
+    max: 5000
+  - name: STAMINAREGEN
+    desc: How much stamina is regenerated per second
+    value: 12
+    min: 0
+    max: 5000
+  - name: SPRINTCOST
+    desc: How much stamina per second sprinting uses
+    value: 40
+    min: 0
+    max: 5000
+  - name: DODGECOST
+    desc: How much stamina points dodging uses
+    value: 70
+    min: 0
+    max: 5000
+  - name: PROCRATE
+    desc: The global rate modifier that determines when proccing random effects like
+      being set on fire or charged are activated
+    value: 1
+    min: 0
+    max: 5000
+  - name: BULLETSPEED
+    desc: The speed of your projectiles
+    value: 400
+    min: 0
+    max: 5000
+  - name: GUNDAMAGE
+    desc: The damage of your projectiles
+    value: 10
+    min: 0
+    max: 5000
+  - name: SHOTSPERSEC
+    desc: How many shots are fired per second
+    value: 2
+    min: 0
+    max: 5000
+  - name: ACCURACY
+    desc: The amount of innacuracy
+    value: 0.5
+    min: 0
+    max: 1
+  - name: BULLETSPLIT
+    desc: The chance for projectiles to split into new projectiles when hitting enemies
+    value: 0
+    min: 0
+    max: 1
+  - name: ADDEDSHATTERBULLETS
+    desc: Number of projectiles added when splitting
+    value: 0
+    min: 0
+    max: 5000
+  - name: PROCRANGE
+    desc: A global modifier determining the range of various proccing effects like
+      an enemy charging another nearby enemy
+    value: 50
+    min: 0
+    max: 5000
+  - name: IGNITECHANCE
+    desc: Chance that an enemy is set on fire from proc event
+    value: 0
+    min: 0
+    max: 1
+  - name: IGNITEDAMAGE
+    desc: Damage of ignite
+    value: 0
+    min: 0
+    max: 5000
+  - name: CHARGECHANCE
+    desc: Chance that an enemy is charged from proc event
+    value: 0
+    min: 0
+    max: 1
+  - name: CHARGEDAMAGE
+    desc: Damage of charged
+    value: 0
+    min: 0
+    max: 5000
+  - name: MELEERANGE
+    desc: The range of your melee weapon
+    value: 9
+    min: 0
+    max: 5000
+  - name: MELEEDAMAGE
+    desc: The damage of your melee weapon
+    value: 100
+    min: 0
+    max: 5000
+  - name: PROJECTILEKNOCKBACK
+    desc: The force that certain projectiles have when hitting enemies, causing them
+      to be pushed back
+    value: 100
+    min: 0
+    max: 5000
+  - name: BULLETSFIRED
+    desc: How many projectiles are fired
+    value: 1
+    min: 0
+    max: 5000
+  - name: CORRUPTIONSPREADCHANCE
+    desc: Chance that a corrupted enemy spreads corruption to another enemy every
+      few seconds
+    value: 0
+    min: 0
+    max: 1
+  - name: NUMMINIONS
+    desc: Number of minions that you have
+    value: 0
+    min: 0
+    max: 5000
+  - name: MINIONTYPE
+    desc: The type of minion you have
+    value: 0
+    min: 0
+    max: 5000
+  - name: GRAVITY
+    desc: The force of gravity on the player
+    value: -9.81
+    min: -5000
+    max: 5000
+  - name: AUTOTURRETON
+    desc: Is the player equipped with an autoturret
+    value: 0
+    min: 0
+    max: 1
+  - name: EXPLOSIONRADIUS
+    desc: The radius used for various exploding weapon effects
+    value: 5
+    min: 0
+    max: 5000
+  - name: MELEESPEED
+    desc: The speed of using your melee weapon
+    value: 1
+    min: 0
+    max: 5000
+  - name: ARMOR
+    desc: Reduces physical damage taken with diminishing returns
+    value: 0
+    min: 0
+    max: 5000
+  - name: PLATES
+    desc: Reduces all physical damage taken by 1
+    value: 0
+    min: 0
+    max: 5000
+  - name: FREENITES
+    desc: Currency for buying permanent upgrades
+    value: 0
+    min: 0
+    max: 5000
+  - name: FIRERESISTANCE
+    desc: RESISTANCE VALUE FOR FIRE DAMAGE
+    value: 0
+    min: 0
+    max: 5000
+  - name: ELECTRICRESISTANCE
+    desc: RESISTANCE VALUE FOR ELECTRIC DAMAGE
+    value: 0
+    min: 0
+    max: 5000
+  - name: CORRUPTIONRESISTANCE
+    desc: RESISTANCE VALUE FOR CORRUPTION DAMAGE
+    value: 0
+    min: 0
+    max: 5000
