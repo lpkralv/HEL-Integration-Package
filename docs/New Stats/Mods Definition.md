@@ -59,7 +59,7 @@ There are 4 outputs from this project:
     * Name
     * Description
     * How it fits in with the lore (or improves it)
-    * How the game engine needs to be adapted for it (e.g., new effects rendering)
+    * How the game mechanics or the game engine needs to be adapted for it (e.g., new effects rendering)
     * How it improves the game
     * How it maintains game balance
 * Mods Description.md - Describe all Mods in your system. Include:
@@ -67,12 +67,12 @@ There are 4 outputs from this project:
     * Description
     * How it fits in with the lore (or improves it)
     * How it combines with other mods
-    * If it is a physical object (e.g., weapon, armor, etc) describe what it looks like and any special rendering effects.
+    * If it is a non-syringe physical object (e.g., weapon, armor, etc.) describe what it looks like and any special rendering effects.
+    * Describe any changes needed to the game mechanics or game engine.
     * How it improves the game
     * How it maintains game balance
 * Stats.asset - The new Stats you define in the correct HEL Stat JSON format
 * Mods.asset - The new Mods you define in the correct HEL Mod JSON format
-For each new Stat, describe:
 
 
 ### Path of Exiles (PoE) Items and Mods System (for reference)
@@ -94,3 +94,21 @@ Key aspects of the system include:
     Build-Defining Potential: The sheer number of potential modifiers and crafting options allows for an almost endless variety of character builds and synergies, which is a major draw for players who enjoy extensive theorycrafting and optimization. Advanced community tools like "Path of Building" help players manage this complexity. 
 
 The highly regarded nature of the system stems from the feeling of agency and potential for deep customization, where the process of acquiring or crafting the right gear is as much a part of the game as the combat itself.
+
+## TASK PROCESS
+
+1. Review the contents of the repo and DOCUMENT WHAT YOU HAVE LEARNED that is relevant to this project. For example, an overview of the Mods and Stats classes. An overview of how the HEL language is interpreted to modify Stats based on the "equations" code in a player's Mods.
+
+2. Research the Mods system of Path of Exiles and DOCUMENT WHAT YOU HAVE LEARNED that is relevant to this project.
+
+3. Create a Master Plan that describes how you will accomplish the goals of this project. This plan MUST include the following mechanism:
+    * MANDATORY: Use Multiple Subagents, in parallel, to perform **EVERY** creative process, all with the same goals. You may alter their prompts to guide them to focus on one particular aspect or another. Have them document their work.
+    * MANDATORY: Once the creative agents are done, Use Multiple Subagents, in parallel, to review the creative results, comparing and contrasting them in pairs. Meld the best ideas from each pair and document the results. Continue this pairwise review process with the outputs of previous reviewers too, until there is one final document with an blend of the best ideas of all creative subagents and reviewers.
+    * MANDATORY: For all work, THINK HARD!
+    * MANDATORY: Use subagents for all independent tasks, in parallel when possible.
+
+4. Review and Refine the Master Plan using a series of Subagents until no more errors, inconsistencies or issues can be found.
+
+5. Execute the plan in Phases, and review/refine each phases output until it cannot be improved before advancing to the next phase.
+
+6. Write frequent messages to the chat window explaining your thought processes, the goals of the subagents you launch, your progress, and what you are doing.
