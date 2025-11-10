@@ -72,9 +72,11 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
-# Claude Code and Serena directories
-.claude/
-.serena/
+
 
 # HEL4Unity subdirectory (separate git repository)
 /HEL4Unity/
+
+# Unity project directories to exclude from this repository
+/Packages/
+/ProjectSettings/

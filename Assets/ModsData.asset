@@ -1,0 +1,1023 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2089455f10e0bb044bfbd1dbcca6bb00, type: 3}
+  m_Name: ModsData
+  m_EditorClassIdentifier: 
+mods:
+- modid: 0
+  uuid: uuid-0-123456
+  val: 0.4349492
+  val2: 1.8630445
+  val1min: 0.1
+  val1max: 1
+  val2min: 1.2
+  val2max: 2
+  name: LIGHTWEIGHT LUCKYSHOT NANITES
+  desc: Lowers gun damage by val1% and increases effective proc rate by val2%
+  modweight: 10
+  type: 0
+  hasProc: 0
+  equation: M_GUNDAMAGE=-val1;M_PROCRATE=val2
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 1
+  uuid: uuid-1-111111
+  val: 0.5957511
+  val2: 0.9990477
+  val1min: 0.1
+  val1max: 0.9
+  val2min: 0.2
+  val2max: 3
+  name: HEAVY LUCKYSHOT NANITES
+  desc: Lowers gun fire rate by val1% and increases effective proc rate by val2%
+  modweight: 10
+  type: 0
+  hasProc: 0
+  equation: M_SHOTSPERSEC=-val1;M_PROCRATE=val2
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 2
+  uuid: uuid-2-222222
+  val: 0.5039572
+  val2: 1.2343634
+  val1min: 0.2
+  val1max: 1
+  val2min: 0.2
+  val2max: 3
+  name: QUICKSHOT NANITES
+  desc: Lowers proc rate by val1% and increases fire rate by val2%
+  modweight: 10
+  type: 0
+  hasProc: 0
+  equation: M_PROCRATE=-val1;M_SHOTSPERSEC=val2
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 3
+  uuid: uuid-3-333333
+  val: 0.37254113
+  val2: 2.8347795
+  val1min: 0.2
+  val1max: 1
+  val2min: 0.2
+  val2max: 3
+  name: STEELSHOT NANITES
+  desc: Lowers proc rate by val1% and increases gun damage by val2%
+  modweight: 10
+  type: 0
+  hasProc: 0
+  equation: M_PROCRATE=-val1;M_GUNDAMAGE=val2
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 4
+  uuid: uuid-4-444444
+  val: 0.23032697
+  val2: 2.260677
+  val1min: 0.2
+  val1max: 1
+  val2min: 0.2
+  val2max: 3
+  name: TRUESHOT NANITES
+  desc: Lowers proc rate by val1% and increases accuracy by val2%
+  modweight: 10
+  type: 0
+  hasProc: 0
+  equation: M_PROCRATE=-val1;M_ACCURACY=val2
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 5
+  uuid: uuid-5-555555
+  val: 0.39345175
+  val2: 1.2616303
+  val1min: 0.01
+  val1max: 1
+  val2min: 1
+  val2max: 5
+  name: SHATTERSHOT NANITES
+  desc: val1% chance for bullets to split and shatter into val2 more bullets on      hit
+  modweight: 3
+  type: 0
+  hasProc: 0
+  equation: B_BULLETSPLIT=val1;A_ADDEDSHATTERBULLETS=val2
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 6
+  uuid: uuid-6-666666
+  val: 0.4973467
+  val2: 0
+  val1min: 0.1
+  val1max: 0.5
+  val2min: 0
+  val2max: 0
+  name: MOON ATTUNED NANITES
+  desc: Decreases effects of gravity on yourself by val1%
+  modweight: 10
+  type: 0
+  hasProc: 0
+  equation: M_GRAVITY=val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 7
+  uuid: uuid-7-777777
+  val: 2.973711
+  val2: 0
+  val1min: 0.1
+  val1max: 3
+  val2min: 0
+  val2max: 0
+  name: KINETIKCELL NANITES
+  desc: val1% of gun base damage is added to melee damage
+  modweight: 10
+  type: 0
+  hasProc: 0
+  equation: A_MELEEDAMAGE = B_GUNDAMAGE val1 * --V_MELEEDAMAGE=B_GUNDAMAGE;X_MELEEDAMAGE=A_MELEEDAMAGE;Y_MELEEDAMAGE=val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 8
+  uuid: uuid-8-888888
+  val: 0.75082433
+  val2: 0
+  val1min: 0.1
+  val1max: 3
+  val2min: 0
+  val2max: 0
+  name: SHARPCELL NANITES
+  desc: val1% of melee base damage is added to gun damage
+  modweight: 10
+  type: 0
+  hasProc: 0
+  equation: A_GUNDAMAGE = B_MELEEDAMAGE val1 * --V_GUNDAMAGE=B_MELEEDAMAGE;X_GUNDAMAGE=A_GUNDAMAGE;Y_GUNDAMAGE=val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 9
+  uuid: uuid-9-999999
+  val: 0.7013209
+  val2: 0
+  val1min: 0.1
+  val1max: 3
+  val2min: 0
+  val2max: 0
+  name: STEELSTRETCH NANITES
+  desc: Melee range is increased by val1%
+  modweight: 10
+  type: 0
+  hasProc: 0
+  equation: M_MELEERANGE=val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 10
+  uuid: uuid-10-101010101010
+  val: 0.10812678
+  val2: 2.1837018
+  val1min: 0.01
+  val1max: 0.6
+  val2min: 0.1
+  val2max: 3
+  name: THERMITE CORE NANITES
+  desc: Bullets have a val1% chance to set the enemy on fire for val2% of bullet      damage per second
+  modweight: 5
+  type: 0
+  hasProc: 0
+  equation: B_IGNITECHANCE = val1; B_IGNITEDAMAGE = B_GUNDAMAGE val2 * --B_IGNITECHANCE=val1;V_IGNITEDAMAGE=T_GUNDAMAGE;X_IGNITEDAMAGE=B_IGNITEDAMAGE;Y_IGNITEDAMAGE=val2
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 11
+  uuid: uuid-11-111111111111
+  val: 1
+  val2: 0.18435782
+  val1min: 1
+  val1max: 1
+  val2min: 0.05
+  val2max: 1.5
+  name: TESLA CORE NANITES
+  desc: Bullets have a val1% chance become statically charged, damaging itself      and nearby enemies for val2% bullet damage every 3 seconds.
+  modweight: 5
+  type: 0
+  hasProc: 0
+  equation: B_CHARGECHANCE = val1; B_CHARGEDAMAGE = B_GUNDAMAGE val2 * --B_CHARGECHANCE=val1;V_CHARGEDAMAGE=T_GUNDAMAGE;X_CHARGEDAMAGE=B_CHARGEDAMAGE;Y_CHARGEDAMAGE=val2
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: Electric
+  armorMeshName: 
+- modid: 500
+  uuid: uuid-500-500500500500500500
+  val: 1
+  val2: 0
+  val1min: 1
+  val1max: 1
+  val2min: 0
+  val2max: 0
+  name: STANDARD GUN
+  desc: Standard small size assault rifle gun.
+  modweight: 0
+  type: 2
+  hasProc: 0
+  equation: 
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 501
+  uuid: uuid-501-501501501501501501
+  val: 7.8063216
+  val2: 0.023271427
+  val1min: 6
+  val1max: 10
+  val2min: 0.02
+  val2max: 0.08
+  name: SHOTGUN
+  desc: Fires group of +val1 bullets in a burst, at -200% accuracy, and -val2%      reduced fire rate.
+  modweight: 10
+  type: 2
+  hasProc: 0
+  equation: B_BULLETSFIRED=val1;M_ACCURACY=-3;M_SHOTSPERSEC=-val2
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 502
+  uuid: uuid-502-502502502502502502
+  val: 1.428995
+  val2: 0.6370828
+  val1min: 1.01
+  val1max: 2.99
+  val2min: 0.5
+  val2max: 0.8
+  name: SNIPER
+  desc: Fires fast moving bullets with val1% increased damage, perfect accuracy,      but -val2% less shots per second. Pierces enemies.
+  modweight: 8
+  type: 2
+  hasProc: 0
+  equation: M_GUNDAMAGE=val1;U_ACCURACY=0.01;M_SHOTSPERSEC=-val2  --LPS, U_ on LHS?
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 503
+  uuid: uuid-503-503503503503503503
+  val: 4.7728777
+  val2: 0.46167618
+  val1min: 3
+  val1max: 10
+  val2min: 0.1
+  val2max: 0.5
+  name: MACHINE GUN
+  desc: Fires +val1 bullets per second base, but with val2% reduced damage.
+  modweight: 0
+  type: 2
+  hasProc: 0
+  equation: B_BULLETSFIRED=val1;M_GUNDAMAGE=val2
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 504
+  uuid: uuid-504-504504504504504504
+  val: 1
+  val2: 0.684072
+  val1min: 1
+  val1max: 1
+  val2min: 0.33
+  val2max: 1.5
+  name: GRENADE LAUNCHER
+  desc: Fires val2 grenades per second with a val1 explosion radius.
+  modweight: 8
+  type: 2
+  hasProc: 0
+  equation: B_BULLETSFIRED=val2;B_EXPLOSIONRADIUS=val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 505
+  uuid: uuid-505-505505505505505505
+  val: 0.021682901
+  val2: 0
+  val1min: 0
+  val1max: 0.4
+  val2min: 0
+  val2max: 0
+  name: AUTO-TURRET
+  desc: Replaces weapon with shoulder mounted auto-turret. val1% decreased damage. --LPS fixed -M_ vals.
+  modweight: 0
+  type: 2
+  hasProc: 0
+  equation: M_GUNDAMAGE=-val1;M_BULLETSPEED=0.8;M_SHOTSPERSEC=0.666;B_PROJECTILEKNOCKBACK=0;B_AUTOTURRETON=1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 506
+  uuid: uuid-506-506506506506506506
+  val: 10.831416
+  val2: 1.2722002
+  val1min: 5
+  val1max: 15
+  val2min: 0.2
+  val2max: 1.5
+  name: SHARD CUBE
+  desc: Shoots a floating cube that fires val1 random projectiles of a certain      type in all directions, with val2% increased proc rate. (Modifiers to shooting      speed change the random projectile)
+  modweight: 8
+  type: 2
+  hasProc: 0
+  equation: B_BULLETSFIRED=val1;M_PROCRATE=val2;U_SHOTSPERSEC=0.5
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 507
+  uuid: uuid-507-507507507507507507
+  val: 0
+  val2: 0
+  val1min: 0
+  val1max: 0
+  val2min: 0
+  val2max: 0
+  name: CHARGE LASER
+  desc: Charges a laser that fires until released. Firing too long will hurt.
+  modweight: 8
+  type: 2
+  hasProc: 0
+  equation: 
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 508
+  uuid: uuid-508-508508508508508508
+  val: 0
+  val2: 0
+  val1min: 0
+  val1max: 0
+  val2min: 0
+  val2max: 0
+  name: ENERGY BUBBLER
+  desc: Fires a slow moving energy bubble that creates a sustained explosion of      many bubbles when burst.
+  modweight: 8
+  type: 2
+  hasProc: 0
+  equation: 
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 509
+  uuid: uuid-509-509509509509509509
+  val: 0.9475116
+  val2: 0.6417929
+  val1min: 0.7
+  val1max: 0.95
+  val2min: 0.2
+  val2max: 0.8
+  name: CORRUPTING VIRUS
+  desc: Fires a slow moving virus cloud infecting enemies increasing all DoT proc      rates by val2% and dealing val1% projectile damage every 3 seconds. Can spread      to nearby enemies.
+  modweight: 7
+  type: 2
+  hasProc: 0
+  equation: B_CORRUPTIONSPREADCHANCE=1;B_BULLETSPEED=0.05;M_PROCRATE=val2;B_PROJECTILEKNOCKBACK=0;M_GUNDAMAGE=-val
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 510
+  uuid: uuid-510-510510510510510510
+  val: 1.2805345
+  val2: 0
+  val1min: 1
+  val1max: 4
+  val2min: 0
+  val2max: 0
+  name: HIOX-029 HOME BEACON
+  desc: Recruits val1% HIOX-029 to your service. They will protect you and can      be directed to attack.
+  modweight: 5
+  type: 2
+  hasProc: 0
+  equation: B_NUMMINIONS=val1;B_MINIONTYPE=1;M_GUNDAMAGE=-0.3
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 511
+  uuid: uuid-511-511511511511511511
+  val: 0.27210307
+  val2: 0
+  val1min: 0.1
+  val1max: 0.5
+  val2min: 0
+  val2max: 0
+  name: ETCHING LASER
+  desc: A powerful laser with good accuracy that instantly hits what its aimed      at and fires at a val1% faster rate.
+  modweight: 8
+  type: 2
+  hasProc: 0
+  equation: M_ACCURACY=-0.01;M_SHOTSPERSEC=val;
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 800
+  uuid: uuid-800-800800800800800800
+  val: 1
+  val2: 0
+  val1min: 1
+  val1max: 1
+  val2min: 0
+  val2max: 0
+  name: STANDARD SWORD
+  desc: Standard sword with short range and medium damage.
+  modweight: 0
+  type: 4
+  hasProc: 0
+  equation: 
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 5000
+  uuid: uuid-5000-500050005000500050005000
+  val: 1
+  val2: 0
+  val1min: 1
+  val1max: 1
+  val2min: 0
+  val2max: 0
+  name: FIRE RATE NANITES
+  desc: +val1 bullets fired per second
+  modweight: 10
+  type: 10
+  hasProc: 0
+  equation: B_SHOTSPERSEC=val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 5001
+  uuid: uuid-5001-500150015001500150015001
+  val: 5
+  val2: 0
+  val1min: 5
+  val1max: 5
+  val2min: 0
+  val2max: 0
+  name: BULLET DAMAGE NANITES
+  desc: +val1 damage added to bullets
+  modweight: 10
+  type: 10
+  hasProc: 0
+  equation: B_GUNDAMAGE=val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 5002
+  uuid: uuid-5002-500250025002500250025002
+  val: 0.2
+  val2: 0
+  val1min: 0.2
+  val1max: 0.2
+  val2min: 0
+  val2max: 0
+  name: BULLET ACCURACY NANITES
+  desc: Reduces bullet angle drift by val1%
+  modweight: 10
+  type: 10
+  hasProc: 0
+  equation: M_ACCURACY=-val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 5003
+  uuid: uuid-5003-500350035003500350035003
+  val: 0.1
+  val2: 0
+  val1min: 0.1
+  val1max: 0.1
+  val2min: 0
+  val2max: 0
+  name: RUN SPEED NANITES
+  desc: Increases base run speed by +val1
+  modweight: 10
+  type: 10
+  hasProc: 0
+  equation: B_PLAYERSPEED=val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 5004
+  uuid: uuid-5004-500450045004500450045004
+  val: 5
+  val2: 0
+  val1min: 5
+  val1max: 5
+  val2min: 0
+  val2max: 0
+  name: SPRINT SPEED NANITES
+  desc: Increases base sprint speed by +val1
+  modweight: 10
+  type: 10
+  hasProc: 0
+  equation: B_SPRINTSPEED=val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 5005
+  uuid: uuid-5005-500550055005500550055005
+  val: 0.3
+  val2: 0
+  val1min: 0.3
+  val1max: 0.3
+  val2min: 0
+  val2max: 0
+  name: SPRINT STAMINA NANITES
+  desc: Decreases sprint stamina cost by val1 per second
+  modweight: 10
+  type: 10
+  hasProc: 0
+  equation: B_SPRINTCOST=-val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 5006
+  uuid: uuid-5006-500650065006500650065006
+  val: 0.2
+  val2: 0
+  val1min: 0.2
+  val1max: 0.2
+  val2min: 0
+  val2max: 0
+  name: STAMINA REGEN NANITES
+  desc: Regenerates +val1 stamina per second
+  modweight: 10
+  type: 10
+  hasProc: 0
+  equation: B_STAMINAREGEN=val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 5007
+  uuid: uuid-5007-500750075007500750075007
+  val: 25
+  val2: 0
+  val1min: 25
+  val1max: 25
+  val2min: 0
+  val2max: 0
+  name: MAX HP NANITES
+  desc: Increases Max HP by +val1
+  modweight: 10
+  type: 10
+  hasProc: 0
+  equation: B_HP=val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 5008
+  uuid: uuid-5008-500850085008500850085008
+  val: 0.001
+  val2: 0
+  val1min: 0.001
+  val1max: 0.001
+  val2min: 0
+  val2max: 0
+  name: HP REGEN NANITES
+  desc: Regenerates +val1% HP per second
+  modweight: 10
+  type: 10
+  hasProc: 0
+  equation: B_HPREGEN=val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 5009
+  uuid: uuid-5009-500950095009500950095009
+  val: 10
+  val2: 0
+  val1min: 10
+  val1max: 10
+  val2min: 0
+  val2max: 0
+  name: ARMOR NANITES
+  desc: Increases Armor by +val
+  modweight: 10
+  type: 10
+  hasProc: 0
+  equation: B_ARMOR=val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 5010
+  uuid: uuid-5010-501050105010501050105010
+  val: 1
+  val2: 0
+  val1min: 1
+  val1max: 1
+  val2min: 0
+  val2max: 0
+  name: PLATE NANITES
+  desc: Increases plate by +val1, decreasing physical damage taken by val1 each
+  modweight: 10
+  type: 10
+  hasProc: 0
+  equation: B_PLATES=val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 6000
+  uuid: uuid-6000-600060006000600060006000
+  val: 5
+  val2: 0
+  val1min: 5
+  val1max: 5
+  val2min: 0
+  val2max: 0
+  name: STARTING HP
+  desc: Increases starting Base HP by +val1
+  modweight: 100
+  type: 20
+  hasProc: 0
+  equation: B_HP=val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 6001
+  uuid: uuid-6001-600160016001600160016001
+  val: 0.002
+  val2: 0
+  val1min: 0.002
+  val1max: 0.002
+  val2min: 0
+  val2max: 0
+  name: HP REGEN
+  desc: Increases starting Base HP Regen by +val
+  modweight: 100
+  type: 20
+  hasProc: 0
+  equation: B_HPREGEN=val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 6002
+  uuid: uuid-6002-600260026002600260026002
+  val: 1
+  val2: 0
+  val1min: 1
+  val1max: 1
+  val2min: 0
+  val2max: 0
+  name: RUN SPEED
+  desc: Increases starting run speed by +val m/s
+  modweight: 200
+  type: 20
+  hasProc: 0
+  equation: B_PLAYERSPEED=val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 6003
+  uuid: uuid-6003-600360036003600360036003
+  val: 1
+  val2: 0
+  val1min: 1
+  val1max: 1
+  val2min: 0
+  val2max: 0
+  name: GUN DAMAGE
+  desc: Increases starting gun damage by +val
+  modweight: 150
+  type: 20
+  hasProc: 0
+  equation: B_GUNDAMAGE=val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 6004
+  uuid: uuid-6004-600460046004600460046004
+  val: 1
+  val2: 0
+  val1min: 1
+  val1max: 1
+  val2min: 0
+  val2max: 0
+  name: MELEE DAMAGE
+  desc: Increases starting melee damage by +val
+  modweight: 150
+  type: 20
+  hasProc: 0
+  equation: B_MELEEDAMAGE=val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 6005
+  uuid: uuid-6005-600560056005600560056005
+  val: 0.06
+  val2: 0
+  val1min: 0.06
+  val1max: 0.06
+  val2min: 0
+  val2max: 0
+  name: SPRINT STAMINA
+  desc: Decreases the stamina cost of sprinting by -val per second
+  modweight: 100
+  type: 20
+  hasProc: 0
+  equation: B_SPRINTCOST=-val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 6006
+  uuid: uuid-6006-600660066006600660066006
+  val: 0.25
+  val2: 0
+  val1min: 0.25
+  val1max: 0.25
+  val2min: 0
+  val2max: 0
+  name: FIRE RATE
+  desc: Increases starting fire rate by +val shots per second
+  modweight: 200
+  type: 20
+  hasProc: 0
+  equation: B_SHOTSPERSEC=val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 6007
+  uuid: uuid-6007-600760076007600760076007
+  val: 1
+  val2: 0
+  val1min: 1
+  val1max: 1
+  val2min: 0
+  val2max: 0
+  name: STAMINA REGEN
+  desc: Increases Stamina regen by +val per second
+  modweight: 150
+  type: 20
+  hasProc: 0
+  equation: B_STAMINAREGEN=val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 6008
+  uuid: uuid-6008-600860086008600860086008
+  val: 1
+  val2: 0
+  val1min: 1
+  val1max: 1
+  val2min: 0
+  val2max: 0
+  name: SPRINT SPEED
+  desc: Increases Sprint speed by +val m/s
+  modweight: 150
+  type: 20
+  hasProc: 0
+  equation: B_SPRINTSPEED=val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 6009
+  uuid: uuid-6009-600960096009600960096009
+  val: 2
+  val2: 0
+  val1min: 2
+  val1max: 2
+  val2min: 0
+  val2max: 0
+  name: ARMOR
+  desc: Increases Armor by +val
+  modweight: 150
+  type: 20
+  hasProc: 0
+  equation: B_ARMOR=val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 6010
+  uuid: uuid-6010-601060106010601060106010
+  val: 1
+  val2: 0
+  val1min: 1
+  val1max: 1
+  val2min: 0
+  val2max: 0
+  name: PLATES
+  desc: Increases plate by +val1, decreasing physical damage taken by val1 each
+  modweight: 600
+  type: 20
+  hasProc: 0
+  equation: B_PLATES=val1
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: 
+  armorMeshName: 
+- modid: 999
+  uuid: uuid-999-999999999999999999
+  val: 0
+  val2: 0
+  val1min: 0
+  val1max: 0
+  val2min: 0
+  val2max: 0
+  name: test
+  desc: test
+  modweight: 0
+  type: 20
+  hasProc: 0
+  equation: B_GUNDAMAGE=A_MELEEDAMAGE
+  modColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  armorEffectName: ''
+  armorMeshName: ''
