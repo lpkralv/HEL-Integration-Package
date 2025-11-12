@@ -1,0 +1,178 @@
+# HIOX StatsData.asset - New Stats YAML
+# Version: 1.0
+# Status: FINAL DELIVERABLE
+# Total New Stats: 27
+# Format: Valid YAML for Unity integration
+
+stats:
+  # CATEGORY 1: CORE COMBAT STATS (8 stats)
+
+  - name: CRITCHANCE
+    desc: Probability of triggering critical precision strikes
+    value: 0.05
+    min: 0
+    max: 1
+
+  - name: CRITDAMAGE
+    desc: Damage multiplier applied when critical strikes are triggered
+    value: 1.5
+    min: 0
+    max: 5000
+
+  - name: PROJECTILESPEED
+    desc: Velocity of fired projectiles from weapon assemblies
+    value: 300
+    min: 0
+    max: 5000
+
+  - name: PIERCINGSHOTS
+    desc: Number of additional enemy targets projectiles can penetrate
+    value: 0
+    min: 0
+    max: 50
+
+  - name: RELOADSPEED
+    desc: Time modifier for ammunition assembly and weapon recalibration cycles
+    value: 1.0
+    min: 0
+    max: 5000
+
+  - name: AMMOCAPACITY
+    desc: Maximum projectiles stored in weapon assembly magazine
+    value: 30
+    min: 0
+    max: 5000
+
+  - name: LIFESTEAL
+    desc: Percentage of damage dealt converted to structural integrity restoration
+    value: 0
+    min: 0
+    max: 1
+
+  - name: CHAINLIGHTNING
+    desc: Maximum number of additional targets electric discharge effects can arc to
+    value: 0
+    min: 0
+    max: 20
+
+  # CATEGORY 2: DEFENSE/SURVIVAL STATS (7 stats)
+
+  - name: SHIELDCAPACITY
+    desc: Maximum structural energy barrier strength protecting outer framework
+    value: 0
+    min: 0
+    max: 5000
+
+  - name: SHIELDREGENRATE
+    desc: Energy barrier reconstruction speed in shield points per second
+    value: 0
+    min: 0
+    max: 5000
+
+  - name: DODGECHANCE
+    desc: Probability of evasion protocols completely negating incoming damage
+    value: 0
+    min: 0
+    max: 1
+
+  - name: DAMAGEABSORPTION
+    desc: Flat damage reduction applied before percentage mitigation
+    value: 0
+    min: 0
+    max: 5000
+
+  - name: THORNDAMAGE
+    desc: Retaliatory damage inflicted on attackers when receiving structural damage
+    value: 0
+    min: 0
+    max: 5000
+
+  - name: REFLECTDAMAGE
+    desc: Percentage of received damage returned to attackers
+    value: 0
+    min: 0
+    max: 1
+
+  - name: MAXHPPERCENTBONUS
+    desc: Multiplicative modifier extending maximum structural integrity capacity
+    value: 0
+    min: 0
+    max: 10
+
+  # CATEGORY 3: RESOURCE MANAGEMENT STATS (5 stats)
+
+  - name: ENERGYCAPACITY
+    desc: Maximum energy reserves for powering special abilities
+    value: 100
+    min: 0
+    max: 5000
+
+  - name: ENERGYREGEN
+    desc: Energy reconstitution rate from core reactor systems per second
+    value: 10
+    min: 0
+    max: 5000
+
+  - name: COOLDOWNREDUCTION
+    desc: Acceleration modifier for ability recalibration and protocol reset timers
+    value: 0
+    min: 0
+    max: 1
+
+  - name: RESOURCEEFFICIENCY
+    desc: Cost reduction modifier for energy consumption and stamina expenditure
+    value: 0
+    min: 0
+    max: 1
+
+  - name: DASHCOOLDOWN
+    desc: Reset timer duration for emergency evasion protocol activations
+    value: 3.0
+    min: 0
+    max: 100
+
+  # CATEGORY 4: ELEMENTAL STATS (4 stats)
+
+  - name: CORRUPTIONCHANCE
+    desc: Probability of inflicting viral code corruption damage-over-time
+    value: 0
+    min: 0
+    max: 1
+
+  - name: CORRUPTIONDAMAGE
+    desc: Structural degradation intensity from viral code corruption per tick
+    value: 0
+    min: 0
+    max: 5000
+
+  - name: ELEMENTALPENETRATION
+    desc: Bypass percentage for enemy elemental resistance protocols
+    value: 0
+    min: 0
+    max: 1
+
+  - name: IGNITESPREAD
+    desc: Maximum thermal propagation range for ignite effect chaining
+    value: 0
+    min: 0
+    max: 10
+
+  # CATEGORY 5: MINION/SUMMONER STATS (3 stats)
+
+  - name: MINIONDAMAGE
+    desc: Damage output multiplier for all deployed autonomous combat constructs
+    value: 1.0
+    min: 0
+    max: 5000
+
+  - name: MINIONHP
+    desc: Structural integrity multiplier for deployed minion frameworks
+    value: 1.0
+    min: 0
+    max: 5000
+
+  - name: MINIONATTACKSPEED
+    desc: Attack cycle frequency multiplier for minion weapon systems
+    value: 1.0
+    min: 0
+    max: 5000
