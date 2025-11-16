@@ -47,7 +47,7 @@ desc: Emits focused photonic beam with val1% improved accuracy and instant proje
 modweight: 100
 type: 2
 hasProc: 0
-equation: M_ACCURACY = M_ACCURACY + (-val1); B_BULLETSPEED = B_BULLETSPEED + 9999
+equation: M_ACCURACY = M_ACCURACY -val1 +; B_BULLETSPEED = B_BULLETSPEED 9999 +
 modColor: {r: 0, g: 0, b: 0, a: 0}
 armorEffectName: ''
 armorMeshName: ''
@@ -83,7 +83,7 @@ desc: Fires superheated plasma packets with val1% increased damage but val2% red
 modweight: 80
 type: 2
 hasProc: 0
-equation: M_GUNDAMAGE = M_GUNDAMAGE + val1; M_SHOTSPERSEC = M_SHOTSPERSEC + (-val2)
+equation: M_GUNDAMAGE = M_GUNDAMAGE val1 +; M_SHOTSPERSEC = M_SHOTSPERSEC -val2 +
 modColor: {r: 0, g: 0, b: 0, a: 0}
 armorEffectName: ''
 armorMeshName: ''
@@ -119,7 +119,7 @@ desc: Fires val1 rapid laser pulses per trigger pull with val2% increased critic
 modweight: 75
 type: 2
 hasProc: 0
-equation: B_BULLETSFIRED = B_BULLETSFIRED + val1; M_CRITCHANCE = M_CRITCHANCE + val2
+equation: B_BULLETSFIRED = B_BULLETSFIRED val1 +; M_CRITCHANCE = M_CRITCHANCE val2 +
 modColor: {r: 0, g: 0, b: 0, a: 0}
 armorEffectName: ''
 armorMeshName: ''
@@ -155,7 +155,7 @@ desc: Projects continuous energy beam dealing val1% increased damage but consumi
 modweight: 65
 type: 2
 hasProc: 0
-equation: M_GUNDAMAGE = M_GUNDAMAGE + val1; B_ENERGYCAPACITY = B_ENERGYCAPACITY + (-50); M_ENERGYREGEN = M_ENERGYREGEN + (-val2)
+equation: M_GUNDAMAGE = M_GUNDAMAGE val1 +; B_ENERGYCAPACITY = B_ENERGYCAPACITY -50 +; M_ENERGYREGEN = M_ENERGYREGEN -val2 +
 modColor: {r: 0, g: 0, b: 0, a: 0}
 armorEffectName: ''
 armorMeshName: ''
@@ -191,7 +191,7 @@ desc: Superheated beam with val1 ignite chance, causing fires to spread to val2 
 modweight: 50
 type: 2
 hasProc: 0
-equation: B_IGNITECHANCE = B_IGNITECHANCE + val1; B_IGNITESPREAD = B_IGNITESPREAD + val2; M_GUNDAMAGE = M_GUNDAMAGE + 0.2
+equation: B_IGNITECHANCE = B_IGNITECHANCE val1 +; B_IGNITESPREAD = B_IGNITESPREAD val2 +; M_GUNDAMAGE = M_GUNDAMAGE 0.2 +
 modColor: {r: 0, g: 0, b: 0, a: 0}
 armorEffectName: ''
 armorMeshName: ''
@@ -227,7 +227,7 @@ desc: Electrical discharge with val1 charge chance that chains to val2 additiona
 modweight: 45
 type: 2
 hasProc: 0
-equation: B_CHARGECHANCE = B_CHARGECHANCE + val1; B_CHAINLIGHTNING = B_CHAINLIGHTNING + val2; M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.15)
+equation: B_CHARGECHANCE = B_CHARGECHANCE val1 +; B_CHAINLIGHTNING = B_CHAINLIGHTNING val2 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.15 +
 modColor: {r: 0, g: 0, b: 0, a: 0}
 armorEffectName: Electric
 armorMeshName: ''
@@ -263,7 +263,7 @@ desc: Ultra-precise photon beam with val1 critical chance bonus and val2 critica
 modweight: 40
 type: 2
 hasProc: 0
-equation: M_CRITCHANCE = M_CRITCHANCE + val1; M_CRITDAMAGE = M_CRITDAMAGE + (T_ACCURACY 0.9 >) val2 *
+equation: M_CRITCHANCE = M_CRITCHANCE val1 +; M_CRITDAMAGE = M_CRITDAMAGE T_ACCURACY 0.9 > val2 * +
 modColor: {r: 0, g: 0, b: 0, a: 0}
 armorEffectName: ''
 armorMeshName: ''
@@ -299,7 +299,7 @@ desc: Coherent beam pierces val1 enemies and ignores val2% of elemental resistan
 modweight: 25
 type: 2
 hasProc: 0
-equation: B_PIERCINGSHOTS = B_PIERCINGSHOTS + val1; B_ELEMENTALPENETRATION = B_ELEMENTALPENETRATION + val2; M_GUNDAMAGE = M_GUNDAMAGE + T_PIERCINGSHOTS val2 0.1 * *
+equation: B_PIERCINGSHOTS = B_PIERCINGSHOTS val1 +; B_ELEMENTALPENETRATION = B_ELEMENTALPENETRATION val2 +; M_GUNDAMAGE = M_GUNDAMAGE T_PIERCINGSHOTS val2 0.1 * * +
 modColor: {r: 0, g: 0, b: 0, a: 0}
 armorEffectName: ''
 armorMeshName: ''
@@ -335,7 +335,7 @@ desc: Cascading lightning emission chains to val1 targets with val2 charge chanc
 modweight: 20
 type: 2
 hasProc: 0
-equation: B_CHAINLIGHTNING = B_CHAINLIGHTNING + val1; B_CHARGECHANCE = B_CHARGECHANCE + val2; B_ENERGYCAPACITY = B_ENERGYCAPACITY + (-30); M_GUNDAMAGE = M_GUNDAMAGE + 0.15
+equation: B_CHAINLIGHTNING = B_CHAINLIGHTNING val1 +; B_CHARGECHANCE = B_CHARGECHANCE val2 +; B_ENERGYCAPACITY = B_ENERGYCAPACITY -30 +; M_GUNDAMAGE = M_GUNDAMAGE 0.15 +
 modColor: {r: 0, g: 0, b: 0, a: 0}
 armorEffectName: Electric
 armorMeshName: ''
@@ -371,7 +371,7 @@ desc: Experimental system converts all damage to thermal energy with fixed val1 
 modweight: 8
 type: 2
 hasProc: 0
-equation: B_IGNITECHANCE = B_IGNITECHANCE + val1; B_IGNITESPREAD = B_IGNITESPREAD + val2; M_GUNDAMAGE = M_GUNDAMAGE + 0.5; B_ENERGYCAPACITY = B_ENERGYCAPACITY + (-80); M_ENERGYREGEN = M_ENERGYREGEN + (-0.25)
+equation: B_IGNITECHANCE = B_IGNITECHANCE val1 +; B_IGNITESPREAD = B_IGNITESPREAD val2 +; M_GUNDAMAGE = M_GUNDAMAGE 0.5 +; B_ENERGYCAPACITY = B_ENERGYCAPACITY -80 +; M_ENERGYREGEN = M_ENERGYREGEN -0.25 +
 modColor: {r: 255, g: 100, b: 0, a: 255}
 armorEffectName: Fire
 armorMeshName: ''
@@ -500,25 +500,25 @@ All lore maintains HIOX world consistency:
 ## EQUATION VALIDATION
 
 All equations follow HEL syntax requirements:
-- ✓ Always add to coefficients: `M_X = M_X + val1`
+- ✓ Always add to coefficients: `M_X = M_X val1 +`
 - ✓ Use lowercase val1/val2 in equations
-- ✓ Postfix notation for operations: `val1 0.5 *`
+- ✓ Pure postfix notation for all operations: `val1 0.5 * +`
 - ✓ Separate statements with semicolons
 - ✓ Use proper coefficient prefixes (B_, M_, A_, Z_, U_)
 - ✓ M_ values are decimals (0.5 = 50%)
-- ✓ Conditional logic properly formatted: `(T_ACCURACY 0.9 >) val2 *`
+- ✓ Conditional logic properly formatted: `T_ACCURACY 0.9 > val2 * +`
 
 **Complex Equation Examples:**
 
 *Photonic Accelerator (521):*
 ```
-M_CRITDAMAGE = M_CRITDAMAGE + (T_ACCURACY 0.9 >) val2 *
+M_CRITDAMAGE = M_CRITDAMAGE T_ACCURACY 0.9 > val2 * +
 ```
 Only adds val2 to crit damage if accuracy exceeds 0.9 (90%)
 
 *Penetrating Beam (522):*
 ```
-M_GUNDAMAGE = M_GUNDAMAGE + T_PIERCINGSHOTS val2 0.1 * *
+M_GUNDAMAGE = M_GUNDAMAGE T_PIERCINGSHOTS val2 0.1 * * +
 ```
 Damage scales with current piercing shot count × val2 × 0.1
 
