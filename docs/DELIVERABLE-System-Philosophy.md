@@ -58,6 +58,41 @@ The HIOX Stats/Mods system is a comprehensive character customization and progre
 - **Resource Optimization** (2): COOLDOWNREDUCTION, RESOURCEEFFICIENCY
 - **Combat Mechanics** (3): BULLETSFIRED, MELEERANGE, MELEESPEED
 
+### 1.3 Parallel Progression System (Intentional Duplicates)
+
+**Design Philosophy:**
+The system intentionally features **9 parallel progression paths** where Items and Syringes provide identical mechanical effects through different equipment categories. This design supports player choice and build flexibility.
+
+**Parallel Pairs (18 mods total, 11.5%):**
+
+| Stat Category | Item Mod (Type 0) | Syringe Mod (Type 10) | Shared Equation |
+|---------------|-------------------|----------------------|-----------------|
+| **Energy Regen** | 2036: REACTOR OPTIMIZATION CORE | 3022: REACTOR EFFICIENCY BOOSTER | `B_ENERGYREGEN = B_ENERGYREGEN val1 +` |
+| **Health Regen** | 2015: NANITE RECONSTRUCTION MATRIX | 3020: REGENERATIVE NANITE INJECTION | `B_HPREGEN = B_HPREGEN val1 +` |
+| **Stamina Regen** | 2016: STAMINA RECOVERY PROTOCOLS | 3021: ENDURANCE ENHANCEMENT SERUM | `B_STAMINAREGEN = B_STAMINAREGEN val1 +` |
+| **Armor** | 2001: ABLATIVE PLATING MATRIX | 3011: ABLATIVE ARMOR NANITES | `M_ARMOR = M_ARMOR val1 +` |
+| **Cooldown Reduction** | 2037: COOLDOWN CALIBRATOR | 3023: RAPID RECALIBRATION SERUM | `M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION val1 +` |
+| **Critical Chance** | 2021: PRECISION TARGETING MATRIX | 3003: PRECISION TARGETING STIMULANT | `M_CRITCHANCE = M_CRITCHANCE val1 +` |
+| **Gun Damage** | 2022: DAMAGE AMPLIFIER CORE | 3000: DAMAGE ENHANCEMENT SERUM | `M_GUNDAMAGE = M_GUNDAMAGE val1 +` |
+| **Health Points** | 2000: REINFORCED NANITE SHELL | 3010: STRUCTURAL FORTIFICATION SERUM | `M_HP = M_HP val1 +` |
+| **HP+Armor-Speed** | 2002: STRUCTURAL REINFORCEMENT PROTOCOLS | 3014: REINFORCED BATTLE PROTOCOLS | `M_HP = M_HP val1 +; M_ARMOR = M_ARMOR val2 +; M_PLAYERSPEED = M_PLAYERSPEED -0.1 +` |
+
+**Rationale:**
+1. **Equipment Slot Choice**: Players can access core mechanics through different equipment slots (Item vs Syringe)
+2. **Build Flexibility**: Enables optimization around available equipment slots and inventory constraints
+3. **Acquisition Diversity**: Items and Syringes may have different drop rates, vendors, or crafting requirements
+4. **Thematic Consistency**: Items represent installed hardware; Syringes represent temporary injections with same mechanical effect
+5. **Stackability**: Syringes stack, allowing multiple instances; Items do not (implementation-dependent)
+
+**Maintenance Note:**
+When balancing these 9 pairs, changes to equations or value ranges should be synchronized across both mods to maintain parity. Any intentional divergence should be documented with clear rationale.
+
+**Coverage:**
+- **Regeneration**: 3 pairs (Energy, Health, Stamina)
+- **Combat**: 2 pairs (Damage, Critical Chance)
+- **Defense**: 3 pairs (Armor, HP simple, HP complex)
+- **Utility**: 1 pair (Cooldown Reduction)
+
 ---
 
 ## 2. RARITY TIER PHILOSOPHY

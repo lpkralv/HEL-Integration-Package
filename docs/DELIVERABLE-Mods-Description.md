@@ -15,6 +15,22 @@ This document provides a comprehensive reference for all 155 mods in the HIOX St
 - **Advanced** (modweight 35-50): Rare drops, complex mechanics, moderate penalties (15-25%)
 - **Prototype** (modweight 5-15): Very rare drops, build-defining, extreme penalties (20-40%)
 
+**Parallel Progression System:**
+The system intentionally includes **9 parallel progression paths** where specific Items and Syringes share identical equations. This design provides player choice in accessing core stat bonuses through different equipment slots. The 18 mods involved in parallel pairs are marked with `[PARALLEL PAIR]` notation below.
+
+**Duplicate Pairs:**
+- Energy Regen: 2036 ↔ 3022
+- Health Regen: 2015 ↔ 3020
+- Stamina Regen: 2016 ↔ 3021
+- Armor: 2001 ↔ 3011
+- Cooldown Reduction: 2037 ↔ 3023
+- Critical Chance: 2021 ↔ 3003
+- Gun Damage: 2022 ↔ 3000
+- Health Points: 2000 ↔ 3010
+- HP+Armor-Speed: 2002 ↔ 3014
+
+*See DELIVERABLE-System-Philosophy.md section 1.3 for detailed rationale.*
+
 **Full Design Details:** See individual class design documents (Weapons-*.md, Items-*.md, Syringes-*.md)
 
 ---
@@ -376,9 +392,9 @@ This document provides a comprehensive reference for all 155 mods in the HIOX St
 ### STRUCTURAL PLATING (8 mods, IDs 2000-2007)
 *HP, armor, and defensive foundations*
 
-**2000 - REINFORCED FRAME** (Standard) - +150-300 HP
-**2001 - ABLATIVE ARMOR PLATING** (Standard) - +100-200 armor
-**2002 - ADAPTIVE ARMOR PROTOCOL** (Enhanced) - +300-500 armor scaling with damage taken, -10% speed
+**2000 - REINFORCED NANITE SHELL** [PARALLEL PAIR: 3010] (Standard) - +150-300 HP
+**2001 - ABLATIVE PLATING MATRIX** [PARALLEL PAIR: 3011] (Standard) - +100-200 armor
+**2002 - STRUCTURAL REINFORCEMENT PROTOCOLS** [PARALLEL PAIR: 3014] (Enhanced) - +300-500 armor scaling with damage taken, -10% speed
 **2003 - REACTIVE PLATING** (Enhanced) - +200-400 HP, +30-60 thorns damage, -10% speed
 **2004 - FORTIFIED BULWARK** (Advanced) - +400-700 HP, +200-400 armor, -20% speed, -15% fire rate
 **2005 - HP SCALING MATRIX** (Advanced) - +1% gun/melee damage per 100 HP, +300-500 HP, -15% speed
@@ -403,8 +419,8 @@ This document provides a comprehensive reference for all 155 mods in the HIOX St
 ### REGENERATION SYSTEMS (6 mods, IDs 2015-2020)
 *HP regen, energy regen, shield regen*
 
-**2015 - NANITE REPAIR PROTOCOL** (Standard) - +15-30 HP regen/sec
-**2016 - ENERGY REACTOR CORE** (Standard) - +20-40 energy regen/sec, +100-200 energy capacity
+**2015 - NANITE RECONSTRUCTION MATRIX** [PARALLEL PAIR: 3020] (Standard) - +15-30 HP regen/sec
+**2016 - STAMINA RECOVERY PROTOCOLS** [PARALLEL PAIR: 3021] (Standard) - +20-40 energy regen/sec, +100-200 energy capacity
 **2017 - SHIELD REGENERATOR** (Standard) - +20-40 shield regen/sec, +100-200 shield capacity
 **2018 - RAPID RECONSTRUCTION** (Enhanced) - +35-60 HP regen/sec, +30-50 energy regen/sec, -10% max HP
 **2019 - PERPETUAL SHIELD MATRIX** (Advanced) - +60-100 shield regen/sec, +300-500 shield capacity, -20% HP, -15% armor
@@ -415,8 +431,8 @@ This document provides a comprehensive reference for all 155 mods in the HIOX St
 ### OFFENSIVE AUGMENTS (8 mods, IDs 2021-2028)
 *Crit, damage, and offensive scaling*
 
-**2021 - PRECISION TARGETING CORE** (Standard) - +15-25% crit chance
-**2022 - DAMAGE AMPLIFIER** (Standard) - +20-35% gun damage, +20-35% melee damage
+**2021 - PRECISION TARGETING MATRIX** [PARALLEL PAIR: 3003] (Standard) - +15-25% crit chance
+**2022 - DAMAGE AMPLIFIER CORE** [PARALLEL PAIR: 3000] (Standard) - +20-35% gun damage, +20-35% melee damage
 **2023 - BURST DAMAGE CORE** (Enhanced) - +40-65% gun damage, +35-60% melee damage, -15% HP
 **2024 - CRITICAL AMPLIFICATION CORE** (Enhanced) - +25-40% crit chance, +1.0-2.0 crit damage, -12% fire rate
 **2025 - ELEMENTAL DAMAGE CATALYST** (Enhanced) - +35-60 ignite/charge/corruption damage, +20-35% elemental chance (all), -15% gun damage
@@ -442,8 +458,8 @@ This document provides a comprehensive reference for all 155 mods in the HIOX St
 *Energy, cooldowns, resource efficiency*
 
 **2035 - ENERGY CELL EXPANSION** (Standard) - +200-400 energy capacity
-**2036 - REACTOR EFFICIENCY CORE** (Standard) - +30-60% resource efficiency
-**2037 - COOLDOWN ACCELERATOR** (Standard) - +20-35% cooldown reduction
+**2036 - REACTOR OPTIMIZATION CORE** [PARALLEL PAIR: 3022] (Standard) - +30-60% resource efficiency
+**2037 - COOLDOWN CALIBRATOR** [PARALLEL PAIR: 3023] (Standard) - +20-35% cooldown reduction
 **2038 - STAMINA OPTIMIZER** (Enhanced) - +40-70 stamina regen/sec, +30-50% resource efficiency, -10% energy capacity
 **2039 - ABILITY SPAM CORE** (Enhanced) - +35-60% cooldown reduction, +40-70% resource efficiency, -15% gun damage
 **2040 - ENERGY REACTOR OVERCHARGE** (Advanced) - +500-800 energy capacity, +60-100 energy regen/sec, -20% HP
@@ -472,10 +488,10 @@ This document provides a comprehensive reference for all 155 mods in the HIOX St
 ### COMBAT STIMULANTS (10 mods, IDs 3000-3009)
 *Damage, attack speed, fire rate, crit*
 
-**3000 - DAMAGE ENHANCEMENT SERUM** (Standard) - +8-12% gun damage
+**3000 - DAMAGE ENHANCEMENT SERUM** [PARALLEL PAIR: 2022] (Standard) - +8-12% gun damage
 **3001 - FIRE RATE ACCELERATOR** (Standard) - +10-15% fire rate
 **3002 - MELEE POWER INJECTION** (Standard) - +10-15% melee damage, +8-12% melee speed
-**3003 - ATTACK SPEED CATALYST** (Standard) - +12-18% fire rate, +10-15% melee speed
+**3003 - PRECISION TARGETING STIMULANT** [PARALLEL PAIR: 2021] (Standard) - +12-18% fire rate, +10-15% melee speed
 **3004 - DUAL DAMAGE PROTOCOL** (Enhanced) - +15-25% gun damage, +15-25% melee damage, -8% HP
 **3005 - PRECISION PROTOCOL** (Enhanced) - +18-28% crit chance, +0.3-0.6 crit damage, -10% fire rate
 **3006 - BURST DAMAGE SERUM** (Enhanced) - +25-40% gun damage, +20-35% melee damage, -12% HP
@@ -488,11 +504,11 @@ This document provides a comprehensive reference for all 155 mods in the HIOX St
 ### DEFENSIVE PROTOCOLS (10 mods, IDs 3010-3019)
 *HP, armor, shields, resistances*
 
-**3010 - STRUCTURAL INTEGRITY BOOST** (Standard) - +60-100 HP
-**3011 - ARMOR ENHANCEMENT** (Standard) - +50-90 armor
+**3010 - STRUCTURAL FORTIFICATION SERUM** [PARALLEL PAIR: 2000] (Standard) - +60-100 HP
+**3011 - ABLATIVE ARMOR NANITES** [PARALLEL PAIR: 2001] (Standard) - +50-90 armor
 **3012 - SHIELD BOOSTER** (Standard) - +60-100 shield capacity, +10-20 shield regen
 **3013 - RESISTANCE INJECTION** (Standard) - +8-12% fire/electric/corruption resistance (all)
-**3014 - FORTIFICATION PROTOCOL** (Enhanced) - +120-200 HP, +80-140 armor, -10% speed
+**3014 - REINFORCED BATTLE PROTOCOLS** [PARALLEL PAIR: 2002] (Enhanced) - +120-200 HP, +80-140 armor, -10% speed
 **3015 - SHIELD OVERCHARGE** (Enhanced) - +150-250 shield capacity, +30-50 shield regen, -12% HP
 **3016 - DAMAGE ABSORPTION SERUM** (Enhanced) - +30-60 damage absorption, +100-180 HP, -10% speed
 **3017 - INVULNERABILITY THRESHOLD** (Advanced) - Immune to damage when above 90% HP, +200-350 HP, -15% gun/melee damage
@@ -504,10 +520,10 @@ This document provides a comprehensive reference for all 155 mods in the HIOX St
 ### METABOLIC ENHANCERS (10 mods, IDs 3020-3029)
 *Regen, stamina, resources, efficiency*
 
-**3020 - REGENERATION ACCELERATOR** (Standard) - +10-18 HP regen/sec
-**3021 - ENERGY METABOLISM BOOST** (Standard) - +15-28 energy regen/sec
-**3022 - STAMINA OPTIMIZER** (Standard) - +20-35 stamina regen/sec
-**3023 - RESOURCE RECLAIMER** (Enhanced) - +15-25% resource efficiency, +12-22 HP/energy regen
+**3020 - REGENERATIVE NANITE INJECTION** [PARALLEL PAIR: 2015] (Standard) - +10-18 HP regen/sec
+**3021 - ENDURANCE ENHANCEMENT SERUM** [PARALLEL PAIR: 2016] (Standard) - +15-28 energy regen/sec
+**3022 - REACTOR EFFICIENCY BOOSTER** [PARALLEL PAIR: 2036] (Standard) - +20-35 stamina regen/sec
+**3023 - RAPID RECALIBRATION SERUM** [PARALLEL PAIR: 2037] (Enhanced) - +15-25% resource efficiency, +12-22 HP/energy regen
 **3024 - RAPID RECOVERY FORMULA** (Enhanced) - +25-42 HP regen/sec, +20-38 energy regen/sec, -10% max HP
 **3025 - COOLDOWN OPTIMIZER** (Enhanced) - +25-40% cooldown reduction, +20-35% resource efficiency, -12% gun damage
 **3026 - PERPETUAL ENERGY CORE** (Advanced) - +40-70 energy regen/sec, +300-500 energy capacity, -15% HP
