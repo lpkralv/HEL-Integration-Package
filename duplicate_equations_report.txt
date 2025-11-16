@@ -1,0 +1,91 @@
+Parsed 156 mods from file
+
+================================================================================
+PASS 1: EXACT STRING MATCHES
+================================================================================
+
+Found 9 duplicate groups with exact string matches
+
+
+Duplicate Group 1:
+Equation: B_ENERGYREGEN = B_ENERGYREGEN val1 +
+Mod IDs and Names (2 mods):
+  - ID 2036: REACTOR OPTIMIZATION CORE
+  - ID 3022: REACTOR EFFICIENCY BOOSTER
+
+Duplicate Group 2:
+Equation: B_HPREGEN = B_HPREGEN val1 +
+Mod IDs and Names (2 mods):
+  - ID 2015: NANITE RECONSTRUCTION MATRIX
+  - ID 3020: REGENERATIVE NANITE INJECTION
+
+Duplicate Group 3:
+Equation: B_STAMINAREGEN = B_STAMINAREGEN val1 +
+Mod IDs and Names (2 mods):
+  - ID 2016: STAMINA RECOVERY PROTOCOLS
+  - ID 3021: ENDURANCE ENHANCEMENT SERUM
+
+Duplicate Group 4:
+Equation: M_ARMOR = M_ARMOR val1 +
+Mod IDs and Names (2 mods):
+  - ID 2001: ABLATIVE PLATING MATRIX
+  - ID 3011: ABLATIVE ARMOR NANITES
+
+Duplicate Group 5:
+Equation: M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION val1 +
+Mod IDs and Names (2 mods):
+  - ID 2037: COOLDOWN CALIBRATOR
+  - ID 3023: RAPID RECALIBRATION SERUM
+
+Duplicate Group 6:
+Equation: M_CRITCHANCE = M_CRITCHANCE val1 +
+Mod IDs and Names (2 mods):
+  - ID 2021: PRECISION TARGETING MATRIX
+  - ID 3003: PRECISION TARGETING STIMULANT
+
+Duplicate Group 7:
+Equation: M_GUNDAMAGE = M_GUNDAMAGE val1 +
+Mod IDs and Names (2 mods):
+  - ID 2022: DAMAGE AMPLIFIER CORE
+  - ID 3000: DAMAGE ENHANCEMENT SERUM
+
+Duplicate Group 8:
+Equation: M_HP = M_HP val1 +
+Mod IDs and Names (2 mods):
+  - ID 2000: REINFORCED NANITE SHELL
+  - ID 3010: STRUCTURAL FORTIFICATION SERUM
+
+Duplicate Group 9:
+Equation: M_HP = M_HP val1 +; M_ARMOR = M_ARMOR val2 +; M_PLAYERSPEED = M_PLAYERSPEED -0.1 +
+Mod IDs and Names (2 mods):
+  - ID 2002: STRUCTURAL REINFORCEMENT PROTOCOLS
+  - ID 3014: REINFORCED BATTLE PROTOCOLS
+
+================================================================================
+PASS 2: STATEMENT ORDERING DIFFERENCES
+================================================================================
+
+Found 0 duplicate groups with statement ordering differences
+(excluding exact matches from Pass 1)
+
+
+================================================================================
+PASS 3: SEMANTIC EQUIVALENCE
+================================================================================
+
+Found 0 groups with semantic equivalence
+(excluding exact matches and statement ordering differences)
+
+
+================================================================================
+SUMMARY
+================================================================================
+
+Pass 1 (Exact matches): 9 duplicate groups
+Pass 2 (Statement ordering): 0 duplicate groups
+Pass 3 (Semantic equivalence): 0 duplicate groups
+
+Total mods analyzed: 156
+Mods involved in Pass 1 duplicates: 18
+Mods involved in Pass 2 duplicates: 0
+Mods involved in Pass 3 duplicates: 0
