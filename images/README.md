@@ -1,201 +1,284 @@
-# Weapon Image Assets
+# Weapon and Mod Image Assets
 
-This directory contains fully rendered weapon images for all weapons defined in the HEL Integration Package, available in both PNG and SVG formats.
+This directory contains fully rendered images for **ALL 156 mods** defined in the HEL Integration Package, available in PNG format.
 
 ## Overview
 
-Weapon images are available in two formats:
+**Total Assets**: 156 PNG images (1.8MB)
+**Categories**:
+- 25 Weapons (Type 2)
+- 17 Melee Weapons/Deployables (Type 4)
+- 63 Nanites (Type 0)
+- 51 Syringes/Upgrades (Type 10)
 
-### PNG Format (Recommended for Production)
+### Image Format
 - **Dimensions**: 800x400 pixels
 - **Format**: PNG (Portable Network Graphics)
-- **Quality**: Full-color, fully rendered with gradients, shadows, and effects
+- **Quality**: Full-color, fully rendered with gradients, particle effects, and professional labels
+- **File Size**: 8-14 KB per image (optimized)
 - **Features**:
-  - Detailed weapon illustrations
   - Type-specific gradient backgrounds
-  - Professional text labels with shadows
-  - Optimized file size (6-14 KB per image)
-  - Ready for game UI, documentation, and marketing materials
+  - Category-appropriate visual designs (weapons, nanites, syringes)
+  - Professional text labels with drop shadows
+  - Mod ID and type identification
+  - Color-coded by mod function and category
 
-### SVG Format (Editable Vector Graphics)
-- **Dimensions**: 200x100 pixels
-- **Format**: SVG 1.1 (Scalable Vector Graphics)
-- **Purpose**: Placeholder/prototype images
-- **Features**:
-  - Scalable to any size without quality loss
-  - Small file size
-  - Easy to modify and customize
-  - Text-based format suitable for version control
+## Complete Mod Catalog
 
-## Weapon Image Catalog
+### Weapons (Type 2) - 25 Items
+Energy and ballistic weapon systems
 
-### Gun-Type Weapons (Type 2)
+| ID Range | Count | Description |
+|----------|-------|-------------|
+| 515-524 | 10 | Energy Weapons (Lasers, Plasma, Beams) |
+| 1000-1014 | 15 | Ballistic Weapons (Kinetic, Precision, Burst) |
 
-| ID | Weapon Name | PNG File | SVG File | Description |
-|----|-------------|----------|----------|-------------|
-| 500 | STANDARD GUN | `weapon_500_standard_gun.png` | `weapon_500_standard_gun.svg` | Standard small size assault rifle gun |
-| 501 | SHOTGUN | `weapon_501_shotgun.png` | `weapon_501_shotgun.svg` | Fires group of bullets in a burst with reduced accuracy |
-| 502 | SNIPER | `weapon_502_sniper.png` | `weapon_502_sniper.svg` | High damage, perfect accuracy, slower fire rate with scope |
-| 503 | MACHINE GUN | `weapon_503_machine_gun.png` | `weapon_503_machine_gun.svg` | High fire rate with ammo belt, includes bipod |
-| 504 | GRENADE LAUNCHER | `weapon_504_grenade_launcher.png` | `weapon_504_grenade_launcher.svg` | Fires grenades with explosion radius |
-| 505 | AUTO-TURRET | `weapon_505_auto_turret.png` | `weapon_505_auto_turret.svg` | Shoulder-mounted auto-turret with twin barrels |
-| 506 | SHARD CUBE | `weapon_506_shard_cube.png` | `weapon_506_shard_cube.svg` | Floating cube firing random projectiles in all directions |
-| 507 | CHARGE LASER | `weapon_507_charge_laser.png` | `weapon_507_charge_laser.svg` | Charges a laser that fires until released |
-| 508 | ENERGY BUBBLER | `weapon_508_energy_bubbler.png` | `weapon_508_energy_bubbler.svg` | Fires slow-moving energy bubbles |
-| 509 | CORRUPTING VIRUS | `weapon_509_corrupting_virus.png` | `weapon_509_corrupting_virus.svg` | Fires virus cloud with spreading infection |
-| 510 | HIOX-029 HOME BEACON | `weapon_510_hiox_029_home_beacon.png` | `weapon_510_hiox_beacon.svg` | Beacon device that recruits HIOX-029 minions |
-| 511 | ETCHING LASER | `weapon_511_etching_laser.png` | `weapon_511_etching_laser.svg` | Precision laser with instant hit mechanics |
+**Example Files:**
+- `mod_515_coherent_light_projector.png`
+- `mod_516_plasma_discharge_rifle.png`
+- `mod_1000_kinetic_accelerator_matrix.png`
+- `mod_1013_adaptive_ballistic_nexus.png`
 
-### Melee Weapons (Type 4)
+### Melee Weapons & Deployables (Type 4) - 17 Items
+Close-combat and autonomous construct systems
 
-| ID | Weapon Name | PNG File | SVG File | Description |
-|----|-------------|----------|----------|-------------|
-| 800 | STANDARD SWORD | `weapon_800_standard_sword.png` | `weapon_800_standard_sword.svg` | Standard sword with short range and medium damage |
+| ID Range | Count | Description |
+|----------|-------|-------------|
+| 1034-1043 | 10 | Deployable Constructs (Drones, Platforms, Swarms) |
+| 1048-1054 | 7 | Melee Edge Systems (Blades, Kinetic Strikes) |
+
+**Example Files:**
+- `mod_1034_basic_combat_drone_assembly.png`
+- `mod_1048_kinetic_blade_matrix.png`
+- `mod_1054_chromatic_coherence_edge.png`
+
+### Nanites (Type 0) - 63 Items
+Nanomachine enhancement systems organized by function
+
+| ID Range | Count | Category | Color Scheme |
+|----------|-------|----------|--------------|
+| 1025-1033 | 9 | Explosive Ordnance | Orange-Brown |
+| 1044-1047 | 4 | Multi-Mode Combat | Gray-Blue |
+| 2000-2007 | 8 | Structural/Armor | Gray-Blue |
+| 2008-2014 | 7 | Mobility Enhancement | Green |
+| 2015-2020 | 6 | Regeneration Systems | Cyan-Green |
+| 2021-2028 | 8 | Offensive Amplifiers | Red |
+| 2029-2034 | 6 | Elemental Resistance | Purple |
+| 2035-2042 | 8 | Resource Management | Blue |
+| 2043-2049 | 7 | Tactical Systems | Yellow-Gray |
+
+**Example Files:**
+- `mod_1025_fragmentation_launcher.png` (Explosive)
+- `mod_2000_reinforced_nanite_shell.png` (Structural)
+- `mod_2008_kinetic_accelerator_nanites.png` (Mobility)
+- `mod_2015_nanite_reconstruction_matrix.png` (Regeneration)
+- `mod_2021_precision_targeting_matrix.png` (Offensive)
+- `mod_2029_thermal_insulation_matrix.png` (Resistance)
+- `mod_2035_energy_matrix_amplifier.png` (Resource)
+- `mod_2044_predictive_evasion_core.png` (Tactical)
+
+### Syringes/Upgrades (Type 10) - 51 Items
+Injectable enhancement serums organized by effect type
+
+| ID Range | Count | Category | Liquid Color |
+|----------|-------|----------|--------------|
+| 3000-3009 | 10 | Combat Enhancement | Red |
+| 3010-3019 | 10 | Defensive Protocols | Blue |
+| 3020-3029 | 10 | Metabolic Boosters | Green |
+| 3030-3038 | 9 | Elemental Infusion | Magenta |
+| 3039-3046 | 8 | Tactical Optimization | Yellow |
+| 3047-3050 | 4 | Exotic Variants | Cyan |
+
+**Example Files:**
+- `mod_3000_damage_enhancement_serum.png` (Combat)
+- `mod_3010_structural_fortification_serum.png` (Defensive)
+- `mod_3020_regenerative_nanite_injection.png` (Metabolic)
+- `mod_3030_thermal_ignition_serum.png` (Elemental)
+- `mod_3039_targeting_optimization_serum.png` (Tactical)
+- `mod_3047_berserker_rage_protocol.png` (Exotic)
 
 ## Design Specifications
 
-### PNG Images (Full-Color Rendered)
-- **Dimensions**: 800x400 pixels
-- **Format**: PNG with alpha channel support
-- **Color depth**: 24-bit RGB
-- **Features**:
-  - Type-specific gradient backgrounds
-  - Detailed weapon geometry with outlines and fills
-  - Visual effects (glows, particles, beams, shadows)
-  - Anti-aliased text rendering
-  - Professional drop shadows on labels
+### Visual Themes by Type
 
-### SVG Images (Vector Graphics)
-- **Dimensions**: 200x100 pixels
-- **Format**: SVG 1.1
+**Weapons (Type 2)**
+- Blue-purple gradient backgrounds
+- Weapon silhouettes with barrels, handles, energy emitters
+- High-tech industrial aesthetic
+
+**Melee/Deployables (Type 4)**
+- Red-brown gradient backgrounds
+- Blade shapes for melee, construct shapes for deployables
+- Aggressive combat styling
+
+**Nanites (Type 0)**
+- Function-specific gradient backgrounds
+- Swarm particle effects with central core
+- Orbiting nanite particles
+- Color-coded by category (explosive, structural, mobility, etc.)
+
+**Syringes (Type 10)**
+- Category-specific gradient backgrounds
+- Syringe/injector design with glass body
+- Colored liquid indicating effect type
+- Medical/pharmaceutical aesthetic
 
 ### Color Schemes
 
-#### PNG Gradient Backgrounds (by weapon type)
-- **Gun weapons**: Dark blue-gray gradient `(30,35,40) → (15,20,25)`
-- **Turret**: Blue-tinted gradient `(35,35,50) → (20,20,35)`
-- **Energy weapons**: Purple-tinted gradient `(25,30,50) → (15,20,35)`
-- **Bio weapons**: Green-tinted gradient `(25,40,25) → (15,25,15)`
-- **Summon weapons**: Dark blue gradient `(30,30,45) → (20,20,30)`
-- **Melee weapons**: Brown-tinted gradient `(35,30,25) → (20,15,10)`
+#### Background Gradients
+- **Weapons**: `(25,30,50) → (15,20,35)` - Blue-purple
+- **Melee**: `(50,25,25) → (30,15,15)` - Red-brown
+- **Nanites**: Varies by category (9 different schemes)
+- **Syringes**: Varies by effect type (6 different schemes)
 
-#### Common Color Elements
-- **Text (title)**: White `#FFFFFF` with black shadow for contrast
-- **Text (ID)**: Light gray `#AAAAAA` with black shadow
-- **Energy effects**:
-  - Cyan: `(100,255,255)`
-  - Green: `(100,255,100)`
-  - Red: `(255,100,100)`
-  - Blue: `(100,150,255)`
-  - Magenta: `(255,100,255)`
-
-### Image Elements
-Each weapon image includes:
-1. **Weapon illustration** - Detailed representation of the weapon type with appropriate visual style
-2. **Weapon name** - Displayed at top center with shadow effect
-3. **Mod ID** - Displayed at bottom center in gray text
-
-### Visual Design Themes
-
-#### Conventional Weapons (500-504)
-- Military/industrial color palette (grays, browns, greens)
-- Realistic proportions and components
-- Traditional gun shapes (barrel, body, handle, trigger)
-
-#### Advanced Tech Weapons (505-511)
-- Energy-based visual effects (glows, particles, beams)
-- Futuristic color schemes (blues, cyans, magentas)
-- Sci-fi elements (floating cubes, energy chambers, laser beams)
-
-#### Melee Weapons (800)
-- Medieval/fantasy styling
-- Metallic finishes and highlights
-- Traditional sword components (blade, guard, grip, pommel)
-
-## Usage
-
-These images can be used for:
-- **PNG images** (recommended):
-  - Production game UI weapon selection screens
-  - High-quality inventory displays
-  - Marketing materials and promotional content
-  - Documentation and player guides
-  - Web displays and social media
-- **SVG images**:
-  - Quick prototyping and mockups
-  - Developer documentation
-  - Editable templates for custom artwork
-  - Version control friendly asset management
+#### Visual Elements
+- **Text Labels**: White with black drop shadow for readability
+- **Mod ID/Type**: Light gray `(170,170,170)`
+- **Nanite Particles**: Category-specific (orange, blue, green, cyan, red, purple, yellow)
+- **Syringe Liquids**: Effect-specific (red, blue, green, magenta, yellow, cyan)
 
 ## Image Generation
 
-PNG images are automatically generated using the Python script `generate_weapon_images.py` at the repository root.
+### Automated Generation System
 
-### Regenerating Images
+All images are generated using the Python script `generate_all_weapon_images.py` which reads from `mod_list.csv`.
 
-To regenerate all weapon images:
-
+#### Generate All Images (156 total)
 ```bash
-python3 generate_weapon_images.py
+python3 generate_all_weapon_images.py
 ```
 
-Requirements:
+#### Generate by Type (for parallel processing)
+```bash
+# Weapons only (25 images)
+python3 generate_all_weapon_images.py 2
+
+# Melee/Deployables only (17 images)
+python3 generate_all_weapon_images.py 4
+
+# Nanites only (63 images)
+python3 generate_all_weapon_images.py 0
+
+# Syringes/Upgrades only (51 images)
+python3 generate_all_weapon_images.py 10
+```
+
+### Requirements
 - Python 3.7+
-- Pillow library (`pip install Pillow`)
+- Pillow library: `pip install Pillow`
+- `mod_list.csv` file (generated from DELIVERABLE-ModsData.asset)
 
-The script generates 800x400 pixel PNG images with:
-- Type-specific gradient backgrounds
-- Detailed weapon illustrations
-- Professional text rendering
-- Optimized file sizes
+### Parallel Generation Workflow
 
-### Customizing the Generator
-
-To modify the generated images:
-1. Edit `generate_weapon_images.py`
-2. Modify the weapon drawing functions (e.g., `draw_sniper()`)
-3. Adjust colors in `get_background_colors()`
-4. Change dimensions by updating `WIDTH` and `HEIGHT` constants
-5. Run the script to regenerate all images
-
-## Customization
-
-### PNG Customization
-- Edit `generate_weapon_images.py` to modify weapon illustrations
-- Adjust gradients, colors, and effects in the drawing functions
-- Regenerate images using the Python script
-
-### SVG Customization
-1. Open the SVG file in any text editor or vector graphics editor (Inkscape, Adobe Illustrator, etc.)
-2. Modify colors by changing hex values in fill and stroke attributes
-3. Adjust shapes by modifying SVG path/shape elements
-4. Scale to desired size (SVG maintains quality at any resolution)
+The complete image set was generated using parallel subagents:
+1. Extract mod data: `python3 extract_mod_list.py`
+2. Generate images in parallel using 4 concurrent processes
+3. Each process handles one mod type independently
+4. Total generation time: ~30 seconds for all 156 images
 
 ## File Naming Convention
 
-Files follow the pattern: `weapon_[MODID]_[name_in_lowercase].[ext]`
+Files follow the pattern: `mod_[MODID]_[name_in_lowercase].[ext]`
 
 Examples:
-- PNG: `weapon_502_sniper.png`
-- SVG: `weapon_502_sniper.svg`
+- `mod_515_coherent_light_projector.png`
+- `mod_2000_reinforced_nanite_shell.png`
+- `mod_3030_thermal_ignition_serum.png`
 
-## Future Enhancements
+## Usage
 
-Potential improvements for production use:
-- **Animation support**: Animated PNGs (APNG) or sprite sheets
-- **Multiple views**: Side, top, isometric perspectives
-- **Texture improvements**: More detailed shading and highlights
-- **3D renders**: Integration with 3D modeling tools
-- **Sprite sheet generation**: Automated sprite atlas creation for game engines
-- **Additional formats**: WebP for web optimization, JPEG for photos
-- **Variant generation**: Automatic color scheme variations
+### Production Use Cases
+- Game UI mod selection screens
+- Inventory and loadout displays
+- Mod catalog and documentation
+- Marketing materials
+- Player guides and wikis
+- Testing and development
+
+### Loading Images
+```python
+# Python example
+from PIL import Image
+
+# Load by mod ID
+mod_id = 515
+img = Image.open(f'images/mod_{mod_id}_coherent_light_projector.png')
+
+# Or iterate through all
+import glob
+for filepath in glob.glob('images/mod_*.png'):
+    print(filepath)
+```
+
+## Customization
+
+### Modify Visual Appearance
+1. Edit `generate_all_weapon_images.py`
+2. Modify drawing functions:
+   - `draw_generic_weapon()` for weapon appearance
+   - `draw_generic_melee()` for melee weapons
+   - `draw_nanite_swarm()` for nanite particle effects
+   - `draw_syringe()` for syringe design
+3. Adjust `get_background_colors()` for gradient themes
+4. Update constants (WIDTH, HEIGHT) for different dimensions
+5. Regenerate images using the script
+
+### Add New Mod Types
+1. Add entries to `mod_list.csv`
+2. Define new type constant in script
+3. Add case to `get_background_colors()`
+4. Create new drawing function
+5. Add type to `generate_mod_image()` conditional
+
+## File Structure
+
+```
+images/
+├── README.md                                    # This file
+├── mod_515_coherent_light_projector.png        # Weapons (515-524)
+├── mod_1000_kinetic_accelerator_matrix.png     # Weapons (1000-1014)
+├── mod_1034_basic_combat_drone_assembly.png    # Melee/Deployables (1034-1054)
+├── mod_1025_fragmentation_launcher.png         # Nanites (1025-2049)
+├── mod_3000_damage_enhancement_serum.png       # Syringes (3000-3050)
+└── ... (156 PNG files total)
+```
+
+## Statistics
+
+- **Total Images**: 156
+- **Total Size**: 1.8 MB
+- **Average File Size**: ~11.5 KB
+- **Image Dimensions**: 800x400 pixels each
+- **Color Depth**: 24-bit RGB
+- **Format**: PNG with optimization
 
 ## Related Files
 
-- Source data: `/Assets/ModsData.csv`
-- Asset definitions: `/Assets/ModsData.asset`
-- Documentation: `/CLAUDE.md`
+- **Source Data**: `/DELIVERABLE-ModsData.asset` (156 mod definitions)
+- **Extraction Script**: `/extract_mod_list.py` (YAML to CSV converter)
+- **Mod List**: `/mod_list.csv` (simplified mod database)
+- **Generator**: `/generate_all_weapon_images.py` (image generation engine)
+- **Documentation**: `/CLAUDE.md` (project overview)
+
+## Version History
+
+- **v2.0** - Complete 156-mod image set with all categories
+  - Added 143 new images (weapons, nanites, syringes, deployables)
+  - Parallel generation using subagents
+  - Category-specific visual themes
+  - Enhanced README with complete catalog
+
+- **v1.0** - Initial 13 weapon images
+  - Basic weapons and melee sword
+  - SVG prototypes
 
 ## License
 
-These placeholder images are part of the HEL Integration Package and follow the same license as the repository.
+These images are part of the HEL Integration Package and follow the same license as the repository.
+
+---
+
+**Generated**: 2025-11-16
+**Script**: `generate_all_weapon_images.py`
+**Format**: PNG 800x400 pixels
+**Total Assets**: 156 images
