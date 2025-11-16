@@ -40,7 +40,7 @@ Offensive protocol injection increasing projectile damage output by val1% throug
 
 **HEL Equation:**
 ```
-M_GUNDAMAGE = M_GUNDAMAGE + val1
+M_GUNDAMAGE = M_GUNDAMAGE val1 +
 ```
 
 **Values:**
@@ -73,7 +73,7 @@ Attack speed protocol injection increasing projectile firing frequency by val1 s
 
 **HEL Equation:**
 ```
-B_SHOTSPERSEC = B_SHOTSPERSEC + val1
+B_SHOTSPERSEC = B_SHOTSPERSEC val1 +
 ```
 
 **Values:**
@@ -106,7 +106,7 @@ Combat reflex enhancement increasing melee attack execution speed by val1% throu
 
 **HEL Equation:**
 ```
-M_MELEESPEED = M_MELEESPEED + val1
+M_MELEESPEED = M_MELEESPEED val1 +
 ```
 
 **Values:**
@@ -139,7 +139,7 @@ Targeting protocol enhancement increasing critical strike probability by val1% t
 
 **HEL Equation:**
 ```
-M_CRITCHANCE = M_CRITCHANCE + val1
+M_CRITCHANCE = M_CRITCHANCE val1 +
 ```
 
 **Values:**
@@ -172,7 +172,7 @@ Combat enhancement injection increasing melee strike damage by val1% through kin
 
 **HEL Equation:**
 ```
-M_MELEEDAMAGE = M_MELEEDAMAGE + val1
+M_MELEEDAMAGE = M_MELEEDAMAGE val1 +
 ```
 
 **Values:**
@@ -207,7 +207,7 @@ Dual-system injection increasing gun damage by val1% and fire rate by val2 shots
 
 **HEL Equation:**
 ```
-M_GUNDAMAGE = M_GUNDAMAGE + val1; B_SHOTSPERSEC = B_SHOTSPERSEC + val2; M_ARMOR = M_ARMOR + (-0.15)
+M_GUNDAMAGE = M_GUNDAMAGE val1 +; B_SHOTSPERSEC = B_SHOTSPERSEC val2 +; M_ARMOR = M_ARMOR -0.15 +
 ```
 
 **Values:**
@@ -241,7 +241,7 @@ Hybrid offensive injection increasing melee damage by val1% and attack speed by 
 
 **HEL Equation:**
 ```
-M_MELEEDAMAGE = M_MELEEDAMAGE + val1; M_MELEESPEED = M_MELEESPEED + val2; M_HP = M_HP + (-0.1)
+M_MELEEDAMAGE = M_MELEEDAMAGE val1 +; M_MELEESPEED = M_MELEESPEED val2 +; M_HP = M_HP -0.1 +
 ```
 
 **Values:**
@@ -275,7 +275,7 @@ Precision enhancement injection increasing critical strike chance by val1% and c
 
 **HEL Equation:**
 ```
-M_CRITCHANCE = M_CRITCHANCE + val1; M_CRITDAMAGE = M_CRITDAMAGE + val2; M_PLAYERSPEED = M_PLAYERSPEED + (-0.1)
+M_CRITCHANCE = M_CRITCHANCE val1 +; M_CRITDAMAGE = M_CRITDAMAGE val2 +; M_PLAYERSPEED = M_PLAYERSPEED -0.1 +
 ```
 
 **Values:**
@@ -311,7 +311,7 @@ Progressive combat enhancement granting val1% gun and melee damage per unique co
 
 **HEL Equation:**
 ```
-M_GUNDAMAGE = M_GUNDAMAGE + T_STACKS val1 *; M_MELEEDAMAGE = M_MELEEDAMAGE + T_STACKS val1 *; M_ARMOR = M_ARMOR + (-0.15)
+M_GUNDAMAGE = M_GUNDAMAGE + T_STACKS val1 *; M_MELEEDAMAGE = M_MELEEDAMAGE + T_STACKS val1 *; M_ARMOR = M_ARMOR -0.15 +
 ```
 
 **Values:**
@@ -352,7 +352,7 @@ Experimental combat override granting val1% gun damage, val2% melee damage, and 
 
 **HEL Equation:**
 ```
-M_GUNDAMAGE = M_GUNDAMAGE + val1; M_MELEEDAMAGE = M_MELEEDAMAGE + val2; B_SHOTSPERSEC = B_SHOTSPERSEC + val1; M_HP = M_HP + (-0.3); M_ARMOR = M_ARMOR + (-0.4); M_HPREGEN = M_HPREGEN + (-0.6)
+M_GUNDAMAGE = M_GUNDAMAGE val1 +; M_MELEEDAMAGE = M_MELEEDAMAGE val2 +; B_SHOTSPERSEC = B_SHOTSPERSEC val1 +; M_HP = M_HP -0.3 +; M_ARMOR = M_ARMOR -0.4 +; M_HPREGEN = M_HPREGEN -0.6 +
 ```
 
 **Values:**

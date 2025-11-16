@@ -41,7 +41,7 @@ Metabolic enhancer serum accelerating nanite reconstruction protocols, restoring
 
 **HEL Equation:**
 ```
-B_HPREGEN = B_HPREGEN + val1
+B_HPREGEN = B_HPREGEN val1 +
 ```
 
 **Values:**
@@ -75,7 +75,7 @@ Stamina optimization injection enhancing energy reclamation systems, restoring v
 
 **HEL Equation:**
 ```
-B_STAMINAREGEN = B_STAMINAREGEN + val1
+B_STAMINAREGEN = B_STAMINAREGEN val1 +
 ```
 
 **Values:**
@@ -109,7 +109,7 @@ Energy optimization injection accelerating reactor output cycles, generating val
 
 **HEL Equation:**
 ```
-B_ENERGYREGEN = B_ENERGYREGEN + val1
+B_ENERGYREGEN = B_ENERGYREGEN val1 +
 ```
 
 **Values:**
@@ -143,7 +143,7 @@ System calibration accelerator reducing tactical ability cooldown timers by val1
 
 **HEL Equation:**
 ```
-M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION + val1
+M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION val1 +
 ```
 
 **Values:**
@@ -177,7 +177,7 @@ Metabolic efficiency enhancer reducing all resource consumption by val1% through
 
 **HEL Equation:**
 ```
-M_RESOURCEEFFICIENCY = M_RESOURCEEFFICIENCY + val1
+M_RESOURCEEFFICIENCY = M_RESOURCEEFFICIENCY val1 +
 ```
 
 **Values:**
@@ -213,7 +213,7 @@ Dual-spectrum metabolic enhancer restoring val1 HP per second and val2 stamina p
 
 **HEL Equation:**
 ```
-B_HPREGEN = B_HPREGEN + val1; B_STAMINAREGEN = B_STAMINAREGEN + val2; M_HP = M_HP + (-0.08)
+B_HPREGEN = B_HPREGEN val1 +; B_STAMINAREGEN = B_STAMINAREGEN val2 +; M_HP = M_HP -0.08 +
 ```
 
 **Values:**
@@ -246,7 +246,7 @@ Dual-system enhancer providing val1 energy per second and reducing cooldowns by 
 
 **HEL Equation:**
 ```
-B_ENERGYREGEN = B_ENERGYREGEN + val1; M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION + val2; M_PLAYERSPEED = M_PLAYERSPEED + (-0.1)
+B_ENERGYREGEN = B_ENERGYREGEN val1 +; M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION val2 +; M_PLAYERSPEED = M_PLAYERSPEED -0.1 +
 ```
 
 **Values:**
@@ -279,7 +279,7 @@ Tri-spectrum metabolic accelerator restoring val1 HP/sec, val2 stamina/sec, and 
 
 **HEL Equation:**
 ```
-B_HPREGEN = B_HPREGEN + val1; B_STAMINAREGEN = B_STAMINAREGEN + val2; B_ENERGYREGEN = B_ENERGYREGEN + 15; M_SHIELDREGENRATE = M_SHIELDREGENRATE + (-0.2); M_ARMOR = M_ARMOR + (-0.12)
+B_HPREGEN = B_HPREGEN val1 +; B_STAMINAREGEN = B_STAMINAREGEN val2 +; B_ENERGYREGEN = B_ENERGYREGEN 15 +; M_SHIELDREGENRATE = M_SHIELDREGENRATE -0.2 +; M_ARMOR = M_ARMOR -0.12 +
 ```
 
 **Values:**
@@ -314,7 +314,7 @@ Percentage-based regeneration matrix restoring val1% of max HP per second and va
 
 **HEL Equation:**
 ```
-B_HPREGEN = B_HPREGEN + T_HP val1 * 0.01 *; B_STAMINAREGEN = B_STAMINAREGEN + T_MAXSTAMINA val2 * 0.01 *; M_RESOURCEEFFICIENCY = M_RESOURCEEFFICIENCY + T_HPREGEN T_STAMINAREGEN + 10 / 0.01 *; M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.2)
+B_HPREGEN = B_HPREGEN + T_HP val1 * 0.01 *; B_STAMINAREGEN = B_STAMINAREGEN + T_MAXSTAMINA val2 * 0.01 *; M_RESOURCEEFFICIENCY = M_RESOURCEEFFICIENCY + T_HPREGEN T_STAMINAREGEN + 10 / 0.01 *; M_SHOTSPERSEC = M_SHOTSPERSEC -0.2 +
 ```
 
 **Values:**
@@ -350,7 +350,7 @@ Experimental infinite-sustain reactor providing val1 HP/sec, val2 energy/sec, 80
 
 **HEL Equation:**
 ```
-B_HPREGEN = B_HPREGEN + val1; B_ENERGYREGEN = B_ENERGYREGEN + val2; M_RESOURCEEFFICIENCY = M_RESOURCEEFFICIENCY + 0.8; M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION + 0.45; M_GUNDAMAGE = M_GUNDAMAGE + (-0.3); M_MELEEDAMAGE = M_MELEEDAMAGE + (-0.3); M_HP = M_HP + (-0.15)
+B_HPREGEN = B_HPREGEN val1 +; B_ENERGYREGEN = B_ENERGYREGEN val2 +; M_RESOURCEEFFICIENCY = M_RESOURCEEFFICIENCY 0.8 +; M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION 0.45 +; M_GUNDAMAGE = M_GUNDAMAGE -0.3 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.3 +; M_HP = M_HP -0.15 +
 ```
 
 **Values:**

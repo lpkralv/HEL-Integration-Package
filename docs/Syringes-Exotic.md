@@ -39,7 +39,7 @@ Experimental fury injection granting val1% gun damage and val2% melee damage whe
 
 **HEL Equation:**
 ```
-M_GUNDAMAGE = M_GUNDAMAGE + (T_HP S_HP 0.5 * <) val1 *; M_MELEEDAMAGE = M_MELEEDAMAGE + (T_HP S_HP 0.5 * <) val2 *; M_HP = M_HP + (-0.15)
+M_GUNDAMAGE = M_GUNDAMAGE + (T_HP S_HP 0.5 * <) val1 *; M_MELEEDAMAGE = M_MELEEDAMAGE + (T_HP S_HP 0.5 * <) val2 *; M_HP = M_HP -0.15 +
 ```
 
 **Values:**
@@ -76,7 +76,7 @@ Experimental randomization protocol granting val1% damage variance (random damag
 
 **HEL Equation:**
 ```
-M_GUNDAMAGE = M_GUNDAMAGE + RAND val1 * -0.5 +; M_MELEEDAMAGE = M_MELEEDAMAGE + RAND val1 * -0.5 +; M_CRITCHANCE = M_CRITCHANCE + val2; M_ACCURACY = M_ACCURACY + (-0.2)
+M_GUNDAMAGE = M_GUNDAMAGE + RAND val1 * -0.5 +; M_MELEEDAMAGE = M_MELEEDAMAGE + RAND val1 * -0.5 +; M_CRITCHANCE = M_CRITCHANCE val2 +; M_ACCURACY = M_ACCURACY -0.2 +
 ```
 
 **Values:**
@@ -121,7 +121,7 @@ Ultimate mobility transformation converting movement speed into weapon damage, g
 
 **HEL Equation:**
 ```
-M_GUNDAMAGE = M_GUNDAMAGE + T_PLAYERSPEED 0.01 * val1 *; M_MELEEDAMAGE = M_MELEEDAMAGE + T_PLAYERSPEED 0.01 * val1 *; M_GUNDAMAGE = M_GUNDAMAGE + (-0.25); M_MELEEDAMAGE = M_MELEEDAMAGE + (-0.25); M_HP = M_HP + (-0.2)
+M_GUNDAMAGE = M_GUNDAMAGE + T_PLAYERSPEED 0.01 * val1 *; M_MELEEDAMAGE = M_MELEEDAMAGE + T_PLAYERSPEED 0.01 * val1 *; M_GUNDAMAGE = M_GUNDAMAGE -0.25 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.25 +; M_HP = M_HP -0.2 +
 ```
 
 **Values:**
@@ -160,7 +160,7 @@ Ultimate defensive transformation converting armor into thorns damage, granting 
 
 **HEL Equation:**
 ```
-B_THORNDAMAGE = B_THORNDAMAGE + T_ARMOR val1 *; M_ARMOR = M_ARMOR + val2; M_GUNDAMAGE = M_GUNDAMAGE + (-0.3); M_MELEEDAMAGE = M_MELEEDAMAGE + (-0.25)
+B_THORNDAMAGE = B_THORNDAMAGE + T_ARMOR val1 *; M_ARMOR = M_ARMOR val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.3 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.25 +
 ```
 
 **Values:**
