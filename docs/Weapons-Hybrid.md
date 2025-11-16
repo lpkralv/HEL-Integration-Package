@@ -40,7 +40,7 @@ Adaptive weapon platform switching between precision mode (high damage, slow fir
 
 **Equation:**
 ```
-M_GUNDAMAGE = M_GUNDAMAGE + (T_ACCURACY 0.7 >) val1 *; M_SHOTSPERSEC = M_SHOTSPERSEC + (T_ACCURACY 0.7 <) val2 *; M_ACCURACY = M_ACCURACY + (-0.15)
+M_GUNDAMAGE = M_GUNDAMAGE T_ACCURACY 0.7 > val1 * +; M_SHOTSPERSEC = M_SHOTSPERSEC T_ACCURACY 0.7 < val2 * +; M_ACCURACY = M_ACCURACY -0.15 +
 ```
 
 **Values:**
@@ -96,7 +96,7 @@ Reconfigurable weapon platform cycling between ballistic (piercing), energy (ele
 
 **Equation:**
 ```
-B_PIERCINGSHOTS = B_PIERCINGSHOTS + 2; B_IGNITECHANCE = B_IGNITECHANCE + 0.3; B_EXPLOSIONRADIUS = B_EXPLOSIONRADIUS + 1.5; M_GUNDAMAGE = M_GUNDAMAGE + val2; M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.25); M_RELOADSPEED = M_RELOADSPEED + (-0.3)
+B_PIERCINGSHOTS = B_PIERCINGSHOTS 2 +; B_IGNITECHANCE = B_IGNITECHANCE 0.3 +; B_EXPLOSIONRADIUS = B_EXPLOSIONRADIUS 1.5 +; M_GUNDAMAGE = M_GUNDAMAGE val2 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.25 +; M_RELOADSPEED = M_RELOADSPEED -0.3 +
 ```
 
 **Values:**
@@ -154,7 +154,7 @@ Quantum-adaptive weapon framework gaining val1% damage per 100 player speed, val
 
 **Equation:**
 ```
-M_GUNDAMAGE = M_GUNDAMAGE + T_PLAYERSPEED val1 * 0.01 *; M_SHOTSPERSEC = M_SHOTSPERSEC + T_HP val2 * 0.1 *; M_CRITCHANCE = M_CRITCHANCE + T_ACCURACY 0.5 *; M_PROJECTILESPEED = M_PROJECTILESPEED + 0.4; M_HP = M_HP + (-0.1)
+M_GUNDAMAGE = M_GUNDAMAGE T_PLAYERSPEED val1 * 0.01 * +; M_SHOTSPERSEC = M_SHOTSPERSEC T_HP val2 * 0.1 * +; M_CRITCHANCE = M_CRITCHANCE T_ACCURACY 0.5 * +; M_PROJECTILESPEED = M_PROJECTILESPEED 0.4 +; M_HP = M_HP -0.1 +
 ```
 
 **Values:**
@@ -218,7 +218,7 @@ EXPERIMENTAL: All-spectrum weapon platform combining ballistic, energy, and expl
 
 **Equation:**
 ```
-B_PIERCINGSHOTS = B_PIERCINGSHOTS + val1; B_EXPLOSIONRADIUS = B_EXPLOSIONRADIUS + 2.0; B_IGNITECHANCE = B_IGNITECHANCE + 0.4; B_CHARGECHANCE = B_CHARGECHANCE + 0.4; M_GUNDAMAGE = M_GUNDAMAGE + 0.7; U_SHOTSPERSEC = U_SHOTSPERSEC + val2; M_HP = M_HP + (-0.2); M_AMMOCAPACITY = M_AMMOCAPACITY + (-0.4); M_LIFESTEAL = M_LIFESTEAL + 0.15
+B_PIERCINGSHOTS = B_PIERCINGSHOTS val1 +; B_EXPLOSIONRADIUS = B_EXPLOSIONRADIUS 2.0 +; B_IGNITECHANCE = B_IGNITECHANCE 0.4 +; B_CHARGECHANCE = B_CHARGECHANCE 0.4 +; M_GUNDAMAGE = M_GUNDAMAGE 0.7 +; U_SHOTSPERSEC = U_SHOTSPERSEC val2 +; M_HP = M_HP -0.2 +; M_AMMOCAPACITY = M_AMMOCAPACITY -0.4 +; M_LIFESTEAL = M_LIFESTEAL 0.15 +
 ```
 
 **Values:**
@@ -428,12 +428,12 @@ The ultimate hybrid weapon - literally does everything simultaneously but at tre
 - ✅ Equations use correct HEL syntax
 
 ### HEL Equation Validity
-- ✅ All equations add to coefficients (M_X = M_X + val, not M_X = val)
+- ✅ All equations add to coefficients (M_X = M_X val +, not M_X = val)
 - ✅ No read-only prefixes assigned (no T_ or S_ on LHS)
 - ✅ M_ values are decimals (0.5 = 50%, not 50)
-- ✅ Postfix notation used for operations
+- ✅ Pure postfix notation used for all operations
 - ✅ Cross-stat dependencies used (T_ACCURACY, T_PLAYERSPEED, T_HP)
-- ✅ Complex conditionals properly formatted: `(T_ACCURACY 0.7 >) val1 *`
+- ✅ Complex conditionals properly formatted: `T_ACCURACY 0.7 > val1 * +`
 - ✅ U_ coefficient used correctly (caps/extends max values)
 
 ### Balance Requirements
@@ -521,7 +521,7 @@ The ultimate hybrid weapon - literally does everything simultaneously but at tre
   modweight: 50
   type: 2
   hasProc: 0
-  equation: M_GUNDAMAGE = M_GUNDAMAGE + (T_ACCURACY 0.7 >) val1 *; M_SHOTSPERSEC = M_SHOTSPERSEC + (T_ACCURACY 0.7 <) val2 *; M_ACCURACY = M_ACCURACY + (-0.15)
+  equation: M_GUNDAMAGE = M_GUNDAMAGE T_ACCURACY 0.7 > val1 * +; M_SHOTSPERSEC = M_SHOTSPERSEC T_ACCURACY 0.7 < val2 * +; M_ACCURACY = M_ACCURACY -0.15 +
   modColor: {r: 0, g: 0, b: 0, a: 0}
   armorEffectName: ''
   armorMeshName: ''
@@ -539,7 +539,7 @@ The ultimate hybrid weapon - literally does everything simultaneously but at tre
   modweight: 30
   type: 2
   hasProc: 0
-  equation: B_PIERCINGSHOTS = B_PIERCINGSHOTS + 2; B_IGNITECHANCE = B_IGNITECHANCE + 0.3; B_EXPLOSIONRADIUS = B_EXPLOSIONRADIUS + 1.5; M_GUNDAMAGE = M_GUNDAMAGE + val2; M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.25); M_RELOADSPEED = M_RELOADSPEED + (-0.3)
+  equation: B_PIERCINGSHOTS = B_PIERCINGSHOTS 2 +; B_IGNITECHANCE = B_IGNITECHANCE 0.3 +; B_EXPLOSIONRADIUS = B_EXPLOSIONRADIUS 1.5 +; M_GUNDAMAGE = M_GUNDAMAGE val2 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.25 +; M_RELOADSPEED = M_RELOADSPEED -0.3 +
   modColor: {r: 0, g: 0, b: 0, a: 0}
   armorEffectName: ''
   armorMeshName: ''
@@ -557,7 +557,7 @@ The ultimate hybrid weapon - literally does everything simultaneously but at tre
   modweight: 25
   type: 2
   hasProc: 0
-  equation: M_GUNDAMAGE = M_GUNDAMAGE + T_PLAYERSPEED val1 * 0.01 *; M_SHOTSPERSEC = M_SHOTSPERSEC + T_HP val2 * 0.1 *; M_CRITCHANCE = M_CRITCHANCE + T_ACCURACY 0.5 *; M_PROJECTILESPEED = M_PROJECTILESPEED + 0.4; M_HP = M_HP + (-0.1)
+  equation: M_GUNDAMAGE = M_GUNDAMAGE T_PLAYERSPEED val1 * 0.01 * +; M_SHOTSPERSEC = M_SHOTSPERSEC T_HP val2 * 0.1 * +; M_CRITCHANCE = M_CRITCHANCE T_ACCURACY 0.5 * +; M_PROJECTILESPEED = M_PROJECTILESPEED 0.4 +; M_HP = M_HP -0.1 +
   modColor: {r: 0, g: 0, b: 0, a: 0}
   armorEffectName: ''
   armorMeshName: ''
@@ -575,7 +575,7 @@ The ultimate hybrid weapon - literally does everything simultaneously but at tre
   modweight: 8
   type: 2
   hasProc: 0
-  equation: B_PIERCINGSHOTS = B_PIERCINGSHOTS + val1; B_EXPLOSIONRADIUS = B_EXPLOSIONRADIUS + 2.0; B_IGNITECHANCE = B_IGNITECHANCE + 0.4; B_CHARGECHANCE = B_CHARGECHANCE + 0.4; M_GUNDAMAGE = M_GUNDAMAGE + 0.7; U_SHOTSPERSEC = U_SHOTSPERSEC + val2; M_HP = M_HP + (-0.2); M_AMMOCAPACITY = M_AMMOCAPACITY + (-0.4); M_LIFESTEAL = M_LIFESTEAL + 0.15
+  equation: B_PIERCINGSHOTS = B_PIERCINGSHOTS val1 +; B_EXPLOSIONRADIUS = B_EXPLOSIONRADIUS 2.0 +; B_IGNITECHANCE = B_IGNITECHANCE 0.4 +; B_CHARGECHANCE = B_CHARGECHANCE 0.4 +; M_GUNDAMAGE = M_GUNDAMAGE 0.7 +; U_SHOTSPERSEC = U_SHOTSPERSEC val2 +; M_HP = M_HP -0.2 +; M_AMMOCAPACITY = M_AMMOCAPACITY -0.4 +; M_LIFESTEAL = M_LIFESTEAL 0.15 +
   modColor: {r: 0, g: 0, b: 0, a: 0}
   armorEffectName: ''
   armorMeshName: ''
@@ -594,8 +594,8 @@ The ultimate hybrid weapon - literally does everything simultaneously but at tre
 - ✅ Simultaneous all-spectrum mechanics (1047)
 
 **Equation Complexity**:
-- ✅ Complex conditionals: `(T_ACCURACY 0.7 >) val1 *`
-- ✅ Cross-stat scaling: `T_PLAYERSPEED val1 * 0.01 *`
+- ✅ Complex conditionals: `T_ACCURACY 0.7 > val1 * +`
+- ✅ Cross-stat scaling: `T_PLAYERSPEED val1 * 0.01 * +`
 - ✅ Multi-stat dependencies: Speed + HP + Accuracy
 - ✅ Coefficient diversity: B_, M_, U_ all utilized
 
