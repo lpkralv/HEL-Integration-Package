@@ -1,6 +1,6 @@
 # HIOX ModsData.asset - Complete Mods YAML
-# Version: 1.0
-# Status: FINAL DELIVERABLE
+# Version: 1.1
+# Status: FINAL DELIVERABLE (HEL SYNTAX CORRECTED)
 # Total Mods: 155 (55 Weapons + 50 Items + 50 Syringes)
 # Format: Valid YAML for Unity integration
 #
@@ -28,7 +28,7 @@ mods:
     modweight: 200
     type: 2
     hasProc: 0
-    equation: "M_GUNDAMAGE = M_GUNDAMAGE + val1; M_SHOTSPERSEC = M_SHOTSPERSEC + val2"
+    equation: "M_GUNDAMAGE = M_GUNDAMAGE val1 +; M_SHOTSPERSEC = M_SHOTSPERSEC val2 +"
     modColor: {r: 0, g: 0, b: 0, a: 0}
     armorEffectName: ""
     armorMeshName: ""
@@ -46,7 +46,7 @@ mods:
     modweight: 190
     type: 2
     hasProc: 0
-    equation: "M_GUNDAMAGE = M_GUNDAMAGE + val1; M_ACCURACY = M_ACCURACY + val2; M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.15)"
+    equation: "M_GUNDAMAGE = M_GUNDAMAGE val1 +; M_ACCURACY = M_ACCURACY val2 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.15 +"
     modColor: {r: 0, g: 0, b: 0, a: 0}
     armorEffectName: ""
     armorMeshName: ""
@@ -64,7 +64,7 @@ mods:
     modweight: 5
     type: 2
     hasProc: 0
-    equation: "B_BULLETSFIRED = B_BULLETSFIRED + 5; M_GUNDAMAGE = M_GUNDAMAGE + val1; M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.4); M_ACCURACY = M_ACCURACY + (-0.5); M_RANGE = M_RANGE + (-0.25)"
+    equation: "B_BULLETSFIRED = B_BULLETSFIRED 5 +; M_GUNDAMAGE = M_GUNDAMAGE val1 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.4 +; M_ACCURACY = M_ACCURACY -0.5 +; M_RANGE = M_RANGE -0.25 +"
     modColor: {r: 255, g: 140, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -86,7 +86,7 @@ mods:
     modweight: 195
     type: 2
     hasProc: 1
-    equation: "M_IGNITECHANCE = M_IGNITECHANCE + val1; B_IGNITEDAMAGE = B_IGNITEDAMAGE + val2"
+    equation: "M_IGNITECHANCE = M_IGNITECHANCE val1 +; B_IGNITEDAMAGE = B_IGNITEDAMAGE val2 +"
     modColor: {r: 255, g: 69, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -104,7 +104,7 @@ mods:
     modweight: 10
     type: 2
     hasProc: 1
-    equation: "M_IGNITECHANCE = M_IGNITECHANCE + val1; M_CHARGECHANCE = M_CHARGECHANCE + val1; M_CORRUPTIONCHANCE = M_CORRUPTIONCHANCE + val1; B_IGNITEDAMAGE = B_IGNITEDAMAGE + val2; B_CHARGEDAMAGE = B_CHARGEDAMAGE + val2; B_CORRUPTIONDAMAGE = B_CORRUPTIONDAMAGE + val2; M_GUNDAMAGE = M_GUNDAMAGE + (-0.4); M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.3)"
+    equation: "M_IGNITECHANCE = M_IGNITECHANCE val1 +; M_CHARGECHANCE = M_CHARGECHANCE val1 +; M_CORRUPTIONCHANCE = M_CORRUPTIONCHANCE val1 +; B_IGNITEDAMAGE = B_IGNITEDAMAGE val2 +; B_CHARGEDAMAGE = B_CHARGEDAMAGE val2 +; B_CORRUPTIONDAMAGE = B_CORRUPTIONDAMAGE val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.4 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.3 +"
     modColor: {r: 255, g: 140, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -126,7 +126,7 @@ mods:
     modweight: 195
     type: 2
     hasProc: 0
-    equation: "B_NUMMINIONS = B_NUMMINIONS + 1; M_MINIONDAMAGE = M_MINIONDAMAGE + val1"
+    equation: "B_NUMMINIONS = B_NUMMINIONS 1 +; M_MINIONDAMAGE = M_MINIONDAMAGE val1 +"
     modColor: {r: 0, g: 0, b: 0, a: 0}
     armorEffectName: ""
     armorMeshName: ""
@@ -144,7 +144,7 @@ mods:
     modweight: 10
     type: 2
     hasProc: 0
-    equation: "B_NUMMINIONS = B_NUMMINIONS + 3; M_MINIONDAMAGE = M_MINIONDAMAGE + val1; M_MINIONATTACKSPEED = M_MINIONATTACKSPEED + val1; M_GUNDAMAGE = M_GUNDAMAGE + (-0.4); M_HP = M_HP + (-0.2); M_MINIONHP = M_MINIONHP + (-0.6)"
+    equation: "B_NUMMINIONS = B_NUMMINIONS 3 +; M_MINIONDAMAGE = M_MINIONDAMAGE val1 +; M_MINIONATTACKSPEED = M_MINIONATTACKSPEED val1 +; M_GUNDAMAGE = M_GUNDAMAGE -0.4 +; M_HP = M_HP -0.2 +; M_MINIONHP = M_MINIONHP -0.6 +"
     modColor: {r: 255, g: 140, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -166,7 +166,7 @@ mods:
     modweight: 195
     type: 4
     hasProc: 0
-    equation: "M_MELEEDAMAGE = M_MELEEDAMAGE + val1; M_MELEESPEED = M_MELEESPEED + val2"
+    equation: "M_MELEEDAMAGE = M_MELEEDAMAGE val1 +; M_MELEESPEED = M_MELEESPEED val2 +"
     modColor: {r: 0, g: 0, b: 0, a: 0}
     armorEffectName: ""
     armorMeshName: ""
@@ -184,7 +184,7 @@ mods:
     modweight: 10
     type: 4
     hasProc: 1
-    equation: "M_MELEEDAMAGE = M_MELEEDAMAGE + val1; B_MELEERANGE = B_MELEERANGE + 6; M_PROCRATE = M_PROCRATE + 0.5; M_HP = M_HP + (-0.3); M_ARMOR = M_ARMOR + (-0.25)"
+    equation: "M_MELEEDAMAGE = M_MELEEDAMAGE val1 +; B_MELEERANGE = B_MELEERANGE 6 +; M_PROCRATE = M_PROCRATE 0.5 +; M_HP = M_HP -0.3 +; M_ARMOR = M_ARMOR -0.25 +"
     modColor: {r: 255, g: 140, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -206,7 +206,7 @@ mods:
     modweight: 200
     type: 0
     hasProc: 0
-    equation: "B_HP = B_HP + val1"
+    equation: "B_HP = B_HP val1 +"
     modColor: {r: 0, g: 0, b: 0, a: 0}
     armorEffectName: ""
     armorMeshName: ""
@@ -224,7 +224,7 @@ mods:
     modweight: 200
     type: 0
     hasProc: 0
-    equation: "B_ARMOR = B_ARMOR + val1"
+    equation: "B_ARMOR = B_ARMOR val1 +"
     modColor: {r: 0, g: 0, b: 0, a: 0}
     armorEffectName: ""
     armorMeshName: ""
@@ -242,7 +242,7 @@ mods:
     modweight: 10
     type: 0
     hasProc: 0
-    equation: "B_HP = B_HP + val1; B_HPREGEN = B_HPREGEN + T_HP val2 *; M_PLAYERSPEED = M_PLAYERSPEED + (-0.25); M_ARMOR = M_ARMOR + (-0.2)"
+    equation: "B_HP = B_HP val1 +; B_HPREGEN = B_HPREGEN T_HP val2 * +; M_PLAYERSPEED = M_PLAYERSPEED -0.25 +; M_ARMOR = M_ARMOR -0.2 +"
     modColor: {r: 255, g: 140, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -264,7 +264,7 @@ mods:
     modweight: 200
     type: 0
     hasProc: 0
-    equation: "M_PLAYERSPEED = M_PLAYERSPEED + val1"
+    equation: "M_PLAYERSPEED = M_PLAYERSPEED val1 +"
     modColor: {r: 0, g: 0, b: 0, a: 0}
     armorEffectName: ""
     armorMeshName: ""
@@ -282,7 +282,7 @@ mods:
     modweight: 10
     type: 0
     hasProc: 0
-    equation: "M_PLAYERSPEED = M_PLAYERSPEED + val1; M_DASHSPEED = M_DASHSPEED + val1; M_GUNDAMAGE = M_GUNDAMAGE + (-0.35); M_HP = M_HP + (-0.3)"
+    equation: "M_PLAYERSPEED = M_PLAYERSPEED val1 +; M_DASHSPEED = M_DASHSPEED val1 +; M_GUNDAMAGE = M_GUNDAMAGE -0.35 +; M_HP = M_HP -0.3 +"
     modColor: {r: 255, g: 140, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -304,7 +304,7 @@ mods:
     modweight: 200
     type: 0
     hasProc: 0
-    equation: "M_CRITCHANCE = M_CRITCHANCE + val1"
+    equation: "M_CRITCHANCE = M_CRITCHANCE val1 +"
     modColor: {r: 0, g: 0, b: 0, a: 0}
     armorEffectName: ""
     armorMeshName: ""
@@ -322,7 +322,7 @@ mods:
     modweight: 90
     type: 0
     hasProc: 0
-    equation: "M_CRITCHANCE = M_CRITCHANCE + val1; M_CRITDAMAGE = M_CRITDAMAGE + val2; M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.12)"
+    equation: "M_CRITCHANCE = M_CRITCHANCE val1 +; M_CRITDAMAGE = M_CRITDAMAGE val2 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.12 +"
     modColor: {r: 0, g: 150, b: 255, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -344,7 +344,7 @@ mods:
     modweight: 200
     type: 0
     hasProc: 0
-    equation: "M_FIRERESISTANCE = M_FIRERESISTANCE + val1"
+    equation: "M_FIRERESISTANCE = M_FIRERESISTANCE val1 +"
     modColor: {r: 0, g: 0, b: 0, a: 0}
     armorEffectName: ""
     armorMeshName: ""
@@ -362,7 +362,7 @@ mods:
     modweight: 40
     type: 0
     hasProc: 0
-    equation: "M_ELEMENTALPENETRATION = M_ELEMENTALPENETRATION + T_FIRERESISTANCE T_ELECTRICRESISTANCE + T_CORRUPTIONRESISTANCE + val1 * 0.01 *; M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.25)"
+    equation: "M_ELEMENTALPENETRATION = M_ELEMENTALPENETRATION T_FIRERESISTANCE T_ELECTRICRESISTANCE + T_CORRUPTIONRESISTANCE + val1 * 0.01 * +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.25 +"
     modColor: {r: 255, g: 215, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -384,7 +384,7 @@ mods:
     modweight: 200
     type: 0
     hasProc: 0
-    equation: "B_ENERGYCAPACITY = B_ENERGYCAPACITY + val1"
+    equation: "B_ENERGYCAPACITY = B_ENERGYCAPACITY val1 +"
     modColor: {r: 0, g: 0, b: 0, a: 0}
     armorEffectName: ""
     armorMeshName: ""
@@ -402,7 +402,7 @@ mods:
     modweight: 5
     type: 0
     hasProc: 0
-    equation: "B_HPREGEN = B_HPREGEN + val1; B_ENERGYREGEN = B_ENERGYREGEN + val1; M_RESOURCEEFFICIENCY = M_RESOURCEEFFICIENCY + 0.8; M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION + 0.45; M_GUNDAMAGE = M_GUNDAMAGE + (-0.3); M_MELEEDAMAGE = M_MELEEDAMAGE + (-0.3); M_HP = M_HP + (-0.15)"
+    equation: "B_HPREGEN = B_HPREGEN val1 +; B_ENERGYREGEN = B_ENERGYREGEN val1 +; M_RESOURCEEFFICIENCY = M_RESOURCEEFFICIENCY 0.8 +; M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION 0.45 +; M_GUNDAMAGE = M_GUNDAMAGE -0.3 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.3 +; M_HP = M_HP -0.15 +"
     modColor: {r: 255, g: 140, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -424,7 +424,7 @@ mods:
     modweight: 200
     type: 10
     hasProc: 0
-    equation: "M_GUNDAMAGE = M_GUNDAMAGE + val1"
+    equation: "M_GUNDAMAGE = M_GUNDAMAGE val1 +"
     modColor: {r: 0, g: 0, b: 0, a: 0}
     armorEffectName: ""
     armorMeshName: ""
@@ -442,7 +442,7 @@ mods:
     modweight: 10
     type: 10
     hasProc: 0
-    equation: "M_GUNDAMAGE = M_GUNDAMAGE + val1; M_MELEEDAMAGE = M_MELEEDAMAGE + val1; M_SHOTSPERSEC = M_SHOTSPERSEC + 0.5; M_MELEESPEED = M_MELEESPEED + 0.5; M_HP = M_HP + (-0.25); M_ARMOR = M_ARMOR + (-0.2)"
+    equation: "M_GUNDAMAGE = M_GUNDAMAGE val1 +; M_MELEEDAMAGE = M_MELEEDAMAGE val1 +; M_SHOTSPERSEC = M_SHOTSPERSEC 0.5 +; M_MELEESPEED = M_MELEESPEED 0.5 +; M_HP = M_HP -0.25 +; M_ARMOR = M_ARMOR -0.2 +"
     modColor: {r: 255, g: 140, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -464,7 +464,7 @@ mods:
     modweight: 200
     type: 10
     hasProc: 0
-    equation: "B_HP = B_HP + val1"
+    equation: "B_HP = B_HP val1 +"
     modColor: {r: 0, g: 0, b: 0, a: 0}
     armorEffectName: ""
     armorMeshName: ""
@@ -482,7 +482,7 @@ mods:
     modweight: 10
     type: 10
     hasProc: 0
-    equation: "B_HP = B_HP + val1; B_ARMOR = B_ARMOR + val2; M_FIRERESISTANCE = M_FIRERESISTANCE + 0.5; M_ELECTRICRESISTANCE = M_ELECTRICRESISTANCE + 0.5; M_CORRUPTIONRESISTANCE = M_CORRUPTIONRESISTANCE + 0.5; M_PLAYERSPEED = M_PLAYERSPEED + (-0.3); M_GUNDAMAGE = M_GUNDAMAGE + (-0.25); M_MELEEDAMAGE = M_MELEEDAMAGE + (-0.25)"
+    equation: "B_HP = B_HP val1 +; B_ARMOR = B_ARMOR val2 +; M_FIRERESISTANCE = M_FIRERESISTANCE 0.5 +; M_ELECTRICRESISTANCE = M_ELECTRICRESISTANCE 0.5 +; M_CORRUPTIONRESISTANCE = M_CORRUPTIONRESISTANCE 0.5 +; M_PLAYERSPEED = M_PLAYERSPEED -0.3 +; M_GUNDAMAGE = M_GUNDAMAGE -0.25 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.25 +"
     modColor: {r: 255, g: 140, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -504,7 +504,7 @@ mods:
     modweight: 200
     type: 10
     hasProc: 1
-    equation: "M_IGNITECHANCE = M_IGNITECHANCE + val1"
+    equation: "M_IGNITECHANCE = M_IGNITECHANCE val1 +"
     modColor: {r: 0, g: 0, b: 0, a: 0}
     armorEffectName: ""
     armorMeshName: ""
@@ -522,7 +522,7 @@ mods:
     modweight: 10
     type: 10
     hasProc: 1
-    equation: "M_IGNITECHANCE = M_IGNITECHANCE + val1; M_CHARGECHANCE = M_CHARGECHANCE + val1; M_CORRUPTIONCHANCE = M_CORRUPTIONCHANCE + val1; M_IGNITEDAMAGE = M_IGNITEDAMAGE + T_GUNDAMAGE T_MELEEDAMAGE + 1.0 *; M_CHARGEDAMAGE = M_CHARGEDAMAGE + T_GUNDAMAGE T_MELEEDAMAGE + 1.0 *; M_CORRUPTIONDAMAGE = M_CORRUPTIONDAMAGE + T_GUNDAMAGE T_MELEEDAMAGE + 1.0 *; M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.25); M_PLAYERSPEED = M_PLAYERSPEED + (-0.2)"
+    equation: "M_IGNITECHANCE = M_IGNITECHANCE val1 +; M_CHARGECHANCE = M_CHARGECHANCE val1 +; M_CORRUPTIONCHANCE = M_CORRUPTIONCHANCE val1 +; M_IGNITEDAMAGE = M_IGNITEDAMAGE T_GUNDAMAGE T_MELEEDAMAGE + 1.0 * +; M_CHARGEDAMAGE = M_CHARGEDAMAGE T_GUNDAMAGE T_MELEEDAMAGE + 1.0 * +; M_CORRUPTIONDAMAGE = M_CORRUPTIONDAMAGE T_GUNDAMAGE T_MELEEDAMAGE + 1.0 * +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.25 +; M_PLAYERSPEED = M_PLAYERSPEED -0.2 +"
     modColor: {r: 255, g: 140, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -544,7 +544,7 @@ mods:
     modweight: 200
     type: 10
     hasProc: 0
-    equation: "M_ACCURACY = M_ACCURACY + val1"
+    equation: "M_ACCURACY = M_ACCURACY val1 +"
     modColor: {r: 0, g: 0, b: 0, a: 0}
     armorEffectName: ""
     armorMeshName: ""
@@ -562,7 +562,7 @@ mods:
     modweight: 10
     type: 10
     hasProc: 0
-    equation: "Z_ACCURACY = 1.0; M_RANGE = M_RANGE + val1; M_PROJECTILESPEED = M_PROJECTILESPEED + val2; M_GUNDAMAGE = M_GUNDAMAGE + (-0.3); M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.2)"
+    equation: "Z_ACCURACY = 1.0; M_RANGE = M_RANGE val1 +; M_PROJECTILESPEED = M_PROJECTILESPEED val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.3 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.2 +"
     modColor: {r: 255, g: 140, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -584,7 +584,7 @@ mods:
     modweight: 35
     type: 10
     hasProc: 0
-    equation: "M_GUNDAMAGE = M_GUNDAMAGE + (T_HP S_HP 0.5 * <) val1 *; M_MELEEDAMAGE = M_MELEEDAMAGE + (T_HP S_HP 0.5 * <) val2 *; M_HP = M_HP + (-0.15)"
+    equation: "M_GUNDAMAGE = M_GUNDAMAGE T_HP S_HP 0.5 * < val1 * +; M_MELEEDAMAGE = M_MELEEDAMAGE T_HP S_HP 0.5 * < val2 * +; M_HP = M_HP -0.15 +"
     modColor: {r: 255, g: 215, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -602,7 +602,7 @@ mods:
     modweight: 30
     type: 10
     hasProc: 0
-    equation: "M_GUNDAMAGE = M_GUNDAMAGE + RAND val1 * -0.5 +; M_MELEEDAMAGE = M_MELEEDAMAGE + RAND val1 * -0.5 +; M_CRITCHANCE = M_CRITCHANCE + val2; M_ACCURACY = M_ACCURACY + (-0.2)"
+    equation: "M_GUNDAMAGE = M_GUNDAMAGE RAND val1 * 0.5 - +; M_MELEEDAMAGE = M_MELEEDAMAGE RAND val1 * 0.5 - +; M_CRITCHANCE = M_CRITCHANCE val2 +; M_ACCURACY = M_ACCURACY -0.2 +"
     modColor: {r: 255, g: 215, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -620,7 +620,7 @@ mods:
     modweight: 10
     type: 10
     hasProc: 0
-    equation: "M_GUNDAMAGE = M_GUNDAMAGE + T_PLAYERSPEED 0.01 * val1 *; M_MELEEDAMAGE = M_MELEEDAMAGE + T_PLAYERSPEED 0.01 * val1 *; M_GUNDAMAGE = M_GUNDAMAGE + (-0.25); M_MELEEDAMAGE = M_MELEEDAMAGE + (-0.25); M_HP = M_HP + (-0.2)"
+    equation: "M_GUNDAMAGE = M_GUNDAMAGE T_PLAYERSPEED 0.01 * val1 * +; M_MELEEDAMAGE = M_MELEEDAMAGE T_PLAYERSPEED 0.01 * val1 * +; M_GUNDAMAGE = M_GUNDAMAGE -0.25 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.25 +; M_HP = M_HP -0.2 +"
     modColor: {r: 255, g: 140, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -638,7 +638,7 @@ mods:
     modweight: 10
     type: 10
     hasProc: 0
-    equation: "B_THORNDAMAGE = B_THORNDAMAGE + T_ARMOR val1 *; M_ARMOR = M_ARMOR + val2; M_GUNDAMAGE = M_GUNDAMAGE + (-0.3); M_MELEEDAMAGE = M_MELEEDAMAGE + (-0.25)"
+    equation: "B_THORNDAMAGE = B_THORNDAMAGE T_ARMOR val1 * +; M_ARMOR = M_ARMOR val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.3 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.25 +"
     modColor: {r: 255, g: 140, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -653,6 +653,7 @@ mods:
 # - All syringe classes (Combat, Defensive, Elemental, Tactical, Exotic)
 # - All rarity tiers (Standard, Enhanced, Advanced, Prototype)
 # - Various HEL equation patterns (simple, conditional, scaling, conversion, random)
+# - ALL EQUATIONS NOW USE PURE POSTFIX NOTATION (v1.1 correction)
 #
 # For the complete 155-mod dataset with full details, extract data from:
 # - docs/Weapons-*.md (55 weapons)
