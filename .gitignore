@@ -80,3 +80,6 @@ crashlytics-build.properties
 # Unity project directories to exclude from this repository
 /Packages/
 /ProjectSettings/
+
+# Python cache
+__pycache__/
