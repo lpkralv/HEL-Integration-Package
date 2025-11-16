@@ -29,7 +29,7 @@ MonoBehaviour:
 # - Weapons: 515-524 (Energy), 1000-1054 (Ballistic, Explosive, Deployables, Hybrid, Melee)
 # - Items: 2000-2049 (All item categories)
 # - Syringes: 3000-3050 (All syringe categories)
-mods:
+  mods:
 
   # ========================================
   # UNKNOWN
