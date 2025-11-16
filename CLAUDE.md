@@ -77,3 +77,86 @@ Enable debugging by uncommenting `#define MYDEBUG` in relevant files. This outpu
 - `#!123` - Embedded mod ID comment
 - `S_HEALTH` - Target stat variable
 - `VAL` - Placeholder replaced with mod value during preparation
+
+### Text File Processing Utilities
+
+Three Python utilities are available for efficiently working with large text files in this repository:
+
+#### findall.py - Find Files Containing Text
+Searches for files matching a glob pattern that contain a target string.
+
+**Usage:**
+```bash
+# CLI usage
+python3 findall.py "**/*.cs" "HEL"          # Find all C# files containing "HEL"
+python3 findall.py "docs/*.md" "Architecture"  # Find docs with "Architecture"
+
+# Module usage
+from findall import findall
+files = findall("src/*.cs", "class")
+```
+
+**When to use:**
+- Searching for files that contain specific terms across multiple directories
+- Quickly narrowing down which files to examine for code patterns
+- Finding all files that reference a particular variable, class, or concept
+
+#### findlines.py - Find Line Numbers
+Returns 1-indexed line numbers where a target string appears in a file.
+
+**Usage:**
+```bash
+# CLI usage
+python3 findlines.py src/HEL.cs "EvaluateMods"
+python3 findlines.py CLAUDE.md "Variable Prefix"
+
+# Module usage
+from findlines import findlines
+lines = findlines("src/HELInterpreter.cs", "S_")
+```
+
+**When to use:**
+- Locating specific code patterns within a known file
+- Finding all occurrences of a variable or function name
+- Identifying where documentation mentions specific topics
+- Preparing to extract relevant code sections
+
+#### sniptext.py - Extract Text Snippets
+Extracts a snippet from a file by line range (1-indexed, inclusive).
+
+**Usage:**
+```bash
+# CLI usage
+python3 sniptext.py src/HEL.cs 15 25        # Lines 15-25
+python3 sniptext.py README.md 1 10          # First 10 lines
+
+# Module usage
+from sniptext import sniptext
+snippet = sniptext("src/HELLexer.cs", 100, 150)
+```
+
+**When to use:**
+- Extracting specific code sections for analysis or documentation
+- Reading portions of large files without loading the entire file
+- Focusing on specific line ranges identified by findlines.py
+- Creating code examples or documentation snippets
+
+#### Workflow Example
+```bash
+# 1. Find files containing "CoefDict"
+python3 findall.py "**/*.cs" "CoefDict"
+# Result: src/HELInterpreter.cs
+
+# 2. Find line numbers where it's used
+python3 findlines.py src/HELInterpreter.cs "CoefDict"
+# Result: [12, 45, 89, 134]
+
+# 3. Extract relevant code section
+python3 sniptext.py src/HELInterpreter.cs 45 60
+```
+
+**Notes:**
+- All utilities support both CLI and module import patterns
+- Searches are case-sensitive
+- Encoding errors are handled gracefully (UTF-8, UTF-16, Latin-1)
+- Use these tools to efficiently navigate the codebase without reading entire files
