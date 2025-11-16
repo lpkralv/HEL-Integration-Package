@@ -1,0 +1,23 @@
+<svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="100" fill="#1a1a1a"/>
+
+  <!-- Gun body -->
+  <rect x="35" y="40" width="70" height="22" fill="#4a2a2a" stroke="#6a4a4a" stroke-width="2"/>
+
+  <!-- Wide barrel -->
+  <rect x="105" y="38" width="45" height="26" fill="#5a3a3a" stroke="#7a5a5a" stroke-width="2"/>
+  <circle cx="150" cy="51" r="13" fill="none" stroke="#8a6a6a" stroke-width="2"/>
+
+  <!-- Grenade in chamber -->
+  <ellipse cx="130" cy="51" rx="8" ry="10" fill="#3a5a3a" stroke="#5a7a5a" stroke-width="1"/>
+
+  <!-- Handle -->
+  <rect x="50" y="62" width="15" height="28" fill="#3a1a1a" stroke="#5a3a3a" stroke-width="2"/>
+
+  <!-- Stock -->
+  <rect x="20" y="45" width="15" height="12" fill="#4a2a2a" stroke="#6a4a4a" stroke-width="1"/>
+
+  <!-- Label -->
+  <text x="100" y="20" font-family="Arial" font-size="12" fill="#ffffff" text-anchor="middle">GRENADE LAUNCHER</text>
+  <text x="100" y="95" font-family="Arial" font-size="10" fill="#aaaaaa" text-anchor="middle">ID: 504</text>
+</svg>

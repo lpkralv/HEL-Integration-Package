@@ -1,0 +1,30 @@
+<svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="100" fill="#1a1a1a"/>
+
+  <!-- Floating cube (isometric view) -->
+  <polygon points="100,35 125,50 100,65 75,50" fill="#4a4a6a" stroke="#6a6a8a" stroke-width="2"/>
+  <polygon points="100,35 125,50 125,70 100,55" fill="#3a3a5a" stroke="#5a5a7a" stroke-width="2"/>
+  <polygon points="100,35 75,50 75,70 100,55" fill="#2a2a4a" stroke="#4a4a6a" stroke-width="2"/>
+
+  <!-- Energy core -->
+  <circle cx="100" cy="50" r="8" fill="#ff44ff" opacity="0.6"/>
+  <circle cx="100" cy="50" r="5" fill="#ffaaff" opacity="0.8"/>
+
+  <!-- Projectile trails -->
+  <line x1="100" y1="50" x2="130" y2="30" stroke="#ff44ff" stroke-width="2" opacity="0.5"/>
+  <line x1="100" y1="50" x2="145" y2="60" stroke="#44ff44" stroke-width="2" opacity="0.5"/>
+  <line x1="100" y1="50" x2="120" y2="75" stroke="#4444ff" stroke-width="2" opacity="0.5"/>
+  <line x1="100" y1="50" x2="55" y2="35" stroke="#ffff44" stroke-width="2" opacity="0.5"/>
+  <line x1="100" y1="50" x2="70" y2="70" stroke="#ff4444" stroke-width="2" opacity="0.5"/>
+
+  <!-- Projectile endpoints -->
+  <circle cx="130" cy="30" r="3" fill="#ff44ff"/>
+  <circle cx="145" cy="60" r="3" fill="#44ff44"/>
+  <circle cx="120" cy="75" r="3" fill="#4444ff"/>
+  <circle cx="55" cy="35" r="3" fill="#ffff44"/>
+  <circle cx="70" cy="70" r="3" fill="#ff4444"/>
+
+  <!-- Label -->
+  <text x="100" y="20" font-family="Arial" font-size="12" fill="#ffffff" text-anchor="middle">SHARD CUBE</text>
+  <text x="100" y="95" font-family="Arial" font-size="10" fill="#aaaaaa" text-anchor="middle">ID: 506</text>
+</svg>

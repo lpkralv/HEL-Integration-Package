@@ -1,0 +1,19 @@
+<svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="100" fill="#1a1a1a"/>
+
+  <!-- Gun body -->
+  <rect x="40" y="40" width="80" height="20" fill="#4a4a4a" stroke="#6a6a6a" stroke-width="2"/>
+
+  <!-- Barrel -->
+  <rect x="120" y="45" width="40" height="10" fill="#5a5a5a" stroke="#7a7a7a" stroke-width="2"/>
+
+  <!-- Handle -->
+  <rect x="50" y="60" width="15" height="30" fill="#3a3a3a" stroke="#5a5a5a" stroke-width="2"/>
+
+  <!-- Trigger -->
+  <rect x="70" y="60" width="8" height="12" fill="#2a2a2a" stroke="#4a4a4a" stroke-width="1"/>
+
+  <!-- Label -->
+  <text x="100" y="20" font-family="Arial" font-size="12" fill="#ffffff" text-anchor="middle">STANDARD GUN</text>
+  <text x="100" y="95" font-family="Arial" font-size="10" fill="#aaaaaa" text-anchor="middle">ID: 500</text>
+</svg>

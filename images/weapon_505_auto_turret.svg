@@ -1,0 +1,24 @@
+<svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="100" fill="#1a1a1a"/>
+
+  <!-- Base platform -->
+  <rect x="60" y="60" width="80" height="15" fill="#3a3a4a" stroke="#5a5a6a" stroke-width="2"/>
+
+  <!-- Turret body -->
+  <ellipse cx="100" cy="50" rx="25" ry="20" fill="#4a4a5a" stroke="#6a6a7a" stroke-width="2"/>
+
+  <!-- Twin barrels -->
+  <rect x="115" y="43" width="35" height="6" fill="#5a5a6a" stroke="#7a7a8a" stroke-width="1"/>
+  <rect x="115" y="51" width="35" height="6" fill="#5a5a6a" stroke="#7a7a8a" stroke-width="1"/>
+
+  <!-- Sensor/camera -->
+  <circle cx="100" cy="50" r="6" fill="#2a2a3a" stroke="#4a4a5a" stroke-width="1"/>
+  <circle cx="100" cy="50" r="3" fill="#ff4444"/>
+
+  <!-- Mounting arm -->
+  <rect x="95" y="30" width="10" height="20" fill="#3a3a4a" stroke="#5a5a6a" stroke-width="1"/>
+
+  <!-- Label -->
+  <text x="100" y="20" font-family="Arial" font-size="12" fill="#ffffff" text-anchor="middle">AUTO-TURRET</text>
+  <text x="100" y="92" font-family="Arial" font-size="10" fill="#aaaaaa" text-anchor="middle">ID: 505</text>
+</svg>
