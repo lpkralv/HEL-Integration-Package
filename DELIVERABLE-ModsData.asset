@@ -4,6 +4,17 @@
 # Total Mods: 156 (45 Weapons + 50 Items + 51 Syringes)
 # Format: Valid YAML for Unity integration
 # HEL Syntax: Pure postfix notation (corrected v1.1)
+#
+# NOTE: This file contains ALL mods from the complete Stats/Mods system design.
+# Source design documents:
+# - Weapons-*.md (Ballistic, Energy, Explosive, Deployables, Hybrid, Melee)
+# - Items-*.md (Structural, Mobility, Regeneration, Offensive, Resistance, Resource, Tactical)
+# - Syringes-*.md (Combat, Defensive, Metabolic, Elemental, Tactical, Exotic)
+#
+# Mod ID Ranges:
+# - Weapons: 515-524 (Energy), 1000-1054 (Ballistic, Explosive, Deployables, Hybrid, Melee)
+# - Items: 2000-2049 (All item categories)
+# - Syringes: 3000-3050 (All syringe categories)
 
 mods:
 
