@@ -39,7 +39,7 @@ Advanced targeting protocols analyze enemy structural weaknesses, increasing cri
 
 **HEL Equation:**
 ```
-M_CRITCHANCE = M_CRITCHANCE + val1
+M_CRITCHANCE = M_CRITCHANCE val1 +
 ```
 
 **Values:**
@@ -72,7 +72,7 @@ Weapon output optimization protocols increasing projectile damage by val1% throu
 
 **HEL Equation:**
 ```
-M_GUNDAMAGE = M_GUNDAMAGE + val1
+M_GUNDAMAGE = M_GUNDAMAGE val1 +
 ```
 
 **Values:**
@@ -105,7 +105,7 @@ Optimized effect amplification systems increasing proc trigger frequency by val1
 
 **HEL Equation:**
 ```
-M_PROCRATE = M_PROCRATE + val1
+M_PROCRATE = M_PROCRATE val1 +
 ```
 
 **Values:**
@@ -140,7 +140,7 @@ Integrated precision systems granting val1% critical strike chance and val2% cri
 
 **HEL Equation:**
 ```
-M_CRITCHANCE = M_CRITCHANCE + val1; M_CRITDAMAGE = M_CRITDAMAGE + val2; M_ARMOR = M_ARMOR + (-0.3)
+M_CRITCHANCE = M_CRITCHANCE val1 +; M_CRITDAMAGE = M_CRITDAMAGE val2 +; M_ARMOR = M_ARMOR -0.3 +
 ```
 
 **Values:**
@@ -174,7 +174,7 @@ Aggressive weapon calibration increasing gun damage by val1% and proc effectiven
 
 **HEL Equation:**
 ```
-M_GUNDAMAGE = M_GUNDAMAGE + val1; M_PROCRATE = M_PROCRATE + val2; M_HP = M_HP + (-0.25)
+M_GUNDAMAGE = M_GUNDAMAGE val1 +; M_PROCRATE = M_PROCRATE val2 +; M_HP = M_HP -0.25 +
 ```
 
 **Values:**
@@ -210,7 +210,7 @@ Perfection-optimized targeting systems granting val1% critical chance and val2% 
 
 **HEL Equation:**
 ```
-M_CRITCHANCE = M_CRITCHANCE + (T_HP T_HP <) (-1.0) * val1 *; M_GUNDAMAGE = M_GUNDAMAGE + (T_HP T_HP <) (-1.0) * val2 *; M_MELEEDAMAGE = M_MELEEDAMAGE + (T_HP T_HP <) (-1.0) * val2 *
+M_CRITCHANCE = M_CRITCHANCE T_HP T_HP < -1.0 * val1 * +; M_GUNDAMAGE = M_GUNDAMAGE T_HP T_HP < -1.0 * val2 * +; M_MELEEDAMAGE = M_MELEEDAMAGE T_HP T_HP < -1.0 * val2 * +
 ```
 
 **Values:**
@@ -247,7 +247,7 @@ Desperation combat protocols converting structural damage into offensive fury, g
 
 **HEL Equation:**
 ```
-M_GUNDAMAGE = M_GUNDAMAGE + T_HP T_HP / (-1.0) + val1 * 10 *; M_MELEEDAMAGE = M_MELEEDAMAGE + T_HP T_HP / (-1.0) + val1 * 10 *; M_ARMOR = M_ARMOR + (-0.2)
+M_GUNDAMAGE = M_GUNDAMAGE + T_HP T_HP / (-1.0) + val1 * 10 *; M_MELEEDAMAGE = M_MELEEDAMAGE + T_HP T_HP / (-1.0) + val1 * 10 *; M_ARMOR = M_ARMOR -0.2 +
 ```
 
 **Values:**
@@ -286,7 +286,7 @@ Experimental targeting override guaranteeing all attacks strike critical weakpoi
 
 **HEL Equation:**
 ```
-M_CRITCHANCE = M_CRITCHANCE + val1; M_CRITDAMAGE = M_CRITDAMAGE + val2; M_HP = M_HP + (-0.5); M_ARMOR = M_ARMOR + (-0.6); M_PLAYERSPEED = M_PLAYERSPEED + (-0.25)
+M_CRITCHANCE = M_CRITCHANCE val1 +; M_CRITDAMAGE = M_CRITDAMAGE val2 +; M_HP = M_HP -0.5 +; M_ARMOR = M_ARMOR -0.6 +; M_PLAYERSPEED = M_PLAYERSPEED -0.25 +
 ```
 
 **Values:**

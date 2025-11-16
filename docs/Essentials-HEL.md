@@ -29,13 +29,13 @@ Final_Value = Min(Max((S + B) * Max(0, 1 + M) + A, min + Z), max + U)
 ## What HEL CAN Do
 
 - **Cross-Stat Dependencies**: `A_MELEEDAMAGE = B_GUNDAMAGE val1 *`
-- **Math Functions**: `M_DAMAGE = M_DAMAGE + MIN(0.5, T_SPEED 100 /)`
-- **Boolean Conditionals**: `M_DAMAGE = M_DAMAGE + (T_HP 100 <) 0.5 *`
+- **Math Functions**: `M_DAMAGE = M_DAMAGE MIN(0.5, T_SPEED 100 /) +`
+- **Boolean Conditionals**: `M_DAMAGE = M_DAMAGE T_HP 100 < 0.5 * +`
 - **Comparison Operators**: `<, <=, >, >=, ==, !=` (return 1.0 if true, 0.0 if false)
 - **Logical Operators**: `AND, OR, NOT`
-- **Min/Max Boundaries**: `Z_HP = Z_HP + 50; U_HP = U_HP + 500`
-- **Trade-offs**: `M_DAMAGE = M_DAMAGE + (-0.3); M_FIRERATE = M_FIRERATE + 0.5`
-- **Multiple Statements**: `B_HP = B_HP + 100; M_ARMOR = M_ARMOR + 0.2; B_HPREGEN = B_HPREGEN + 0.5`
+- **Min/Max Boundaries**: `Z_HP = Z_HP 50 +; U_HP = U_HP 500 +`
+- **Trade-offs**: `M_DAMAGE = M_DAMAGE -0.3 +; M_FIRERATE = M_FIRERATE 0.5 +`
+- **Multiple Statements**: `B_HP = B_HP 100 +; M_ARMOR = M_ARMOR 0.2 +; B_HPREGEN = B_HPREGEN 0.5 +`
 
 ---
 
@@ -52,11 +52,11 @@ Final_Value = Min(Max((S + B) * Max(0, 1 + M) + A, min + Z), max + U)
 
 ## Critical Syntax Rules
 
-1. **Always add to coefficients**: `M_DAMAGE = M_DAMAGE + 0.25` (not `= 0.25`)
+1. **Always add to coefficients**: `M_DAMAGE = M_DAMAGE 0.25 +` (not `= 0.25`)
 2. **Don't write to read-only**: Never assign to S_ or T_ variables
 3. **Postfix notation**: Operators after operands: `val1 0.5 *` (not `0.5 * val1`)
 4. **M_ uses decimals**: 0.5 = +50%, 1.0 = +100%, 0.1 = +10% (not 50, 100, 10)
-5. **Separate statements**: Use semicolons: `B_HP = B_HP + 50; M_ARMOR = M_ARMOR + 0.2`
+5. **Separate statements**: Use semicolons: `B_HP = B_HP 50 +; M_ARMOR = M_ARMOR 0.2 +`
 6. **VAL substitution**: VAL and VAL1 → mod.val, VAL2 → mod.val2 (before evaluation)
 7. **Coefficients accumulate**: Multiple mods can modify same coefficient (values add together)
 
@@ -66,11 +66,11 @@ Final_Value = Min(Max((S + B) * Max(0, 1 + M) + A, min + Z), max + U)
 
 | Pattern | Equation | Use Case |
 |---------|----------|----------|
-| **Simple % Boost** | `M_GUNDAMAGE = M_GUNDAMAGE + val1` | Basic percentage increase |
-| **Flat Addition** | `B_HP = B_HP + val1` | Base additive (scales with multipliers) |
-| **Conditional Bonus** | `M_DAMAGE = M_DAMAGE + (T_HP 100 <) val1 *` | Bonus when condition met |
-| **Cross-Stat Synergy** | `A_MELEEDAMAGE = A_MELEEDAMAGE + B_GUNDAMAGE val1 *` | Convert one stat to another |
-| **Trade-off** | `M_DAMAGE = M_DAMAGE + (-val1); M_FIRERATE = M_FIRERATE + val2` | Decrease one, increase another |
+| **Simple % Boost** | `M_GUNDAMAGE = M_GUNDAMAGE val1 +` | Basic percentage increase |
+| **Flat Addition** | `B_HP = B_HP val1 +` | Base additive (scales with multipliers) |
+| **Conditional Bonus** | `M_DAMAGE = M_DAMAGE T_HP 100 < val1 * +` | Bonus when condition met |
+| **Cross-Stat Synergy** | `A_MELEEDAMAGE = A_MELEEDAMAGE B_GUNDAMAGE val1 * +` | Convert one stat to another |
+| **Trade-off** | `M_DAMAGE = M_DAMAGE -val1 +; M_FIRERATE = M_FIRERATE val2 +` | Decrease one, increase another |
 
 ---
 
@@ -87,21 +87,21 @@ Final_Value = Min(Max((S + B) * Max(0, 1 + M) + A, min + Z), max + U)
 
 | ❌ Wrong | ✅ Correct | Issue |
 |----------|-----------|-------|
-| `M_DAMAGE = 0.5` | `M_DAMAGE = M_DAMAGE + 0.5` | Overwrites instead of adding |
+| `M_DAMAGE = 0.5` | `M_DAMAGE = M_DAMAGE 0.5 +` | Overwrites instead of adding |
 | `T_HP = 100` | `B_HP = 100` | T_ is read-only |
-| `M_DAMAGE = M_DAMAGE + 50` | `M_DAMAGE = M_DAMAGE + 0.5` | 50 = +5000%, not +50% |
-| `M_DAMAGE = M_DAMAGE + 0.5 * val1` | `M_DAMAGE = M_DAMAGE + val1 0.5 *` | Wrong operator order (postfix) |
-| `DAMAGE = DAMAGE + 10` | `B_DAMAGE = B_DAMAGE + 10` | Missing coefficient prefix |
+| `M_DAMAGE = M_DAMAGE 50 +` | `M_DAMAGE = M_DAMAGE 0.5 +` | 50 = +5000%, not +50% |
+| `M_DAMAGE = M_DAMAGE + 0.5 * val1` | `M_DAMAGE = M_DAMAGE val1 0.5 * +` | Wrong operator order (infix not postfix) |
+| `DAMAGE = DAMAGE 10 +` | `B_DAMAGE = B_DAMAGE 10 +` | Missing coefficient prefix |
 
 ---
 
 ## Decision Tree: B_ vs A_
 
 - **Use B_**: When bonus should scale with M_ multipliers
-  Example: `B_HP = B_HP + 50` → Affected by M_HP percentage bonuses
+  Example: `B_HP = B_HP 50 +` → Affected by M_HP percentage bonuses
 
 - **Use A_**: When bonus should be flat (no scaling)
-  Example: `A_HP = A_HP + 50` → Always exactly +50 HP regardless of multipliers
+  Example: `A_HP = A_HP 50 +` → Always exactly +50 HP regardless of multipliers
 
 ---
 
@@ -112,7 +112,7 @@ modid: 42
 name: BLOOD MAGE NANITES
 val: 0.25          # HP sacrifice %
 val2: 1.5          # Damage boost %
-equation: M_HP = M_HP + (-val1); M_GUNDAMAGE = M_GUNDAMAGE + val2
+equation: M_HP = M_HP -val1 +; M_GUNDAMAGE = M_GUNDAMAGE val2 +
 ```
 
 **Result**: -25% max HP, +150% gun damage

@@ -39,7 +39,7 @@ Automated repair protocols continuously reconstruct damaged framework nanites, r
 
 **HEL Equation:**
 ```
-B_HPREGEN = B_HPREGEN + val1
+B_HPREGEN = B_HPREGEN val1 +
 ```
 
 **Values:**
@@ -68,7 +68,7 @@ Optimized energy reclamation systems accelerate stamina reconstitution, restorin
 
 **HEL Equation:**
 ```
-B_STAMINAREGEN = B_STAMINAREGEN + val1
+B_STAMINAREGEN = B_STAMINAREGEN val1 +
 ```
 
 **Values:**
@@ -99,7 +99,7 @@ Dual-layer restoration protocols simultaneously reconstruct structural integrity
 
 **HEL Equation:**
 ```
-B_HPREGEN = B_HPREGEN + val1; B_STAMINAREGEN = B_STAMINAREGEN + val2; M_HP = M_HP + (-0.1)
+B_HPREGEN = B_HPREGEN val1 +; B_STAMINAREGEN = B_STAMINAREGEN val2 +; M_HP = M_HP -0.1 +
 ```
 
 **Values:**
@@ -129,7 +129,7 @@ Tri-spectrum regeneration matrix restoring structural integrity (val1 HP/sec), s
 
 **HEL Equation:**
 ```
-B_HPREGEN = B_HPREGEN + val1; B_STAMINAREGEN = B_STAMINAREGEN + val2; M_SHIELDREGENRATE = M_SHIELDREGENRATE + 0.25; M_GUNDAMAGE = M_GUNDAMAGE + (-0.15); M_MELEEDAMAGE = M_MELEEDAMAGE + (-0.15)
+B_HPREGEN = B_HPREGEN val1 +; B_STAMINAREGEN = B_STAMINAREGEN val2 +; M_SHIELDREGENRATE = M_SHIELDREGENRATE 0.25 +; M_GUNDAMAGE = M_GUNDAMAGE -0.15 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.15 +
 ```
 
 **Values:**
@@ -161,7 +161,7 @@ Adaptive nanite protocols restore val1% of maximum structural integrity per seco
 
 **HEL Equation:**
 ```
-B_HPREGEN = B_HPREGEN + T_HP val1 * 0.01 *; B_STAMINAREGEN = B_STAMINAREGEN + T_MAXSTAMINA val2 * 0.01 *; M_ARMOR = M_ARMOR + (-0.25)
+B_HPREGEN = B_HPREGEN + T_HP val1 * 0.01 *; B_STAMINAREGEN = B_STAMINAREGEN + T_MAXSTAMINA val2 * 0.01 *; M_ARMOR = M_ARMOR -0.25 +
 ```
 
 **Values:**
@@ -196,7 +196,7 @@ Emergency reconstruction protocols activate when structural integrity falls belo
 
 **HEL Equation:**
 ```
-B_HPREGEN = B_HPREGEN + (T_HP T_HP 0.3 * <) val1 *; M_GUNDAMAGE = M_GUNDAMAGE + T_HPREGEN val2 * 0.01 *; M_MELEEDAMAGE = M_MELEEDAMAGE + T_HPREGEN val2 * 0.01 *
+B_HPREGEN = B_HPREGEN T_HP T_HP 0.3 * < val1 * +; M_GUNDAMAGE = M_GUNDAMAGE T_HPREGEN val2 * 0.01 * +; M_MELEEDAMAGE = M_MELEEDAMAGE T_HPREGEN val2 * 0.01 * +
 ```
 
 **Values:**

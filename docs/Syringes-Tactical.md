@@ -40,7 +40,7 @@ Precision calibration protocol increasing weapon accuracy by val1% through predi
 
 **HEL Equation:**
 ```
-M_ACCURACY = M_ACCURACY + val1
+M_ACCURACY = M_ACCURACY val1 +
 ```
 
 **Values:**
@@ -73,7 +73,7 @@ Effective distance protocol increasing weapon range by val1% through enhanced pr
 
 **HEL Equation:**
 ```
-M_RANGE = M_RANGE + val1
+M_RANGE = M_RANGE val1 +
 ```
 
 **Values:**
@@ -106,7 +106,7 @@ Area effect protocol increasing proc and AoE range by val1% through blast radius
 
 **HEL Equation:**
 ```
-M_PROCRANGE = M_PROCRANGE + val1
+M_PROCRANGE = M_PROCRANGE val1 +
 ```
 
 **Values:**
@@ -139,7 +139,7 @@ Acceleration enhancement protocol increasing projectile speed by val1% through v
 
 **HEL Equation:**
 ```
-M_PROJECTILESPEED = M_PROJECTILESPEED + val1
+M_PROJECTILESPEED = M_PROJECTILESPEED val1 +
 ```
 
 **Values:**
@@ -174,7 +174,7 @@ Dual-range injection granting val1% weapon range and val2% melee range, with 10%
 
 **HEL Equation:**
 ```
-M_RANGE = M_RANGE + val1; M_MELEERANGE = M_MELEERANGE + val2; M_GUNDAMAGE = M_GUNDAMAGE + (-0.1); M_MELEEDAMAGE = M_MELEEDAMAGE + (-0.1)
+M_RANGE = M_RANGE val1 +; M_MELEERANGE = M_MELEERANGE val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.1 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.1 +
 ```
 
 **Values:**
@@ -208,7 +208,7 @@ Multi-projectile injection granting val1 additional bullets per shot and val2% i
 
 **HEL Equation:**
 ```
-B_BULLETSFIRED = B_BULLETSFIRED + val1; M_ACCURACY = M_ACCURACY + val2; M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.15)
+B_BULLETSFIRED = B_BULLETSFIRED val1 +; M_ACCURACY = M_ACCURACY val2 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.15 +
 ```
 
 **Values:**
@@ -244,7 +244,7 @@ Experimental adaptive targeting granting val1% accuracy, val2% range, and gainin
 
 **HEL Equation:**
 ```
-M_ACCURACY = M_ACCURACY + val1; M_RANGE = M_RANGE + val2; M_ACCURACY = M_ACCURACY + 1 T_ACCURACY - 0.1 *; M_PLAYERSPEED = M_PLAYERSPEED + (-0.12)
+M_ACCURACY = M_ACCURACY val1 +; M_RANGE = M_RANGE val2 +; M_ACCURACY = M_ACCURACY 1 + T_ACCURACY - 0.1 *; M_PLAYERSPEED = M_PLAYERSPEED -0.12 +
 ```
 
 **Values:**
@@ -283,7 +283,7 @@ Ultimate precision transformation setting accuracy to 100% (never miss), grantin
 
 **HEL Equation:**
 ```
-Z_ACCURACY = 1.0; M_RANGE = M_RANGE + val1; M_PROJECTILESPEED = M_PROJECTILESPEED + val2; M_GUNDAMAGE = M_GUNDAMAGE + (-0.3); M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.2)
+Z_ACCURACY = 1.0; M_RANGE = M_RANGE val1 +; M_PROJECTILESPEED = M_PROJECTILESPEED val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.3 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.2 +
 ```
 
 **Values:**

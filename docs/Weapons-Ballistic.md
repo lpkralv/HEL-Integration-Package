@@ -1,6 +1,6 @@
 # Ballistic Assembly Weapons Design
-**Version:** 1.0
-**Status:** FINAL DESIGN
+**Version:** 1.1
+**Status:** FINAL DESIGN (HEL SYNTAX CORRECTED)
 **Mod ID Range:** 1000-1014 (15 weapons)
 **Class Type:** Ballistic Assemblies
 **Weapon Type Code:** 2
@@ -39,7 +39,7 @@ Standard ballistic assembly using electromagnetic acceleration to propel nanite-
 
 **HEL Equation:**
 ```
-M_GUNDAMAGE = M_GUNDAMAGE + val1; M_SHOTSPERSEC = M_SHOTSPERSEC + val2
+M_GUNDAMAGE = M_GUNDAMAGE val1 +; M_SHOTSPERSEC = M_SHOTSPERSEC val2 +
 ```
 
 **Values:**
@@ -69,7 +69,7 @@ High-frequency projectile assembly optimized for rapid ammunition cycling, firin
 
 **HEL Equation:**
 ```
-B_SHOTSPERSEC = B_SHOTSPERSEC + val1; M_GUNDAMAGE = M_GUNDAMAGE + (-val2)
+B_SHOTSPERSEC = B_SHOTSPERSEC val1 +; M_GUNDAMAGE = M_GUNDAMAGE -val2 +
 ```
 
 **Values:**
@@ -99,7 +99,7 @@ Dispersed projectile matrix firing val1 simultaneous nanite packets in spread pa
 
 **HEL Equation:**
 ```
-B_BULLETSFIRED = B_BULLETSFIRED + val1; M_ACCURACY = M_ACCURACY + val2
+B_BULLETSFIRED = B_BULLETSFIRED val1 +; M_ACCURACY = M_ACCURACY val2 +
 ```
 
 **Values:**
@@ -129,7 +129,7 @@ Long-range ballistic framework with enhanced targeting protocols, increasing pro
 
 **HEL Equation:**
 ```
-M_PROJECTILESPEED = M_PROJECTILESPEED + val1; M_ACCURACY = M_ACCURACY + (-val2); M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.3)
+M_PROJECTILESPEED = M_PROJECTILESPEED val1 +; M_ACCURACY = M_ACCURACY -val2 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.3 +
 ```
 
 **Values:**
@@ -159,7 +159,7 @@ Synchronized firing sequence releasing val1-round bursts with val2% increased da
 
 **HEL Equation:**
 ```
-B_BULLETSFIRED = B_BULLETSFIRED + val1; M_GUNDAMAGE = M_GUNDAMAGE + val2; M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.25)
+B_BULLETSFIRED = B_BULLETSFIRED val1 +; M_GUNDAMAGE = M_GUNDAMAGE val2 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.25 +
 ```
 
 **Values:**
@@ -189,7 +189,7 @@ Versatile compact framework increasing mobility with val1% movement speed while 
 
 **HEL Equation:**
 ```
-M_PLAYERSPEED = M_PLAYERSPEED + val1; M_GUNDAMAGE = M_GUNDAMAGE + (-val2)
+M_PLAYERSPEED = M_PLAYERSPEED val1 +; M_GUNDAMAGE = M_GUNDAMAGE -val2 +
 ```
 
 **Values:**
@@ -221,7 +221,7 @@ Armor-penetrating projectile assembly with val1 piercing shots capability and va
 
 **HEL Equation:**
 ```
-B_PIERCINGSHOTS = B_PIERCINGSHOTS + val1; M_GUNDAMAGE = M_GUNDAMAGE + val2; M_RELOADSPEED = M_RELOADSPEED + (-val2)
+B_PIERCINGSHOTS = B_PIERCINGSHOTS val1 +; M_GUNDAMAGE = M_GUNDAMAGE val2 +; M_RELOADSPEED = M_RELOADSPEED -val2 +
 ```
 
 **Values:**
@@ -251,7 +251,7 @@ Extreme velocity accelerator increasing projectile speed by val1%, critical chan
 
 **HEL Equation:**
 ```
-M_PROJECTILESPEED = M_PROJECTILESPEED + val1; M_CRITCHANCE = M_CRITCHANCE + val2; M_AMMOCAPACITY = M_AMMOCAPACITY + (-0.4)
+M_PROJECTILESPEED = M_PROJECTILESPEED val1 +; M_CRITCHANCE = M_CRITCHANCE val2 +; M_AMMOCAPACITY = M_AMMOCAPACITY -0.4 +
 ```
 
 **Values:**
@@ -281,7 +281,7 @@ High-capacity ammunition matrix increasing magazine size by val1% and reload spe
 
 **HEL Equation:**
 ```
-M_AMMOCAPACITY = M_AMMOCAPACITY + val1; M_RELOADSPEED = M_RELOADSPEED + val2; M_GUNDAMAGE = M_GUNDAMAGE + (-0.25)
+M_AMMOCAPACITY = M_AMMOCAPACITY val1 +; M_RELOADSPEED = M_RELOADSPEED val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.25 +
 ```
 
 **Values:**
@@ -311,7 +311,7 @@ Precision-tuned targeting matrix increasing critical chance by val1% and critica
 
 **HEL Equation:**
 ```
-M_CRITCHANCE = M_CRITCHANCE + val1; M_CRITDAMAGE = M_CRITDAMAGE + val2; M_SHOTSPERSEC = M_SHOTSPERSEC + (-val1)
+M_CRITCHANCE = M_CRITCHANCE val1 +; M_CRITDAMAGE = M_CRITDAMAGE val2 +; M_SHOTSPERSEC = M_SHOTSPERSEC -val1 +
 ```
 
 **Values:**
@@ -343,7 +343,7 @@ Experimental projectile accelerator achieving val1% increased speed and val2% da
 
 **HEL Equation:**
 ```
-M_PROJECTILESPEED = M_PROJECTILESPEED + val1; M_GUNDAMAGE = M_GUNDAMAGE + val2; M_ACCURACY = M_ACCURACY + 0.6; M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.2)
+M_PROJECTILESPEED = M_PROJECTILESPEED val1 +; M_GUNDAMAGE = M_GUNDAMAGE val2 +; M_ACCURACY = M_ACCURACY 0.6 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.2 +
 ```
 
 **Values:**
@@ -373,7 +373,7 @@ Unstable projectile matrix causing shots to pierce val1 enemies and split into v
 
 **HEL Equation:**
 ```
-B_PIERCINGSHOTS = B_PIERCINGSHOTS + val1; B_BULLETSFIRED = B_BULLETSFIRED + val2; M_GUNDAMAGE = M_GUNDAMAGE + (-0.3)
+B_PIERCINGSHOTS = B_PIERCINGSHOTS val1 +; B_BULLETSFIRED = B_BULLETSFIRED val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.3 +
 ```
 
 **Values:**
@@ -403,7 +403,7 @@ Adaptive damage protocols scaling with accuracy - gain val1% damage per 10% accu
 
 **HEL Equation:**
 ```
-M_GUNDAMAGE = M_GUNDAMAGE + T_ACCURACY val1 * 10 /; M_SHOTSPERSEC = M_SHOTSPERSEC + (-val2)
+M_GUNDAMAGE = M_GUNDAMAGE T_ACCURACY val1 * 10 / +; M_SHOTSPERSEC = M_SHOTSPERSEC -val2 +
 ```
 
 **Values:**
@@ -435,7 +435,7 @@ Experimental assembly that converts val1% of critical damage multiplier into fir
 
 **HEL Equation:**
 ```
-M_SHOTSPERSEC = M_SHOTSPERSEC + T_CRITDAMAGE val1 * 0.1 *; M_LIFESTEAL = M_LIFESTEAL + T_SHOTSPERSEC val2 * 0.01 *
+M_SHOTSPERSEC = M_SHOTSPERSEC T_CRITDAMAGE val1 * 0.1 * +; M_LIFESTEAL = M_LIFESTEAL T_SHOTSPERSEC val2 * 0.01 * +
 ```
 
 **Values:**
@@ -468,7 +468,7 @@ Experimental ammunition reclamation system granting val1% lifesteal and reducing
 
 **HEL Equation:**
 ```
-M_LIFESTEAL = M_LIFESTEAL + val1; M_RELOADSPEED = M_RELOADSPEED + val2; M_GUNDAMAGE = M_GUNDAMAGE + T_AMMOCAPACITY 10 / 0.01 *
+M_LIFESTEAL = M_LIFESTEAL val1 +; M_RELOADSPEED = M_RELOADSPEED val2 +; M_GUNDAMAGE = M_GUNDAMAGE T_AMMOCAPACITY 10 / 0.01 * +
 ```
 
 **Values:**
@@ -536,10 +536,10 @@ Build-defining ammo management system. Incentivizes frequent reloads (faster rel
 - Player-visible descriptions avoid confidential lore
 
 **HEL Equation Validation:**
-- All equations add to coefficients (M_X = M_X + val)
+- All equations add to coefficients (M_X = M_X val +)
 - Proper coefficient prefixes (B_, M_, A_)
 - M_ values use decimals (0.5 = 50%)
-- Postfix notation for operations (T_ACCURACY val1 * 10 /)
+- Pure postfix notation for all operations (T_ACCURACY val1 * 10 / +)
 - Cross-stat dependencies in Prototype tier
 
 ---

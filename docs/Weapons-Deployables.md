@@ -39,7 +39,7 @@ Fundamental autonomous combat drone fabricator deploying val1 tactical construct
 
 **HEL Equation:**
 ```
-B_NUMMINIONS = B_NUMMINIONS + val1; M_GUNDAMAGE = M_GUNDAMAGE + (-val2)
+B_NUMMINIONS = B_NUMMINIONS val1 +; M_GUNDAMAGE = M_GUNDAMAGE -val2 +
 ```
 
 **Values:**
@@ -69,7 +69,7 @@ Reinforced autonomous turret deployment system spawning val1 heavily-armored def
 
 **HEL Equation:**
 ```
-B_NUMMINIONS = B_NUMMINIONS + val1; M_MINIONHP = M_MINIONHP + val2; M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.3)
+B_NUMMINIONS = B_NUMMINIONS val1 +; M_MINIONHP = M_MINIONHP val2 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.3 +
 ```
 
 **Values:**
@@ -99,7 +99,7 @@ Lightweight multi-drone fabrication matrix deploying val1 fast-response scout co
 
 **HEL Equation:**
 ```
-B_NUMMINIONS = B_NUMMINIONS + val1; M_MINIONATTACKSPEED = M_MINIONATTACKSPEED + val2; M_HP = M_HP + (-0.2)
+B_NUMMINIONS = B_NUMMINIONS val1 +; M_MINIONATTACKSPEED = M_MINIONATTACKSPEED val2 +; M_HP = M_HP -0.2 +
 ```
 
 **Values:**
@@ -129,7 +129,7 @@ Rapid-deployment combat fabricator spawning val1 aggressive constructs with val2
 
 **HEL Equation:**
 ```
-B_NUMMINIONS = B_NUMMINIONS + val1; M_MINIONDAMAGE = M_MINIONDAMAGE + val2; M_ACCURACY = M_ACCURACY + 0.4
+B_NUMMINIONS = B_NUMMINIONS val1 +; M_MINIONDAMAGE = M_MINIONDAMAGE val2 +; M_ACCURACY = M_ACCURACY 0.4 +
 ```
 
 **Values:**
@@ -161,7 +161,7 @@ Industrial-grade combat construct deploying val1 siege-class autonomous platform
 
 **HEL Equation:**
 ```
-B_NUMMINIONS = B_NUMMINIONS + val1; M_MINIONDAMAGE = M_MINIONDAMAGE + val2; M_MINIONHP = M_MINIONHP + 0.5; M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.4); M_PLAYERSPEED = M_PLAYERSPEED + (-0.2)
+B_NUMMINIONS = B_NUMMINIONS val1 +; M_MINIONDAMAGE = M_MINIONDAMAGE val2 +; M_MINIONHP = M_MINIONHP 0.5 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.4 +; M_PLAYERSPEED = M_PLAYERSPEED -0.2 +
 ```
 
 **Values:**
@@ -191,7 +191,7 @@ Advanced nanite assembly matrix deploying val1 rapid-cycle combat drones with va
 
 **HEL Equation:**
 ```
-B_NUMMINIONS = B_NUMMINIONS + val1; M_MINIONATTACKSPEED = M_MINIONATTACKSPEED + val2; M_CRITCHANCE = M_CRITCHANCE + (-0.5); M_RELOADSPEED = M_RELOADSPEED + (-0.3)
+B_NUMMINIONS = B_NUMMINIONS val1 +; M_MINIONATTACKSPEED = M_MINIONATTACKSPEED val2 +; M_CRITCHANCE = M_CRITCHANCE -0.5 +; M_RELOADSPEED = M_RELOADSPEED -0.3 +
 ```
 
 **Values:**
@@ -221,7 +221,7 @@ Coordinated multi-unit deployment system spawning val1 tactical constructs with 
 
 **HEL Equation:**
 ```
-B_NUMMINIONS = B_NUMMINIONS + val1; M_MINIONDAMAGE = M_MINIONDAMAGE + val2; M_MINIONHP = M_MINIONHP + val2; M_MINIONATTACKSPEED = M_MINIONATTACKSPEED + val2; M_GUNDAMAGE = M_GUNDAMAGE + (-0.35); M_HP = M_HP + (-0.15)
+B_NUMMINIONS = B_NUMMINIONS val1 +; M_MINIONDAMAGE = M_MINIONDAMAGE val2 +; M_MINIONHP = M_MINIONHP val2 +; M_MINIONATTACKSPEED = M_MINIONATTACKSPEED val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.35 +; M_HP = M_HP -0.15 +
 ```
 
 **Values:**
@@ -253,7 +253,7 @@ Experimental swarm intelligence framework deploying val1 adaptive constructs tha
 
 **HEL Equation:**
 ```
-B_NUMMINIONS = B_NUMMINIONS + val1; M_MINIONDAMAGE = M_MINIONDAMAGE + T_GUNDAMAGE 100 / val2 *; M_MINIONHP = M_MINIONHP + T_ARMOR 0.005 *; M_GUNDAMAGE = M_GUNDAMAGE + (-0.5); M_ACCURACY = M_ACCURACY + 0.6
+B_NUMMINIONS = B_NUMMINIONS val1 +; M_MINIONDAMAGE = M_MINIONDAMAGE + T_GUNDAMAGE 100 / val2 *; M_MINIONHP = M_MINIONHP + T_ARMOR 0.005 *; M_GUNDAMAGE = M_GUNDAMAGE -0.5 +; M_ACCURACY = M_ACCURACY 0.6 +
 ```
 
 **Values:**
@@ -286,7 +286,7 @@ Hierarchical construct deployment system spawning val1 command-tier units that g
 
 **HEL Equation:**
 ```
-B_NUMMINIONS = B_NUMMINIONS + val1; M_MINIONDAMAGE = M_MINIONDAMAGE + val2 T_NUMMINIONS 0.01 * +; M_MINIONHP = M_MINIONHP + T_NUMMINIONS 0.01 *; M_MINIONATTACKSPEED = M_MINIONATTACKSPEED + T_NUMMINIONS 0.01 *; M_GUNDAMAGE = M_GUNDAMAGE + (-0.4); M_HP = M_HP + (-0.3)
+B_NUMMINIONS = B_NUMMINIONS val1 +; M_MINIONDAMAGE = M_MINIONDAMAGE val2 + T_NUMMINIONS 0.01 * +; M_MINIONHP = M_MINIONHP + T_NUMMINIONS 0.01 *; M_MINIONATTACKSPEED = M_MINIONATTACKSPEED + T_NUMMINIONS 0.01 *; M_GUNDAMAGE = M_GUNDAMAGE -0.4 +; M_HP = M_HP -0.3 +
 ```
 
 **Values:**
@@ -321,7 +321,7 @@ Experimental self-sustaining fabrication core deploying val1 autonomous construc
 
 **HEL Equation:**
 ```
-B_NUMMINIONS = B_NUMMINIONS + val1; M_MINIONDAMAGE = M_MINIONDAMAGE + (T_HP S_HP /) 1 - val2 * 10 * +; M_MINIONATTACKSPEED = M_MINIONATTACKSPEED + T_ENERGYCAPACITY 5 / 0.01 *; M_GUNDAMAGE = M_GUNDAMAGE + (-0.6); M_MELEEDAMAGE = M_MELEEDAMAGE + (-0.6); M_HPREGEN = M_HPREGEN + (-0.8)
+B_NUMMINIONS = B_NUMMINIONS val1 +; M_MINIONDAMAGE = M_MINIONDAMAGE + (T_HP S_HP /) 1 - val2 * 10 * +; M_MINIONATTACKSPEED = M_MINIONATTACKSPEED + T_ENERGYCAPACITY 5 / 0.01 *; M_GUNDAMAGE = M_GUNDAMAGE -0.6 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.6 +; M_HPREGEN = M_HPREGEN -0.8 +
 ```
 
 **Values:**

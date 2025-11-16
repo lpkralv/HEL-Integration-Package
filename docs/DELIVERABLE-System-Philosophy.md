@@ -1,7 +1,8 @@
 # HIOX Stats/Mods System Philosophy
-**Version:** 1.0
-**Status:** FINAL DELIVERABLE
+**Version:** 1.1
+**Status:** FINAL DELIVERABLE (HEL SYNTAX CORRECTED)
 **Date:** 2025-11-12
+**Last Updated:** 2025-11-16
 
 ---
 
@@ -221,7 +222,7 @@ Every powerful effect requires a sacrifice. Players must choose between competin
 
 **Direct Percentage Bonuses:**
 ```
-M_GUNDAMAGE = M_GUNDAMAGE + val1
+M_GUNDAMAGE = M_GUNDAMAGE val1 +
 ```
 - Clean, predictable
 - Easy to understand
@@ -231,7 +232,7 @@ M_GUNDAMAGE = M_GUNDAMAGE + val1
 
 **Situational Bonuses:**
 ```
-M_GUNDAMAGE = M_GUNDAMAGE + (T_HP S_HP 0.5 * <) val1 *
+M_GUNDAMAGE = M_GUNDAMAGE T_HP S_HP 0.5 * < val1 * +
 ```
 - Activates under specific conditions
 - Creates risk/reward gameplay
@@ -241,7 +242,7 @@ M_GUNDAMAGE = M_GUNDAMAGE + (T_HP S_HP 0.5 * <) val1 *
 
 **Build-Defining Transformations:**
 ```
-M_GUNDAMAGE = M_GUNDAMAGE + T_PLAYERSPEED 0.01 * val1 *
+M_GUNDAMAGE = M_GUNDAMAGE T_PLAYERSPEED 0.01 * val1 * +
 ```
 - Converts one stat into another
 - Enables unique build paths
@@ -254,7 +255,7 @@ M_GUNDAMAGE = M_GUNDAMAGE + T_PLAYERSPEED 0.01 * val1 *
 
 **Chaos Mechanics:**
 ```
-M_GUNDAMAGE = M_GUNDAMAGE + RAND val1 * -0.5 +
+M_GUNDAMAGE = M_GUNDAMAGE RAND val1 * 0.5 - +
 ```
 - Introduces controlled randomness
 - High-risk, high-reward
@@ -323,7 +324,7 @@ Final_Value = Min(Max((S + B) * Max(0, 1 + M) + A, min + Z), max + U)
 
 **Always Add to Coefficients:**
 ```
-✅ GOOD: M_GUNDAMAGE = M_GUNDAMAGE + val1
+✅ GOOD: M_GUNDAMAGE = M_GUNDAMAGE val1 +
 ❌ BAD:  M_GUNDAMAGE = val1
 ```
 - Enables stacking multiple mods
@@ -331,8 +332,8 @@ Final_Value = Min(Max((S + B) * Max(0, 1 + M) + A, min + Z), max + U)
 
 **Use Decimals for Percentages:**
 ```
-✅ GOOD: M_GUNDAMAGE = M_GUNDAMAGE + 0.5  // 50% bonus
-❌ BAD:  M_GUNDAMAGE = M_GUNDAMAGE + 50    // Would be 5000% bonus
+✅ GOOD: M_GUNDAMAGE = M_GUNDAMAGE 0.5 +  // 50% bonus
+❌ BAD:  M_GUNDAMAGE = M_GUNDAMAGE 50 +    // Would be 5000% bonus
 ```
 
 **Postfix Notation:**
@@ -515,7 +516,7 @@ mods:
     name: DAMAGE ENHANCEMENT SERUM
     desc: Offensive protocol injection increasing projectile damage output by val1% through weapon emitter optimization nanites
     modweight: 200
-    equation: "M_GUNDAMAGE = M_GUNDAMAGE + val1"
+    equation: "M_GUNDAMAGE = M_GUNDAMAGE val1 +"
 ```
 
 ### 11.2 HEL Integration
@@ -546,7 +547,7 @@ mods:
 
 **Technical Validity:**
 - ✅ All mod IDs unique (1000-1054, 2000-2049, 3000-3050)
-- ✅ All HEL equations syntactically correct
+- ✅ All HEL equations syntactically correct (pure postfix notation)
 - ✅ All type codes properly assigned (0, 2, 4, 10)
 - ✅ All value ranges appropriate for stat types
 

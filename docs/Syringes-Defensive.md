@@ -39,7 +39,7 @@ Defensive protocol injection increasing maximum structural integrity by val1% th
 
 **HEL Equation:**
 ```
-M_HP = M_HP + val1
+M_HP = M_HP val1 +
 ```
 
 **Values:**
@@ -73,7 +73,7 @@ Protective nanite serum coating outer framework with ablative plating, increasin
 
 **HEL Equation:**
 ```
-M_ARMOR = M_ARMOR + val1
+M_ARMOR = M_ARMOR val1 +
 ```
 
 **Values:**
@@ -107,7 +107,7 @@ Shield augmentation protocols expanding energy barrier capacity by val1% for enh
 
 **HEL Equation:**
 ```
-M_SHIELDCAPACITY = M_SHIELDCAPACITY + val1
+M_SHIELDCAPACITY = M_SHIELDCAPACITY val1 +
 ```
 
 **Values:**
@@ -141,7 +141,7 @@ Defensive nanite layer providing val1 flat damage reduction per impact through k
 
 **HEL Equation:**
 ```
-B_DAMAGEABSORPTION = B_DAMAGEABSORPTION + val1
+B_DAMAGEABSORPTION = B_DAMAGEABSORPTION val1 +
 ```
 
 **Values:**
@@ -177,7 +177,7 @@ Combined defensive matrix increasing structural integrity by val1% and armor by 
 
 **HEL Equation:**
 ```
-M_HP = M_HP + val1; M_ARMOR = M_ARMOR + val2; M_PLAYERSPEED = M_PLAYERSPEED + (-0.1)
+M_HP = M_HP val1 +; M_ARMOR = M_ARMOR val2 +; M_PLAYERSPEED = M_PLAYERSPEED -0.1 +
 ```
 
 **Values:**
@@ -211,7 +211,7 @@ Shield enhancement protocols increasing energy barrier capacity by val1% and reg
 
 **HEL Equation:**
 ```
-M_SHIELDCAPACITY = M_SHIELDCAPACITY + val1; M_SHIELDREGENRATE = M_SHIELDREGENRATE + val2; M_GUNDAMAGE = M_GUNDAMAGE + (-0.15); M_MELEEDAMAGE = M_MELEEDAMAGE + (-0.15)
+M_SHIELDCAPACITY = M_SHIELDCAPACITY val1 +; M_SHIELDREGENRATE = M_SHIELDREGENRATE val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.15 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.15 +
 ```
 
 **Values:**
@@ -245,7 +245,7 @@ Dual-layer defense protocols granting val1% HP increase and val2% dodge chance t
 
 **HEL Equation:**
 ```
-M_HP = M_HP + val1; M_DODGECHANCE = M_DODGECHANCE + val2; M_MAXSTAMINA = M_MAXSTAMINA + (-0.15)
+M_HP = M_HP val1 +; M_DODGECHANCE = M_DODGECHANCE val2 +; M_MAXSTAMINA = M_MAXSTAMINA -0.15 +
 ```
 
 **Values:**
@@ -281,7 +281,7 @@ Experimental defense nanites granting val1% base armor, plus additional val2% ar
 
 **HEL Equation:**
 ```
-M_ARMOR = M_ARMOR + val1; M_ARMOR = M_ARMOR + T_HP T_HP / 1 - val2 *; M_HPREGEN = M_HPREGEN + (-0.2)
+M_ARMOR = M_ARMOR val1 +; M_ARMOR = M_ARMOR + T_HP T_HP / 1 - val2 *; M_HPREGEN = M_HPREGEN -0.2 +
 ```
 
 **Values:**
@@ -318,7 +318,7 @@ Prototype barrier protocols extending shield capacity limit by val1% and grantin
 
 **HEL Equation:**
 ```
-U_SHIELDCAPACITY = U_SHIELDCAPACITY + T_SHIELDCAPACITY val1 *; M_SHIELDCAPACITY = M_SHIELDCAPACITY + val2; M_ARMOR = M_ARMOR + (-0.25); M_PLAYERSPEED = M_PLAYERSPEED + (-0.2)
+U_SHIELDCAPACITY = U_SHIELDCAPACITY + T_SHIELDCAPACITY val1 *; M_SHIELDCAPACITY = M_SHIELDCAPACITY val2 +; M_ARMOR = M_ARMOR -0.25 +; M_PLAYERSPEED = M_PLAYERSPEED -0.2 +
 ```
 
 **Values:**
@@ -357,7 +357,7 @@ Emergency defense protocols activate when structural integrity falls below 20%, 
 
 **HEL Equation:**
 ```
-M_DAMAGEABSORPTION = M_DAMAGEABSORPTION + (T_HP T_HP 0.2 * <) val1 *; M_HP = M_HP + (-0.35); M_GUNDAMAGE = M_GUNDAMAGE + (-0.3); M_MELEEDAMAGE = M_MELEEDAMAGE + (-0.3)
+M_DAMAGEABSORPTION = M_DAMAGEABSORPTION T_HP T_HP 0.2 * < val1 * +; M_HP = M_HP -0.35 +; M_GUNDAMAGE = M_GUNDAMAGE -0.3 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.3 +
 ```
 
 **Values:**
