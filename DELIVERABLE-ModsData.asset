@@ -1,11 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2089455f10e0bb044bfbd1dbcca6bb00, type: 3}
+  m_Name: ModsData
+  m_EditorClassIdentifier:
 # HIOX ModsData.asset - Complete Mods YAML
 # Version: 2.0
 # Status: COMPLETE (ALL 156 MODS)
 # Total Mods: 156 (45 Weapons + 50 Items + 51 Syringes)
 # Format: Valid YAML for Unity integration
 # HEL Syntax: Pure postfix notation (corrected v1.1)
-
-mods:
+#
+# NOTE: This file contains ALL mods from the complete Stats/Mods system design.
+# Source design documents:
+# - Weapons-*.md (Ballistic, Energy, Explosive, Deployables, Hybrid, Melee)
+# - Items-*.md (Structural, Mobility, Regeneration, Offensive, Resistance, Resource, Tactical)
+# - Syringes-*.md (Combat, Defensive, Metabolic, Elemental, Tactical, Exotic)
+#
+# Mod ID Ranges:
+# - Weapons: 515-524 (Energy), 1000-1054 (Ballistic, Explosive, Deployables, Hybrid, Melee)
+# - Items: 2000-2049 (All item categories)
+# - Syringes: 3000-3050 (All syringe categories)
+  mods:
 
   # ========================================
   # UNKNOWN
