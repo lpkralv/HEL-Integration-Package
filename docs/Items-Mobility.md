@@ -39,7 +39,7 @@ Locomotion enhancement nanites increase base movement speed by val1% through opt
 
 **HEL Equation:**
 ```
-M_PLAYERSPEED = M_PLAYERSPEED + val1
+M_PLAYERSPEED = M_PLAYERSPEED val1 +
 ```
 
 **Values:**
@@ -70,7 +70,7 @@ Enhanced sprint calibration systems increasing sprint speed by val1% but reducin
 
 **HEL Equation:**
 ```
-M_SPRINTSPEED = M_SPRINTSPEED + val1; M_PLAYERSPEED = M_PLAYERSPEED + (-val2)
+M_SPRINTSPEED = M_SPRINTSPEED val1 +; M_PLAYERSPEED = M_PLAYERSPEED -val2 +
 ```
 
 **Values:**
@@ -101,7 +101,7 @@ Gravitational displacement systems enhancing jump force by val1%, enabling super
 
 **HEL Equation:**
 ```
-M_JUMPSTRENGTH = M_JUMPSTRENGTH + val1
+M_JUMPSTRENGTH = M_JUMPSTRENGTH val1 +
 ```
 
 **Values:**
@@ -134,7 +134,7 @@ Emergency evasion protocols reducing dash cooldown by val1 seconds and increasin
 
 **HEL Equation:**
 ```
-B_DASHCOOLDOWN = B_DASHCOOLDOWN + (-val1); M_DASHSPEED = M_DASHSPEED + val2; M_HP = M_HP + (-val2)
+B_DASHCOOLDOWN = B_DASHCOOLDOWN -val1 +; M_DASHSPEED = M_DASHSPEED val2 +; M_HP = M_HP -val2 +
 ```
 
 **Values:**
@@ -165,7 +165,7 @@ Kinetic energy recapture systems increasing movement speed by val1% and stamina 
 
 **HEL Equation:**
 ```
-M_PLAYERSPEED = M_PLAYERSPEED + val1; M_STAMINAREGEN = M_STAMINAREGEN + val2; M_ARMOR = M_ARMOR + (-0.3)
+M_PLAYERSPEED = M_PLAYERSPEED val1 +; M_STAMINAREGEN = M_STAMINAREGEN val2 +; M_ARMOR = M_ARMOR -0.3 +
 ```
 
 **Values:**
@@ -198,7 +198,7 @@ Experimental kinetic conversion protocols granting val1% weapon damage per 100 m
 
 **HEL Equation:**
 ```
-M_GUNDAMAGE = M_GUNDAMAGE + T_PLAYERSPEED 100 / val1 *; M_DODGECHANCE = M_DODGECHANCE + T_PLAYERSPEED 200 / val2 *; M_HP = M_HP + (-0.25)
+M_GUNDAMAGE = M_GUNDAMAGE + T_PLAYERSPEED 100 / val1 *; M_DODGECHANCE = M_DODGECHANCE + T_PLAYERSPEED 200 / val2 *; M_HP = M_HP -0.25 +
 ```
 
 **Values:**
@@ -234,7 +234,7 @@ Experimental overclocked locomotion system granting val1% movement speed and red
 
 **HEL Equation:**
 ```
-M_PLAYERSPEED = M_PLAYERSPEED + val1; B_DASHCOOLDOWN = B_DASHCOOLDOWN + (-val2); M_HP = M_HP + (-val1); M_HPREGEN = M_HPREGEN + (-1.0)
+M_PLAYERSPEED = M_PLAYERSPEED val1 +; B_DASHCOOLDOWN = B_DASHCOOLDOWN -val2 +; M_HP = M_HP -val1 +; M_HPREGEN = M_HPREGEN -1.0 +
 ```
 
 **Values:**

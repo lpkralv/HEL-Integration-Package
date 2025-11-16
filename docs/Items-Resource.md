@@ -39,7 +39,7 @@ Enhanced power cell assembly increasing maximum energy storage capacity by val1%
 
 **HEL Equation:**
 ```
-M_ENERGYCAPACITY = M_ENERGYCAPACITY + val1
+M_ENERGYCAPACITY = M_ENERGYCAPACITY val1 +
 ```
 
 **Values:**
@@ -72,7 +72,7 @@ Optimized reactor protocols accelerating energy reconstitution cycles, restoring
 
 **HEL Equation:**
 ```
-B_ENERGYREGEN = B_ENERGYREGEN + val1
+B_ENERGYREGEN = B_ENERGYREGEN val1 +
 ```
 
 **Values:**
@@ -105,7 +105,7 @@ System recalibration protocols reducing all tactical ability cooldown timers by 
 
 **HEL Equation:**
 ```
-M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION + val1
+M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION val1 +
 ```
 
 **Values:**
@@ -140,7 +140,7 @@ Unified power management system increasing energy capacity by val1% and energy r
 
 **HEL Equation:**
 ```
-M_ENERGYCAPACITY = M_ENERGYCAPACITY + val1; B_ENERGYREGEN = B_ENERGYREGEN + val2; M_MAXSTAMINA = M_MAXSTAMINA + (-0.2)
+M_ENERGYCAPACITY = M_ENERGYCAPACITY val1 +; B_ENERGYREGEN = B_ENERGYREGEN val2 +; M_MAXSTAMINA = M_MAXSTAMINA -0.2 +
 ```
 
 **Values:**
@@ -174,7 +174,7 @@ Advanced resource conservation algorithms reducing ability cooldowns by val1% an
 
 **HEL Equation:**
 ```
-M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION + val1; M_RESOURCEEFFICIENCY = M_RESOURCEEFFICIENCY + val2; M_PLAYERSPEED = M_PLAYERSPEED + (-0.15)
+M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION val1 +; M_RESOURCEEFFICIENCY = M_RESOURCEEFFICIENCY val2 +; M_PLAYERSPEED = M_PLAYERSPEED -0.15 +
 ```
 
 **Values:**
@@ -210,7 +210,7 @@ Experimental power routing system granting val1 base energy capacity and convert
 
 **HEL Equation:**
 ```
-B_ENERGYCAPACITY = B_ENERGYCAPACITY + val1; M_GUNDAMAGE = M_GUNDAMAGE + T_ENERGYCAPACITY val2 * 0.001 *; M_MELEEDAMAGE = M_MELEEDAMAGE + T_ENERGYCAPACITY val2 * 0.001 *; M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.3)
+B_ENERGYCAPACITY = B_ENERGYCAPACITY val1 +; M_GUNDAMAGE = M_GUNDAMAGE + T_ENERGYCAPACITY val2 * 0.001 *; M_MELEEDAMAGE = M_MELEEDAMAGE + T_ENERGYCAPACITY val2 * 0.001 *; M_SHOTSPERSEC = M_SHOTSPERSEC -0.3 +
 ```
 
 **Values:**
@@ -247,7 +247,7 @@ Experimental time-dilation protocols reducing ability cooldowns by val1% and con
 
 **HEL Equation:**
 ```
-M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION + val1; M_IGNITECHANCE = M_IGNITECHANCE + T_COOLDOWNREDUCTION val2 *; M_CHARGECHANCE = M_CHARGECHANCE + T_COOLDOWNREDUCTION val2 *; M_ARMOR = M_ARMOR + (-0.25)
+M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION val1 +; M_IGNITECHANCE = M_IGNITECHANCE + T_COOLDOWNREDUCTION val2 *; M_CHARGECHANCE = M_CHARGECHANCE + T_COOLDOWNREDUCTION val2 *; M_ARMOR = M_ARMOR -0.25 +
 ```
 
 **Values:**
@@ -286,7 +286,7 @@ Prototype perpetual motion reactor reducing all resource costs by val1%, grantin
 
 **HEL Equation:**
 ```
-M_RESOURCEEFFICIENCY = M_RESOURCEEFFICIENCY + val1; B_ENERGYREGEN = B_ENERGYREGEN + val2; M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION + 0.5; M_GUNDAMAGE = M_GUNDAMAGE + (-0.35); M_MELEEDAMAGE = M_MELEEDAMAGE + (-0.35); M_HP = M_HP + (-0.2)
+M_RESOURCEEFFICIENCY = M_RESOURCEEFFICIENCY val1 +; B_ENERGYREGEN = B_ENERGYREGEN val2 +; M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION 0.5 +; M_GUNDAMAGE = M_GUNDAMAGE -0.35 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.35 +; M_HP = M_HP -0.2 +
 ```
 
 **Values:**

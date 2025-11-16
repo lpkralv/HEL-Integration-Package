@@ -40,7 +40,7 @@ Combat nanite extraction protocols converting val1% of inflicted structural dama
 
 **HEL Equation:**
 ```
-M_LIFESTEAL = M_LIFESTEAL + val1
+M_LIFESTEAL = M_LIFESTEAL val1 +
 ```
 
 **Values:**
@@ -74,7 +74,7 @@ Advanced threat assessment algorithms granting val1% probability of complete att
 
 **HEL Equation:**
 ```
-M_DODGECHANCE = M_DODGECHANCE + val1
+M_DODGECHANCE = M_DODGECHANCE val1 +
 ```
 
 **Values:**
@@ -108,7 +108,7 @@ Retaliatory defense protocols inflicting val1 structural damage on any attacker,
 
 **HEL Equation:**
 ```
-B_THORNDAMAGE = B_THORNDAMAGE + val1
+B_THORNDAMAGE = B_THORNDAMAGE val1 +
 ```
 
 **Values:**
@@ -144,7 +144,7 @@ Integrated counterattack systems dealing val1 thorns damage plus reflecting val2
 
 **HEL Equation:**
 ```
-B_THORNDAMAGE = B_THORNDAMAGE + val1; M_REFLECTDAMAGE = M_REFLECTDAMAGE + val2; M_HP = M_HP + (-0.2)
+B_THORNDAMAGE = B_THORNDAMAGE val1 +; M_REFLECTDAMAGE = M_REFLECTDAMAGE val2 +; M_HP = M_HP -0.2 +
 ```
 
 **Values:**
@@ -179,7 +179,7 @@ Predatory strike protocols granting val1% lifesteal and val2% critical damage am
 
 **HEL Equation:**
 ```
-M_LIFESTEAL = M_LIFESTEAL + val1; M_CRITDAMAGE = M_CRITDAMAGE + val2; M_ARMOR = M_ARMOR + (-0.25)
+M_LIFESTEAL = M_LIFESTEAL val1 +; M_CRITDAMAGE = M_CRITDAMAGE val2 +; M_ARMOR = M_ARMOR -0.25 +
 ```
 
 **Values:**
@@ -256,7 +256,7 @@ Experimental reality-inversion protocols converting val1% of all received damage
 
 **HEL Equation:**
 ```
-M_LIFESTEAL = M_LIFESTEAL + val1; M_HP = M_HP + (-0.4); M_ARMOR = M_ARMOR + (-0.5); U_SHIELDCAPACITY = U_SHIELDCAPACITY + (-5000)
+M_LIFESTEAL = M_LIFESTEAL val1 +; M_HP = M_HP -0.4 +; M_ARMOR = M_ARMOR -0.5 +; U_SHIELDCAPACITY = U_SHIELDCAPACITY -5000 +
 ```
 
 **Values:**

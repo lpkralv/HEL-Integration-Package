@@ -38,7 +38,7 @@ Hardened nanite shell increasing maximum structural integrity by val1% through e
 
 **HEL Equation:**
 ```
-M_HP = M_HP + val1
+M_HP = M_HP val1 +
 ```
 
 **Values:**
@@ -72,7 +72,7 @@ Ablative armor layers increasing damage reduction by val1% through layered nanit
 
 **HEL Equation:**
 ```
-M_ARMOR = M_ARMOR + val1
+M_ARMOR = M_ARMOR val1 +
 ```
 
 **Values:**
@@ -106,7 +106,7 @@ Combined defensive matrix increasing HP by val1% and armor by val2%, but reducin
 
 **HEL Equation:**
 ```
-M_HP = M_HP + val1; M_ARMOR = M_ARMOR + val2; M_PLAYERSPEED = M_PLAYERSPEED + (-0.1)
+M_HP = M_HP val1 +; M_ARMOR = M_ARMOR val2 +; M_PLAYERSPEED = M_PLAYERSPEED -0.1 +
 ```
 
 **Values:**
@@ -142,7 +142,7 @@ Advanced barrier system granting val1% HP increase and val2 flat damage absorpti
 
 **HEL Equation:**
 ```
-M_HP = M_HP + val1; B_DAMAGEABSORPTION = B_DAMAGEABSORPTION + val2; M_MAXSTAMINA = M_MAXSTAMINA + (-0.15)
+M_HP = M_HP val1 +; B_DAMAGEABSORPTION = B_DAMAGEABSORPTION val2 +; M_MAXSTAMINA = M_MAXSTAMINA -0.15 +
 ```
 
 **Values:**
@@ -176,7 +176,7 @@ Reflective armor matrix increasing armor by val1% and reflecting val2% of receiv
 
 **HEL Equation:**
 ```
-M_ARMOR = M_ARMOR + val1; M_REFLECTDAMAGE = M_REFLECTDAMAGE + val2; M_GUNDAMAGE = M_GUNDAMAGE + (-0.2); M_MELEEDAMAGE = M_MELEEDAMAGE + (-0.2)
+M_ARMOR = M_ARMOR val1 +; M_REFLECTDAMAGE = M_REFLECTDAMAGE val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.2 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.2 +
 ```
 
 **Values:**
@@ -212,7 +212,7 @@ Experimental regeneration protocols granting val1 HP regen per second, plus addi
 
 **HEL Equation:**
 ```
-B_HPREGEN = B_HPREGEN + val1; B_HPREGEN = B_HPREGEN + T_ARMOR val2 * 0.01 *; M_MAXSTAMINA = M_MAXSTAMINA + (-0.25)
+B_HPREGEN = B_HPREGEN val1 +; B_HPREGEN = B_HPREGEN + T_ARMOR val2 * 0.01 *; M_MAXSTAMINA = M_MAXSTAMINA -0.25 +
 ```
 
 **Values:**
@@ -249,7 +249,7 @@ Retaliatory combat matrix inflicting val1 base thorns damage plus additional val
 
 **HEL Equation:**
 ```
-B_THORNDAMAGE = B_THORNDAMAGE + val1; B_THORNDAMAGE = B_THORNDAMAGE + T_HP val2 * 0.01 *; M_PLAYERSPEED = M_PLAYERSPEED + (-0.15); M_SPRINTSPEED = M_SPRINTSPEED + (-0.3)
+B_THORNDAMAGE = B_THORNDAMAGE val1 +; B_THORNDAMAGE = B_THORNDAMAGE + T_HP val2 * 0.01 *; M_PLAYERSPEED = M_PLAYERSPEED -0.15 +; M_SPRINTSPEED = M_SPRINTSPEED -0.3 +
 ```
 
 **Values:**
@@ -288,7 +288,7 @@ Experimental protocols granting val1% maximum HP increase and val2% HP-to-damage
 
 **HEL Equation:**
 ```
-M_MAXHPPERCENTBONUS = M_MAXHPPERCENTBONUS + val1; M_GUNDAMAGE = M_GUNDAMAGE + T_HP val2 * 0.02 *; M_MELEEDAMAGE = M_MELEEDAMAGE + T_HP val2 * 0.02 *; M_PLAYERSPEED = M_PLAYERSPEED + (-0.4); M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.35)
+M_MAXHPPERCENTBONUS = M_MAXHPPERCENTBONUS val1 +; M_GUNDAMAGE = M_GUNDAMAGE + T_HP val2 * 0.02 *; M_MELEEDAMAGE = M_MELEEDAMAGE + T_HP val2 * 0.02 *; M_PLAYERSPEED = M_PLAYERSPEED -0.4 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.35 +
 ```
 
 **Values:**
