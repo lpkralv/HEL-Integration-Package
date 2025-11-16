@@ -35,6 +35,10 @@ Critical for Glass Cannon builds. Supports Precision Sniper archetype. Enables h
 **Lore:**
 Advanced targeting protocols analyze structural weaknesses in enemy nanite configurations, allowing precision strikes to exploit critical points in their framework.
 
+**Code Changes Required:**
+- *Game-State:* Attack damage calculation system must implement probability roll on each damage event to check against CRITCHANCE value. If roll succeeds, apply CRITDAMAGE multiplier to base damage before final output.
+- *Animation:* Critical hit visual effect (enhanced impact particles, screen shake, damage number highlighting) to distinguish critical hits from normal attacks.
+
 ---
 
 ### CRITDAMAGE
@@ -51,6 +55,10 @@ Essential for Glass Cannon builds. Core stat for Precision Sniper archetype. Syn
 
 **Lore:**
 When targeting protocols identify critical structural points, weapon emitters concentrate their output at vulnerable nanite junctions, amplifying destructive force significantly.
+
+**Code Changes Required:**
+- *Game-State:* Damage calculation must apply CRITDAMAGE multiplier when critical hit flag is set. Must work multiplicatively with all other damage bonuses (elemental, weapon mods, etc.).
+- *Animation:* Enhanced critical strike visual effects (larger particles, different color scheme, special impact animations) to indicate amplified damage.
 
 ---
 
@@ -69,6 +77,10 @@ Important for Precision Sniper builds requiring long-range accuracy. Supports El
 **Lore:**
 Projectile acceleration systems determine how quickly nanite-compressed ammunition or energy packets traverse the battlefield, affecting engagement range effectiveness.
 
+**Code Changes Required:**
+- *Game-State:* Projectile physics system must read PROJECTILESPEED stat and apply velocity to projectile Rigidbody/transform. Update projectile prefabs to use stat-driven velocity instead of hardcoded values.
+- *Animation:* Faster projectiles may need motion blur trails or enhanced visual effects to maintain visibility at high speeds.
+
 ---
 
 ### PIERCINGSHOTS
@@ -85,6 +97,10 @@ Enables crowd control for DoT Specialist builds. Valuable for Speed Demon kiting
 
 **Lore:**
 Enhanced projectile coherence protocols maintain ammunition structural integrity after impact, allowing nanite projectiles to pass through targets and continue to secondary contacts.
+
+**Code Changes Required:**
+- *Game-State:* Projectile collision system must track pierce count and continue through enemies instead of destroying on first hit. Implement pierce counter that decrements on each enemy collision until reaching zero, then destroy projectile.
+- *Animation:* Projectile trail effect showing penetration path through multiple enemies. Possibly different impact particles for piercing hits vs final hit.
 
 ---
 
@@ -103,6 +119,10 @@ Critical for Ballistic Assembly weapon users. Supports Glass Cannon sustained DP
 **Lore:**
 Optimized nanite fabrication protocols accelerate the reconstruction of ammunition matrices and weapon system recalibration between firing sequences.
 
+**Code Changes Required:**
+- *Game-State:* Weapon reload system must apply RELOADSPEED as divider to base reload time (e.g., 3s / RELOADSPEED). Ensure reload timer references this stat dynamically.
+- *Animation:* Reload animation speed must scale with RELOADSPEED multiplier. May need animation blending or time-scale adjustments for very high/low values.
+
 ---
 
 ### AMMOCAPACITY
@@ -119,6 +139,10 @@ Essential for Glass Cannon sustained damage. Supports DoT Specialist for continu
 
 **Lore:**
 Weapon matrix storage capacity determines how many nanite-compressed projectiles can be loaded simultaneously before requiring reconstruction cycles.
+
+**Code Changes Required:**
+- *Game-State:* Weapon system must track current ammo count and max capacity using AMMOCAPACITY stat. Ammo counter decrements on fire, triggers reload when reaching zero.
+- *Animation:* UI ammo counter display must reflect AMMOCAPACITY value. No special visual effects required.
 
 ---
 
@@ -137,6 +161,10 @@ Core mechanic for Hybrid Berserker sustain. Critical for Glass Cannon survival. 
 **Lore:**
 Integrated nanite recycling protocols extract viable structural components from damaged enemy constructs, repurposing their matter to reinforce your own framework integrity.
 
+**Code Changes Required:**
+- *Game-State:* Damage system must track damage dealt and apply healing equal to (damage × LIFESTEAL). Healing event triggers on each damage instance and adds to player HP up to max.
+- *Animation:* Lifesteal healing effect showing particle flow from damaged enemy to player (nanite absorption visual). Health gain feedback through UI or visual effect on player character.
+
 ---
 
 ### CHAINLIGHTNING
@@ -153,6 +181,10 @@ Enables Elemental Savant multi-target strategies. Core mechanic for DoT Speciali
 
 **Lore:**
 Electrical discharge protocols identify conductive pathways between nearby enemy nanite constructs, allowing charge effects to propagate across multiple targets in rapid succession.
+
+**Code Changes Required:**
+- *Game-State:* Electric damage system must implement chaining logic: find nearest enemy within PROCRANGE, apply damage/effect, repeat up to CHAINLIGHTNING times. Track already-hit enemies to prevent loops. Damage may reduce per chain (e.g., 70% per jump).
+- *Animation:* Lightning arc visual effects (line renderer or particle system) connecting from initial target to each subsequent chain target. Electric discharge particles at each impact point. Audio feedback for each chain jump.
 
 ---
 
@@ -173,6 +205,10 @@ Enables shield-tank variant of Fortress Tank builds. Supports Elemental Savant f
 **Lore:**
 Projected energy fields create a secondary defensive layer around your nanite framework, absorbing incoming damage before core structural integrity is compromised.
 
+**Code Changes Required:**
+- *Game-State:* Implement shield system with separate HP pool tracking current/max shield using SHIELDCAPACITY. Damage system must deplete shield before HP. Shield persists between combat encounters.
+- *Animation:* Shield visual overlay around player character (energy barrier effect). Shield impact animations when taking damage. Shield depletion visual feedback when shield breaks.
+
 ---
 
 ### SHIELDREGENRATE
@@ -189,6 +225,10 @@ Critical for shield-tank Fortress Tank builds. Supports Speed Demon hit-and-run 
 
 **Lore:**
 Continuous energy field recalibration systems restore barrier strength during combat lulls, maintaining defensive coverage through sustained engagements.
+
+**Code Changes Required:**
+- *Game-State:* Shield system must implement regeneration timer that restores SHIELDREGENRATE points per second. Timer starts after delay period (e.g., 2-3s) since last damage taken. Regeneration continues until shield reaches SHIELDCAPACITY or player takes damage.
+- *Animation:* Shield recharge visual effect (pulsing energy, particle buildup). UI feedback showing shield regenerating. Possibly audio cue when regeneration begins.
 
 ---
 
@@ -207,6 +247,10 @@ Enables evasion-tank variant of Fortress Tank. Core mechanic for Speed Demon sur
 **Lore:**
 Predictive combat algorithms analyze enemy attack vectors and execute micro-corrections to your trajectory, allowing complete evasion of incoming strikes.
 
+**Code Changes Required:**
+- *Game-State:* Incoming damage system must implement probability roll against DODGECHANCE on each enemy attack. If roll succeeds, set damage to zero and trigger dodge event. Must occur before shield/HP damage calculation.
+- *Animation:* Dodge visual effect (afterimage, blur, quick dash animation). "Miss" or "Dodge" floating text. Possibly brief invulnerability flash or particle effect.
+
 ---
 
 ### DAMAGEABSORPTION
@@ -223,6 +267,10 @@ Core mechanic for Fortress Tank builds. Synergizes with high ARMOR for multiplic
 
 **Lore:**
 Reinforced outer nanite layers ablate and dissipate incoming kinetic and energy attacks, reducing effective damage transfer to core systems.
+
+**Code Changes Required:**
+- *Game-State:* Damage mitigation system must subtract DAMAGEABSORPTION value from incoming damage before applying percentage-based defenses (ARMOR). Final damage = Max(0, (incoming - DAMAGEABSORPTION) × armor_multiplier).
+- *Animation:* No specific visual effect required. Could add subtle damage absorption particle effect at impact point showing flat reduction.
 
 ---
 
@@ -241,6 +289,10 @@ Enables thorns-tank variant of Fortress Tank archetype. Supports passive damage 
 **Lore:**
 Reactive defense protocols channel absorbed attack energy back through point-of-contact vectors, damaging enemy weapon emitters and structural frameworks during their assault.
 
+**Code Changes Required:**
+- *Game-State:* When player takes damage, deal THORNDAMAGE flat damage back to the attacking enemy. Trigger on every hit received regardless of damage amount. Track attacker reference to apply retaliation damage.
+- *Animation:* Thorn/spike visual effect emanating from player toward attacker. Electric discharge or energy pulse on retaliation. Damage numbers appearing on enemy showing thorn damage.
+
 ---
 
 ### REFLECTDAMAGE
@@ -258,6 +310,10 @@ Core mechanic for reflect-focused Fortress Tank builds. Synergizes with high HP 
 **Lore:**
 Defensive energy matrices capture and redirect portions of incoming attack force, creating feedback pulses that damage enemy weapon systems and structural integrity.
 
+**Code Changes Required:**
+- *Game-State:* When player takes damage, calculate reflected damage as (damage_taken × REFLECTDAMAGE) and apply to attacking enemy. Works alongside THORNDAMAGE for combined reflect builds. Track attacker reference.
+- *Animation:* Energy reflection visual effect (projectile/wave returning to attacker). Different visual from THORNDAMAGE to distinguish percentage-based vs flat reflection. Impact particles on enemy.
+
 ---
 
 ### MAXHPPERCENTBONUS
@@ -274,6 +330,10 @@ Essential for Fortress Tank extreme HP builds. Enables HP-scaling strategies tha
 
 **Lore:**
 Optimized nanite density protocols increase total framework structural capacity, allowing more extensive damage buffering before critical system failure.
+
+**Code Changes Required:**
+- *Game-State:* HP system max value calculation must apply MAXHPPERCENTBONUS as multiplier using U_HP coefficient in HEL equation: final_max_hp = (base_hp + bonuses) × (1 + MAXHPPERCENTBONUS). Update max HP dynamically when stat changes.
+- *Animation:* No specific visual effect required. Could add UI feedback or character size/glow scaling to indicate massive HP pools.
 
 ---
 
@@ -294,6 +354,10 @@ Critical for ability-heavy builds across all archetypes. Enables Summoner Comman
 **Lore:**
 Integrated power cells store excess energy generated by your core reactor, providing reserves for high-demand weapon discharges and tactical protocol activations.
 
+**Code Changes Required:**
+- *Game-State:* Implement energy resource system with current/max energy pools using ENERGYCAPACITY. Track energy consumption for abilities and regeneration. Display in UI alongside HP/shields.
+- *Animation:* Energy bar UI element displaying current/max energy. Energy depletion animation when abilities are used. Possibly character glow or visual indicator scaling with energy level.
+
 ---
 
 ### ENERGYREGEN
@@ -310,6 +374,10 @@ Essential for Elemental Savant continuous casting. Supports Summoner Commander f
 
 **Lore:**
 Optimized reactor efficiency protocols maximize energy conversion from ambient nanite field interactions, maintaining steady power flow to ability systems.
+
+**Code Changes Required:**
+- *Game-State:* Energy system must regenerate ENERGYREGEN points per second continuously or during specific states. Add energy to current pool until reaching ENERGYCAPACITY max. May pause during certain actions.
+- *Animation:* Energy bar filling animation during regeneration. Possibly pulsing glow or particle effect on character during energy regen. UI feedback showing regen rate.
 
 ---
 
@@ -328,6 +396,10 @@ Core stat for ability-spam builds across archetypes. Critical for Speed Demon da
 **Lore:**
 Streamlined system recalibration algorithms reduce downtime between tactical protocol executions, enabling rapid-succession ability deployments.
 
+**Code Changes Required:**
+- *Game-State:* Ability cooldown system must apply COOLDOWNREDUCTION as multiplier to all cooldown timers: actual_cooldown = base_cooldown × (1 - COOLDOWNREDUCTION). Update cooldown timers dynamically when stat changes.
+- *Animation:* UI feedback showing reduced cooldown timers. Possibly accelerated cooldown UI animation/effects. No character animation required.
+
 ---
 
 ### RESOURCEEFFICIENCY
@@ -345,6 +417,10 @@ Valuable for Speed Demon stamina management. Supports Summoner Commander minion 
 **Lore:**
 Optimized power distribution systems reduce wasted energy during ability activations, lowering total consumption while maintaining full operational output.
 
+**Code Changes Required:**
+- *Game-State:* Resource consumption system must apply RESOURCEEFFICIENCY to all costs: actual_cost = base_cost × (1 - RESOURCEEFFICIENCY). Applies to energy, stamina, and any special currencies. Calculate before deducting resources.
+- *Animation:* No specific visual effect required. Could add efficient energy use visual (cleaner particles, reduced waste effects) when abilities are activated.
+
 ---
 
 ### DASHCOOLDOWN
@@ -361,6 +437,10 @@ Core mechanic for Speed Demon archetype. Critical for Glass Cannon survival thro
 
 **Lore:**
 System recalibration requirements limit rapid-succession activation of high-intensity movement protocols, governing the frequency of emergency displacement maneuvers.
+
+**Code Changes Required:**
+- *Game-State:* Dash ability system must use DASHCOOLDOWN as base cooldown timer. After dash activation, start cooldown timer that counts down from DASHCOOLDOWN value. May interact with COOLDOWNREDUCTION stat.
+- *Animation:* Dash movement animation (rapid displacement with trail/blur effect). Cooldown UI indicator showing time remaining. Ready-state visual feedback when dash becomes available.
 
 ---
 
@@ -381,6 +461,10 @@ Enables corruption-focused Elemental Savant builds. Core mechanic for DoT Specia
 **Lore:**
 Weaponized viral protocols inject malicious code into enemy nanite systems, causing cascading structural degradation and system malfunctions over extended duration.
 
+**Code Changes Required:**
+- *Game-State:* Implement corruption proc system: on attack or proc event, roll probability against CORRUPTIONCHANCE. If successful, apply corruption DoT debuff to enemy that deals CORRUPTIONDAMAGE per tick at fixed intervals.
+- *Animation:* Corruption application visual effect (viral/glitch particles, screen distortion on enemy). Corruption DoT tick effect showing ongoing damage (pulsing corruption aura, deteriorating visual on enemy). Corrupted enemy visual state (color shift, particle effects).
+
 ---
 
 ### CORRUPTIONDAMAGE
@@ -397,6 +481,10 @@ Essential for DoT Specialist archetype. Supports Elemental Savant corruption bui
 
 **Lore:**
 Corrupted nanite systems suffer progressive structural failure as viral code propagates through their framework, dealing continuous damage until purge protocols complete.
+
+**Code Changes Required:**
+- *Game-State:* Corruption DoT system must deal CORRUPTIONDAMAGE per tick. Track DoT duration, tick rate (e.g., every 0.5s), and apply damage to corrupted enemies each tick. Handle stacking/refresh mechanics.
+- *Animation:* Corruption damage tick visual effects (pulsing aura, deterioration particles each tick). Damage numbers appearing on enemy showing corruption damage. Ongoing corruption visual state persists through DoT duration.
 
 ---
 
@@ -415,6 +503,10 @@ Critical for Elemental Savant builds in late-game against resistant enemies. Sup
 **Lore:**
 Advanced frequency modulation systems attune elemental attacks to bypass enemy resistance calibrations, ensuring damage transmission despite defensive countermeasures.
 
+**Code Changes Required:**
+- *Game-State:* Elemental damage calculation must reduce enemy resistances by ELEMENTALPENETRATION percentage before applying damage: effective_resistance = enemy_resistance × (1 - ELEMENTALPENETRATION). Applies to fire, electric, and corruption damage types.
+- *Animation:* No specific visual effect required. Could add penetrating visual effect (enhanced particles bypassing defenses) when ELEMENTALPENETRATION is high.
+
 ---
 
 ### IGNITESPREAD
@@ -431,6 +523,10 @@ Enables AoE-focused Elemental Savant fire builds. Core mechanic for DoT Speciali
 
 **Lore:**
 Thermal cascade protocols detect nearby heat-vulnerable targets within effective range, allowing ignite effects to propagate through enemy formations via radiant energy transfer.
+
+**Code Changes Required:**
+- *Game-State:* Fire DoT (ignite) system must check for enemies within IGNITESPREAD radius of burning enemy. Spread ignite effect to nearby enemies, creating chain reactions. Track already-ignited enemies to prevent infinite loops.
+- *Animation:* Fire spread visual effects showing flames jumping between enemies. Thermal wave or fire particles propagating from burning enemy to nearby targets. Enhanced fire visuals when spread occurs (cascading flames, heat distortion).
 
 ---
 
@@ -451,6 +547,10 @@ Core scaling stat for Summoner Commander archetype. Essential for minion-focused
 **Lore:**
 Enhanced targeting protocols and weapon system optimizations uploaded to minion AI cores, increasing their combat effectiveness and damage output.
 
+**Code Changes Required:**
+- *Game-State:* Minion damage calculation system must apply MINIONDAMAGE as multiplier to all minion attack damage: final_damage = base_minion_damage × MINIONDAMAGE. Applies globally to all minion types.
+- *Animation:* No specific visual effect required. Could add enhanced attack visual effects on minions when MINIONDAMAGE is high (larger projectiles, brighter effects).
+
 ---
 
 ### MINIONHP
@@ -468,6 +568,10 @@ Critical for Summoner Commander minion survivability. Enables minions to tank fo
 **Lore:**
 Reinforced construction protocols increase minion nanite density and structural resilience, allowing them to withstand significantly more combat damage before decoherence.
 
+**Code Changes Required:**
+- *Game-State:* Minion HP system must apply MINIONHP as multiplier to all minion maximum HP: final_hp = base_minion_hp × MINIONHP. Update minion HP pools when stat changes. Applies globally to all minion types.
+- *Animation:* Visual feedback for tankier minions (larger size, enhanced armor/shield effects, reinforced appearance). No specific animation required but minions could appear more robust.
+
 ---
 
 ### MINIONATTACKSPEED
@@ -484,6 +588,10 @@ Core DPS stat for Summoner Commander builds. Synergizes with MINIONDAMAGE for to
 
 **Lore:**
 Optimized combat algorithm processing increases minion targeting acquisition speed and weapon cycling efficiency, enabling more frequent attack executions.
+
+**Code Changes Required:**
+- *Game-State:* Minion attack system must apply MINIONATTACKSPEED as multiplier to attack rate: attacks_per_second = base_attack_rate × MINIONATTACKSPEED. Reduce time between minion attacks or increase animation speed. Applies globally to all minion types.
+- *Animation:* Faster minion attack animations when MINIONATTACKSPEED is high (animation speed scaling, faster projectile firing rate). Visual feedback showing increased attack frequency.
 
 ---
 
