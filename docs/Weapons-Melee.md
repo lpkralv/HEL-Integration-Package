@@ -47,7 +47,7 @@ desc: Coherent nanite blade with val1% increased melee damage and val2% improved
 modweight: 100
 type: 4
 hasProc: 0
-equation: M_MELEEDAMAGE = M_MELEEDAMAGE + val1; M_MELEESPEED = M_MELEESPEED + val2
+equation: M_MELEEDAMAGE = M_MELEEDAMAGE val1 +; M_MELEESPEED = M_MELEESPEED val2 +
 modColor: {r: 0, g: 0, b: 0, a: 0}
 armorEffectName: ''
 armorMeshName: ''
@@ -83,7 +83,7 @@ desc: Rapid-strike blade system with val1% increased attack speed and val2% move
 modweight: 80
 type: 4
 hasProc: 0
-equation: M_MELEESPEED = M_MELEESPEED + val1; M_PLAYERSPEED = M_PLAYERSPEED + val2; M_MELEEDAMAGE = M_MELEEDAMAGE + (-0.2)
+equation: M_MELEESPEED = M_MELEESPEED val1 +; M_PLAYERSPEED = M_PLAYERSPEED val2 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.2 +
 modColor: {r: 0, g: 0, b: 0, a: 0}
 armorEffectName: ''
 armorMeshName: ''
@@ -119,7 +119,7 @@ desc: Heavy molecular blade dealing val1% increased melee damage but reduces att
 modweight: 75
 type: 4
 hasProc: 0
-equation: M_MELEEDAMAGE = M_MELEEDAMAGE + val1; M_MELEESPEED = M_MELEESPEED + (-val2)
+equation: M_MELEEDAMAGE = M_MELEEDAMAGE val1 +; M_MELEESPEED = M_MELEESPEED -val2 +
 modColor: {r: 0, g: 0, b: 0, a: 0}
 armorEffectName: ''
 armorMeshName: ''
@@ -155,7 +155,7 @@ desc: Superheated blade edge with val1 ignite chance on melee strikes, granting 
 modweight: 50
 type: 4
 hasProc: 0
-equation: B_IGNITECHANCE = B_IGNITECHANCE + val1; M_LIFESTEAL = M_LIFESTEAL + val2; M_HP = M_HP + (-0.1); M_MELEEDAMAGE = M_MELEEDAMAGE + 0.3
+equation: B_IGNITECHANCE = B_IGNITECHANCE val1 +; M_LIFESTEAL = M_LIFESTEAL val2 +; M_HP = M_HP -0.1 +; M_MELEEDAMAGE = M_MELEEDAMAGE 0.3 +
 modColor: {r: 0, g: 0, b: 0, a: 0}
 armorEffectName: Fire
 armorMeshName: ''
@@ -191,7 +191,7 @@ desc: Life-draining blade system granting val1% lifesteal on melee hits and val2
 modweight: 45
 type: 4
 hasProc: 0
-equation: M_LIFESTEAL = M_LIFESTEAL + val1; M_MELEESPEED = M_MELEESPEED + val2; M_GUNDAMAGE = M_GUNDAMAGE + (-0.4); M_MELEEDAMAGE = M_MELEEDAMAGE + 0.35
+equation: M_LIFESTEAL = M_LIFESTEAL val1 +; M_MELEESPEED = M_MELEESPEED val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.4 +; M_MELEEDAMAGE = M_MELEEDAMAGE 0.35 +
 modColor: {r: 0, g: 0, b: 0, a: 0}
 armorEffectName: ''
 armorMeshName: ''
@@ -227,7 +227,7 @@ desc: Retaliatory blade system reflecting val1 thorns damage and generating val2
 modweight: 25
 type: 4
 hasProc: 0
-equation: B_THORNDAMAGE = B_THORNDAMAGE + val1; B_SHIELDONKILL = B_SHIELDONKILL + val2; M_PLAYERSPEED = M_PLAYERSPEED + (-0.2); M_MELEESPEED = M_MELEESPEED + (-0.15); M_MELEEDAMAGE = M_MELEEDAMAGE + 0.4
+equation: B_THORNDAMAGE = B_THORNDAMAGE val1 +; B_SHIELDONKILL = B_SHIELDONKILL val2 +; M_PLAYERSPEED = M_PLAYERSPEED -0.2 +; M_MELEESPEED = M_MELEESPEED -0.15 +; M_MELEEDAMAGE = M_MELEEDAMAGE 0.4 +
 modColor: {r: 0, g: 0, b: 0, a: 0}
 armorEffectName: ''
 armorMeshName: ''
@@ -263,7 +263,7 @@ desc: Experimental blade matrix converting val1% of gun damage to melee damage a
 modweight: 8
 type: 4
 hasProc: 0
-equation: A_MELEEDAMAGE = A_MELEEDAMAGE + T_GUNDAMAGE val1 *; M_MELEECRITCHANCE = M_MELEECRITCHANCE + val2; M_GUNDAMAGE = M_GUNDAMAGE + (-10); M_HP = M_HP + (-0.15); M_MELEERANGE = M_MELEERANGE + 0.4
+equation: A_MELEEDAMAGE = A_MELEEDAMAGE T_GUNDAMAGE val1 * +; M_MELEECRITCHANCE = M_MELEECRITCHANCE val2 +; M_GUNDAMAGE = M_GUNDAMAGE -10 +; M_HP = M_HP -0.15 +; M_MELEERANGE = M_MELEERANGE 0.4 +
 modColor: {r: 150, g: 50, b: 255, a: 255}
 armorEffectName: ''
 armorMeshName: ''
@@ -552,7 +552,7 @@ When adding these weapons to ModsData.asset, ensure:
   modweight: 100
   type: 4
   hasProc: 0
-  equation: M_MELEEDAMAGE = M_MELEEDAMAGE + val1; M_MELEESPEED = M_MELEESPEED + val2
+  equation: M_MELEEDAMAGE = M_MELEEDAMAGE val1 +; M_MELEESPEED = M_MELEESPEED val2 +
   modColor: {r: 0, g: 0, b: 0, a: 0}
   armorEffectName: ''
   armorMeshName: ''
@@ -570,7 +570,7 @@ When adding these weapons to ModsData.asset, ensure:
   modweight: 80
   type: 4
   hasProc: 0
-  equation: M_MELEESPEED = M_MELEESPEED + val1; M_PLAYERSPEED = M_PLAYERSPEED + val2; M_MELEEDAMAGE = M_MELEEDAMAGE + (-0.2)
+  equation: M_MELEESPEED = M_MELEESPEED val1 +; M_PLAYERSPEED = M_PLAYERSPEED val2 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.2 +
   modColor: {r: 0, g: 0, b: 0, a: 0}
   armorEffectName: ''
   armorMeshName: ''
@@ -588,7 +588,7 @@ When adding these weapons to ModsData.asset, ensure:
   modweight: 75
   type: 4
   hasProc: 0
-  equation: M_MELEEDAMAGE = M_MELEEDAMAGE + val1; M_MELEESPEED = M_MELEESPEED + (-val2)
+  equation: M_MELEEDAMAGE = M_MELEEDAMAGE val1 +; M_MELEESPEED = M_MELEESPEED -val2 +
   modColor: {r: 0, g: 0, b: 0, a: 0}
   armorEffectName: ''
   armorMeshName: ''
@@ -606,7 +606,7 @@ When adding these weapons to ModsData.asset, ensure:
   modweight: 50
   type: 4
   hasProc: 0
-  equation: B_IGNITECHANCE = B_IGNITECHANCE + val1; M_LIFESTEAL = M_LIFESTEAL + val2; M_HP = M_HP + (-0.1); M_MELEEDAMAGE = M_MELEEDAMAGE + 0.3
+  equation: B_IGNITECHANCE = B_IGNITECHANCE val1 +; M_LIFESTEAL = M_LIFESTEAL val2 +; M_HP = M_HP -0.1 +; M_MELEEDAMAGE = M_MELEEDAMAGE 0.3 +
   modColor: {r: 0, g: 0, b: 0, a: 0}
   armorEffectName: Fire
   armorMeshName: ''
@@ -624,7 +624,7 @@ When adding these weapons to ModsData.asset, ensure:
   modweight: 45
   type: 4
   hasProc: 0
-  equation: M_LIFESTEAL = M_LIFESTEAL + val1; M_MELEESPEED = M_MELEESPEED + val2; M_GUNDAMAGE = M_GUNDAMAGE + (-0.4); M_MELEEDAMAGE = M_MELEEDAMAGE + 0.35
+  equation: M_LIFESTEAL = M_LIFESTEAL val1 +; M_MELEESPEED = M_MELEESPEED val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.4 +; M_MELEEDAMAGE = M_MELEEDAMAGE 0.35 +
   modColor: {r: 0, g: 0, b: 0, a: 0}
   armorEffectName: ''
   armorMeshName: ''
@@ -642,7 +642,7 @@ When adding these weapons to ModsData.asset, ensure:
   modweight: 25
   type: 4
   hasProc: 0
-  equation: B_THORNDAMAGE = B_THORNDAMAGE + val1; B_SHIELDONKILL = B_SHIELDONKILL + val2; M_PLAYERSPEED = M_PLAYERSPEED + (-0.2); M_MELEESPEED = M_MELEESPEED + (-0.15); M_MELEEDAMAGE = M_MELEEDAMAGE + 0.4
+  equation: B_THORNDAMAGE = B_THORNDAMAGE val1 +; B_SHIELDONKILL = B_SHIELDONKILL val2 +; M_PLAYERSPEED = M_PLAYERSPEED -0.2 +; M_MELEESPEED = M_MELEESPEED -0.15 +; M_MELEEDAMAGE = M_MELEEDAMAGE 0.4 +
   modColor: {r: 0, g: 0, b: 0, a: 0}
   armorEffectName: ''
   armorMeshName: ''
@@ -660,7 +660,7 @@ When adding these weapons to ModsData.asset, ensure:
   modweight: 8
   type: 4
   hasProc: 0
-  equation: A_MELEEDAMAGE = A_MELEEDAMAGE + T_GUNDAMAGE val1 *; M_MELEECRITCHANCE = M_MELEECRITCHANCE + val2; M_GUNDAMAGE = M_GUNDAMAGE + (-10); M_HP = M_HP + (-0.15); M_MELEERANGE = M_MELEERANGE + 0.4
+  equation: A_MELEEDAMAGE = A_MELEEDAMAGE T_GUNDAMAGE val1 * +; M_MELEECRITCHANCE = M_MELEECRITCHANCE val2 +; M_GUNDAMAGE = M_GUNDAMAGE -10 +; M_HP = M_HP -0.15 +; M_MELEERANGE = M_MELEERANGE 0.4 +
   modColor: {r: 150, g: 50, b: 255, a: 255}
   armorEffectName: ''
   armorMeshName: ''

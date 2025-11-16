@@ -760,7 +760,7 @@ The ultimate risk/reward explosive weapon. Can clear entire screens but might ki
   modweight: 10
   type: 2
   hasProc: 0
-  equation: B_EXPLOSIONRADIUS=val1;M_SHOTSPERSEC=-0.6;M_PROJECTILESPEED=-0.5
+  equation: B_EXPLOSIONRADIUS=val1; M_SHOTSPERSEC=-0.6; M_PROJECTILESPEED=-0.5
   modColor: {r: 0, g: 0, b: 0, a: 0}
   armorEffectName: ''
   armorMeshName: ''
@@ -778,7 +778,7 @@ The ultimate risk/reward explosive weapon. Can clear entire screens but might ki
   modweight: 12
   type: 2
   hasProc: 0
-  equation: M_GUNDAMAGE=val1;B_EXPLOSIONRADIUS=1.2;M_ACCURACY=-val2;M_SHOTSPERSEC=-0.4
+  equation: M_GUNDAMAGE=val1; B_EXPLOSIONRADIUS=1.2; M_ACCURACY=-val2; M_SHOTSPERSEC=-0.4
   modColor: {r: 0, g: 0, b: 0, a: 0}
   armorEffectName: ''
   armorMeshName: ''
@@ -796,7 +796,7 @@ The ultimate risk/reward explosive weapon. Can clear entire screens but might ki
   modweight: 8
   type: 2
   hasProc: 0
-  equation: B_EXPLOSIONRADIUS=val1;M_SHOTSPERSEC=-0.7;M_PROJECTILESPEED=-0.8;B_GUNDAMAGE=15
+  equation: B_EXPLOSIONRADIUS=val1; M_SHOTSPERSEC=-0.7; M_PROJECTILESPEED=-0.8; B_GUNDAMAGE=15
   modColor: {r: 0, g: 0, b: 0, a: 0}
   armorEffectName: ''
   armorMeshName: ''
@@ -814,7 +814,7 @@ The ultimate risk/reward explosive weapon. Can clear entire screens but might ki
   modweight: 7
   type: 2
   hasProc: 0
-  equation: B_EXPLOSIONRADIUS=val1;M_IGNITECHANCE=val2;M_HP=-0.15;M_SHOTSPERSEC=-0.5;M_PROJECTILESPEED=-0.4
+  equation: B_EXPLOSIONRADIUS=val1; M_IGNITECHANCE=val2; M_HP=-0.15; M_SHOTSPERSEC=-0.5; M_PROJECTILESPEED=-0.4
   modColor: {r: 0, g: 0, b: 0, a: 0}
   armorEffectName: ''
   armorMeshName: ''
@@ -832,7 +832,7 @@ The ultimate risk/reward explosive weapon. Can clear entire screens but might ki
   modweight: 7
   type: 2
   hasProc: 0
-  equation: B_EXPLOSIONRADIUS=val1;M_CHARGECHANCE=val2;M_PLAYERSPEED=-0.2;M_SHOTSPERSEC=-0.55;B_GUNDAMAGE=8
+  equation: B_EXPLOSIONRADIUS=val1; M_CHARGECHANCE=val2; M_PLAYERSPEED=-0.2; M_SHOTSPERSEC=-0.55; B_GUNDAMAGE=8
   modColor: {r: 0, g: 0, b: 0, a: 0}
   armorEffectName: ''
   armorMeshName: ''
@@ -850,7 +850,7 @@ The ultimate risk/reward explosive weapon. Can clear entire screens but might ki
   modweight: 6
   type: 2
   hasProc: 0
-  equation: B_EXPLOSIONRADIUS=val1;M_CORRUPTIONCHANCE=0.6;M_ACCURACY=-val2;M_SHOTSPERSEC=-0.65;M_HPREGEN=-0.1
+  equation: B_EXPLOSIONRADIUS=val1; M_CORRUPTIONCHANCE=0.6; M_ACCURACY=-val2; M_SHOTSPERSEC=-0.65; M_HPREGEN=-0.1
   modColor: {r: 0, g: 0, b: 0, a: 0}
   armorEffectName: ''
   armorMeshName: ''
@@ -868,7 +868,7 @@ The ultimate risk/reward explosive weapon. Can clear entire screens but might ki
   modweight: 4
   type: 2
   hasProc: 0
-  equation: B_BULLETSFIRED=val1;B_EXPLOSIONRADIUS=val2;M_SHOTSPERSEC=-0.75;M_ACCURACY=-0.5;M_HP=-0.2;B_GUNDAMAGE=20
+  equation: B_BULLETSFIRED=val1; B_EXPLOSIONRADIUS=val2; M_SHOTSPERSEC=-0.75; M_ACCURACY=-0.5; M_HP=-0.2; B_GUNDAMAGE=20
   modColor: {r: 0, g: 0, b: 0, a: 0}
   armorEffectName: ''
   armorMeshName: ''
@@ -886,7 +886,7 @@ The ultimate risk/reward explosive weapon. Can clear entire screens but might ki
   modweight: 5
   type: 2
   hasProc: 0
-  equation: B_EXPLOSIONRADIUS=val1;M_GUNDAMAGE=0.4;M_SHOTSPERSEC=-0.7;M_PLAYERSPEED=-val2;M_PROJECTILESPEED=-0.6;B_PIERCINGSHOTS=2
+  equation: B_EXPLOSIONRADIUS=val1; M_GUNDAMAGE=0.4; M_SHOTSPERSEC=-0.7; M_PLAYERSPEED=-val2; M_PROJECTILESPEED=-0.6; B_PIERCINGSHOTS=2
   modColor: {r: 0, g: 0, b: 0, a: 0}
   armorEffectName: ''
   armorMeshName: ''
@@ -904,7 +904,7 @@ The ultimate risk/reward explosive weapon. Can clear entire screens but might ki
   modweight: 3
   type: 2
   hasProc: 0
-  equation: B_EXPLOSIONRADIUS=val1;U_SHOTSPERSEC=val2;M_HP=-0.25;M_GUNDAMAGE=0.8;B_PIERCINGSHOTS=5;M_ACCURACY=-0.7;M_PROJECTILESPEED=-0.9
+  equation: B_EXPLOSIONRADIUS=val1; U_SHOTSPERSEC=val2; M_HP=-0.25; M_GUNDAMAGE=0.8; B_PIERCINGSHOTS=5; M_ACCURACY=-0.7; M_PROJECTILESPEED=-0.9
   modColor: {r: 0, g: 0, b: 0, a: 0}
   armorEffectName: ''
   armorMeshName: ''
