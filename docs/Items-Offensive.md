@@ -210,7 +210,7 @@ Perfection-optimized targeting systems granting val1% critical chance and val2% 
 
 **HEL Equation:**
 ```
-M_CRITCHANCE = M_CRITCHANCE + (T_HP T_HP <) (-1.0) * val1 *; M_GUNDAMAGE = M_GUNDAMAGE + (T_HP T_HP <) (-1.0) * val2 *; M_MELEEDAMAGE = M_MELEEDAMAGE + (T_HP T_HP <) (-1.0) * val2 *
+M_CRITCHANCE = M_CRITCHANCE T_HP T_HP < -1.0 * val1 * +; M_GUNDAMAGE = M_GUNDAMAGE T_HP T_HP < -1.0 * val2 * +; M_MELEEDAMAGE = M_MELEEDAMAGE T_HP T_HP < -1.0 * val2 * +
 ```
 
 **Values:**

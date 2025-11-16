@@ -357,7 +357,7 @@ Emergency defense protocols activate when structural integrity falls below 20%, 
 
 **HEL Equation:**
 ```
-M_DAMAGEABSORPTION = M_DAMAGEABSORPTION + (T_HP T_HP 0.2 * <) val1 *; M_HP = M_HP -0.35 +; M_GUNDAMAGE = M_GUNDAMAGE -0.3 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.3 +
+M_DAMAGEABSORPTION = M_DAMAGEABSORPTION T_HP T_HP 0.2 * < val1 * +; M_HP = M_HP -0.35 +; M_GUNDAMAGE = M_GUNDAMAGE -0.3 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.3 +
 ```
 
 **Values:**

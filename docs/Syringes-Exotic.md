@@ -39,7 +39,7 @@ Experimental fury injection granting val1% gun damage and val2% melee damage whe
 
 **HEL Equation:**
 ```
-M_GUNDAMAGE = M_GUNDAMAGE + (T_HP S_HP 0.5 * <) val1 *; M_MELEEDAMAGE = M_MELEEDAMAGE + (T_HP S_HP 0.5 * <) val2 *; M_HP = M_HP -0.15 +
+M_GUNDAMAGE = M_GUNDAMAGE T_HP S_HP 0.5 * < val1 * +; M_MELEEDAMAGE = M_MELEEDAMAGE T_HP S_HP 0.5 * < val2 * +; M_HP = M_HP -0.15 +
 ```
 
 **Values:**

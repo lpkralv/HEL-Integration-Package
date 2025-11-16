@@ -196,7 +196,7 @@ Emergency reconstruction protocols activate when structural integrity falls belo
 
 **HEL Equation:**
 ```
-B_HPREGEN = B_HPREGEN + (T_HP T_HP 0.3 * <) val1 *; M_GUNDAMAGE = M_GUNDAMAGE + T_HPREGEN val2 * 0.01 *; M_MELEEDAMAGE = M_MELEEDAMAGE + T_HPREGEN val2 * 0.01 *
+B_HPREGEN = B_HPREGEN T_HP T_HP 0.3 * < val1 * +; M_GUNDAMAGE = M_GUNDAMAGE T_HPREGEN val2 * 0.01 * +; M_MELEEDAMAGE = M_MELEEDAMAGE T_HPREGEN val2 * 0.01 * +
 ```
 
 **Values:**
