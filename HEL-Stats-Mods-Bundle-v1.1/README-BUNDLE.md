@@ -74,26 +74,11 @@ This bundle contains the complete Stats/Mods system design for HIOX, ready for i
 - **Foundation-HEL-Guide.md** - HEL equation syntax, coefficient system, postfix notation
 - **Foundation-Format-Guide.md** - YAML asset format specifications
 
-### Analysis & Balance Reports (`analysis/`)
+### Analysis Results (`analysis/results/`)
 
-**For understanding system balance and build optimization:**
-- **ARCHETYPE_MOD_XREF.md** - Cross-reference of which mods support each archetype
-- **game-breakers.md** - Analysis of potentially overpowered mod combinations
-- **good-stat-ranges.md** - Recommended stat ranges and balance analysis
-- **hel-equations.txt** - Complete list of all HEL equations in the system
-- **PLAN-equation-combination-analysis.md** - Analysis plan for equation interactions
-- **SCRIPTS-SUMMARY.md** - Documentation of analysis scripts used
-
-**Archetype Build Guides** (`analysis/ARCHETYPE_XREF/`)
-- DoT_Specialist.md - Damage over time build guide and mod recommendations
-- Elemental_Savant.md - Elemental damage specialist build guide
-- Fortress_Tank.md - Maximum survivability build guide
-- Glass_Cannon.md - Maximum damage output build guide
-- Hybrid_Berserker.md - Balanced aggressive build guide
-- Precision_Sniper.md - Critical strike and accuracy build guide
-- Speed_Demon.md - Movement and mobility focused build guide
-- Summoner_Commander.md - Minion-focused build guide
-- README.md - Overview of archetype cross-reference system
+**For understanding mod combination analysis and balance findings:**
+- **ANALYSIS_REPORT.md** - Comprehensive analysis report of mod combination testing, stat violations, and balance findings
+- **MOD_COMBO_ANALYSIS_SUMMARY.md** - Complete documentation of the mod combo analysis system, methodology, and interpretation guide
 
 ---
 
@@ -103,15 +88,14 @@ This bundle contains the complete Stats/Mods system design for HIOX, ready for i
 1. Start: `DELIVERABLE-System-Philosophy.md` for design vision
 2. Reference: `DELIVERABLE-Mods-Description.md` for mod overview
 3. Deep dive: `reference/` directories for specific class details
-4. Balance: `analysis/good-stat-ranges.md` and `analysis/game-breakers.md` for balance insights
-5. Builds: `analysis/ARCHETYPE_XREF/` for detailed build guides
+4. Balance: `analysis/results/ANALYSIS_REPORT.md` for balance findings
 
 ### Developers
 1. Start: `00-QUICK-START.md` then `INTEGRATION-CHECKLIST.md`
 2. Import: `deliverables/*.asset` files to Unity
 3. Reference: `technical/Foundation-HEL-Guide.md` for equation integration
 4. Verify: `deliverables/Integration-Validation-Report.md` for validation
-5. Debug: `analysis/hel-equations.txt` for complete equation listing
+5. Analysis: `analysis/results/MOD_COMBO_ANALYSIS_SUMMARY.md` for understanding the analysis system
 
 ### Technical Artists / UI Designers
 1. Review: `DELIVERABLE-Mods-Description.md` for modweight values (drop rates)
@@ -119,9 +103,8 @@ This bundle contains the complete Stats/Mods system design for HIOX, ready for i
 3. Check: Rarity tiers (Standard, Enhanced, Advanced, Prototype)
 
 ### Balance Testers / QA
-1. Start: `analysis/ARCHETYPE_XREF/` for build testing guides
-2. Review: `analysis/game-breakers.md` for known powerful combinations to test
-3. Reference: `analysis/good-stat-ranges.md` for expected stat value ranges
+1. Start: `analysis/results/ANALYSIS_REPORT.md` for known balance issues
+2. Reference: `analysis/results/MOD_COMBO_ANALYSIS_SUMMARY.md` for testing methodology
 
 ---
 
@@ -222,12 +205,11 @@ See `deliverables/Integration-Validation-Report.md` for detailed validation resu
 
 ## Version History
 
-**v1.1 (2025-11-17)** - Analysis & Balance Reports Added
-- Added `analysis/` directory with balance reports and build guides
-- Added archetype-specific build optimization guides (8 archetypes)
-- Added game balance analysis (game-breakers, stat ranges)
-- Added complete HEL equations reference
-- Bundle now includes 46 files (up from 31)
+**v1.1 (2025-11-17)** - Analysis Results Added
+- Added `analysis/results/` directory with mod combo analysis reports
+- Added ANALYSIS_REPORT.md with comprehensive balance findings
+- Added MOD_COMBO_ANALYSIS_SUMMARY.md documenting the analysis system
+- Bundle now includes 33 files (up from 31)
 
 **v1.0 (2025-11-16)** - Initial Release
 - Complete stats/mods design (65 stats, 155 mods)
