@@ -78,85 +78,56 @@ Enable debugging by uncommenting `#define MYDEBUG` in relevant files. This outpu
 - `S_HEALTH` - Target stat variable
 - `VAL` - Placeholder replaced with mod value during preparation
 
-### Text File Processing Utilities
+### REQUIRED: Large File Protocol
 
-Three Python utilities are available for efficiently working with large text files in this repository:
+**CRITICAL RULE**: This repository contains large Stats/Mods files (up to 2,947 lines). You MUST use text processing utilities instead of reading large files directly.
 
-#### findall.py - Find Files Containing Text
-Searches for files matching a glob pattern that contain a target string.
+#### File Size Protocol (MANDATORY)
 
-**Usage:**
+**Before reading any file, check size:**
 ```bash
-# CLI usage
-python3 findall.py "**/*.cs" "HEL"          # Find all C# files containing "HEL"
-python3 findall.py "docs/*.md" "Architecture"  # Find docs with "Architecture"
-
-# Module usage
-from findall import findall
-files = findall("src/*.cs", "class")
+wc -l <filepath>
 ```
 
-**When to use:**
-- Searching for files that contain specific terms across multiple directories
-- Quickly narrowing down which files to examine for code patterns
-- Finding all files that reference a particular variable, class, or concept
+**Apply required strategy:**
+- **< 200 lines**: Use `Read` tool directly
+- **200-500 lines**: Use `findlines.py` + `sniptext.py`
+- **500+ lines**: NEVER use Read - ONLY use `findlines.py` + `sniptext.py`
 
-#### findlines.py - Find Line Numbers
-Returns 1-indexed line numbers where a target string appears in a file.
+#### Critical Large Files (ALWAYS use protocol)
 
-**Usage:**
+**Asset Files:**
+- `DELIVERABLE-ModsData.asset` (2,947 lines) - 156 mods
+- `src/ModsData.asset`, `Assets/ModsData.asset` (1,023 lines)
+- Stats asset files (191-213 lines)
+
+**Documentation:**
+- `docs/DELIVERABLE-Mods-Description.md` (616 lines)
+- `docs/DELIVERABLE-Stats-Description.md` (662 lines)
+- `docs/DELIVERABLE-System-Philosophy.md` (617 lines)
+
+#### Text Utilities Quick Reference
+
 ```bash
-# CLI usage
-python3 findlines.py src/HEL.cs "EvaluateMods"
-python3 findlines.py CLAUDE.md "Variable Prefix"
+# Find files containing text
+python3 findall.py "**/*.asset" "CRIT_CHANCE"
 
-# Module usage
-from findlines import findlines
-lines = findlines("src/HELInterpreter.cs", "S_")
+# Find line numbers in a file
+python3 findlines.py DELIVERABLE-ModsData.asset "id: 1015"
+
+# Extract specific line range
+python3 sniptext.py DELIVERABLE-ModsData.asset 450 475
 ```
 
-**When to use:**
-- Locating specific code patterns within a known file
-- Finding all occurrences of a variable or function name
-- Identifying where documentation mentions specific topics
-- Preparing to extract relevant code sections
+#### Example: Finding a Specific Mod
 
-#### sniptext.py - Extract Text Snippets
-Extracts a snippet from a file by line range (1-indexed, inclusive).
-
-**Usage:**
 ```bash
-# CLI usage
-python3 sniptext.py src/HEL.cs 15 25        # Lines 15-25
-python3 sniptext.py README.md 1 10          # First 10 lines
+# ❌ WRONG: Reading 2,947-line file (wastes ~80,000 tokens)
+Read DELIVERABLE-ModsData.asset
 
-# Module usage
-from sniptext import sniptext
-snippet = sniptext("src/HELLexer.cs", 100, 150)
+# ✅ CORRECT: Targeted extraction (uses ~600 tokens)
+python3 findlines.py DELIVERABLE-ModsData.asset "id: 1015"  # Find line
+python3 sniptext.py DELIVERABLE-ModsData.asset 450 475      # Extract mod
 ```
 
-**When to use:**
-- Extracting specific code sections for analysis or documentation
-- Reading portions of large files without loading the entire file
-- Focusing on specific line ranges identified by findlines.py
-- Creating code examples or documentation snippets
-
-#### Workflow Example
-```bash
-# 1. Find files containing "CoefDict"
-python3 findall.py "**/*.cs" "CoefDict"
-# Result: src/HELInterpreter.cs
-
-# 2. Find line numbers where it's used
-python3 findlines.py src/HELInterpreter.cs "CoefDict"
-# Result: [12, 45, 89, 134]
-
-# 3. Extract relevant code section
-python3 sniptext.py src/HELInterpreter.cs 45 60
-```
-
-**Notes:**
-- All utilities support both CLI and module import patterns
-- Searches are case-sensitive
-- Encoding errors are handled gracefully (UTF-8, UTF-16, Latin-1)
-- Use these tools to efficiently navigate the codebase without reading entire files
+**See `docs/LARGE-FILE-PROTOCOL.md` for detailed examples and workflows.**
