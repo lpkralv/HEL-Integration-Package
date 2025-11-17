@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier:
 # HIOX StatsData.asset - New Stats YAML
 # Version: 1.0
-# Status: FINAL DELIVERABLE (FIXED - Zero-Base Mods)
-# Total New Stats: 28 (Added ARMOR)
+# Status: FINAL DELIVERABLE
+# Total New Stats: 27
 # Format: Valid YAML for Unity integration
   stats:
   # CATEGORY 1: CORE COMBAT STATS (8 stats)
@@ -68,23 +68,17 @@ MonoBehaviour:
     min: 0
     max: 20
 
-  # CATEGORY 2: DEFENSE/SURVIVAL STATS (8 stats)
-
-  - name: ARMOR
-    desc: Damage mitigation coefficient reducing incoming structural damage
-    value: 50
-    min: 0
-    max: 5000
+  # CATEGORY 2: DEFENSE/SURVIVAL STATS (7 stats)
 
   - name: SHIELDCAPACITY
     desc: Maximum structural energy barrier strength protecting outer framework
-    value: 50
+    value: 0
     min: 0
     max: 5000
 
   - name: SHIELDREGENRATE
     desc: Energy barrier reconstruction speed in shield points per second
-    value: 5
+    value: 0
     min: 0
     max: 5000
 
