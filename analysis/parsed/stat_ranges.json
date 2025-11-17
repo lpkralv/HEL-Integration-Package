@@ -1,0 +1,1538 @@
+{
+  "RELOADSPEED": {
+    "default": 1.0,
+    "viable": {
+      "min": 0.5,
+      "max": 2.0
+    },
+    "extended": {
+      "min": 0.2,
+      "max": 5.0
+    },
+    "absolute": {
+      "min": 0.1,
+      "max": 10.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 100",
+        "reason": "Reloads take 100x longer, weapons become unusable"
+      },
+      {
+        "threshold": "< 0.01",
+        "reason": "Instant reload, negates ammo management mechanic"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Instant reload OR divide-by-zero in `reload_time / reload_speed`"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "= 0",
+        "reason": "**CRITICAL CRASH RISK** if formula is `base_reload_time / reload_speed`"
+      },
+      {
+        "threshold": "< 0",
+        "reason": "Negative time modifier, undefined behavior"
+      }
+    ]
+  },
+  "MINIONATTACKSPEED": {
+    "default": 1.0,
+    "viable": {
+      "min": 0.5,
+      "max": 2.5
+    },
+    "extended": {
+      "min": 0.25,
+      "max": 5.0
+    },
+    "absolute": {
+      "min": 0.1,
+      "max": 10.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 50",
+        "reason": "Minions attack so fast they lag the game"
+      },
+      {
+        "threshold": "< 0.1",
+        "reason": "Minions attack every 10+ seconds, useless"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Minions never attack"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Negative attack speed, undefined behavior"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Division by zero if formula is `base_attack_time / attack_speed`"
+      }
+    ]
+  },
+  "BULLETSPEED": {
+    "default": null,
+    "viable": {
+      "min": 100.0,
+      "max": 800.0
+    },
+    "extended": {
+      "min": 50.0,
+      "max": 2000.0
+    },
+    "absolute": {
+      "min": 10.0,
+      "max": 5000.0
+    },
+    "balance_breaking": [],
+    "crash_risk": []
+  },
+  "PROJECTILESPEED": {
+    "default": null,
+    "viable": {
+      "min": 100.0,
+      "max": 800.0
+    },
+    "extended": {
+      "min": 50.0,
+      "max": 2000.0
+    },
+    "absolute": {
+      "min": 10.0,
+      "max": 5000.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 5000",
+        "reason": "Instant-hit projectiles, removes dodging/skill"
+      },
+      {
+        "threshold": "> 10000",
+        "reason": "May exceed collision detection frequency, bullets teleport through walls"
+      },
+      {
+        "threshold": "< 10",
+        "reason": "Projectiles too slow to hit moving targets, weapons unusable"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Projectiles don't move, softlock if required to progress"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Backward-firing projectiles, collision system not designed for this"
+      },
+      {
+        "threshold": "> 50000",
+        "reason": "Physics engine may skip collision checks (\u0394t * velocity > collider size)"
+      }
+    ]
+  },
+  "DASHCOOLDOWN": {
+    "default": null,
+    "viable": {
+      "min": 1.0,
+      "max": 10.0
+    },
+    "extended": {
+      "min": 0.5,
+      "max": 20.0
+    },
+    "absolute": {
+      "min": 0.1,
+      "max": 30.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 60",
+        "reason": "Dash once per minute, mobility disabled"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Infinite dash spam, breaks movement balance"
+      },
+      {
+        "threshold": "< 0.1",
+        "reason": "Effective flight mode"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Negative cooldown, timer underflow, undefined behavior"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "May cause division by zero in cooldown percentage calculations"
+      }
+    ]
+  },
+  "CORRUPTIONCHANCE": {
+    "default": 0.0,
+    "viable": {
+      "min": 0.0,
+      "max": 0.4
+    },
+    "extended": {
+      "min": 0.0,
+      "max": 0.7
+    },
+    "absolute": {
+      "min": 0.0,
+      "max": 0.95
+    },
+    "balance_breaking": [],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Negative probability, undefined RNG"
+      },
+      {
+        "threshold": "> 1.0",
+        "reason": "Breaks probability logic if not clamped"
+      }
+    ]
+  },
+  "MELEEDAMAGE": {
+    "default": null,
+    "viable": {
+      "min": 10.0,
+      "max": 300.0
+    },
+    "extended": {
+      "min": 5.0,
+      "max": 1500.0
+    },
+    "absolute": {
+      "min": 1.0,
+      "max": 10000.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 10000",
+        "reason": "One-shot everything"
+      },
+      {
+        "threshold": "< 1",
+        "reason": "Cannot kill enemies"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Melee useless"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Melee HEALS enemies"
+      }
+    ]
+  },
+  "CORRUPTIONDAMAGE": {
+    "default": 0.0,
+    "viable": {
+      "min": 0.0,
+      "max": 50.0
+    },
+    "extended": {
+      "min": 0.0,
+      "max": 150.0
+    },
+    "absolute": {
+      "min": 0.0,
+      "max": 500.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 500",
+        "reason": "DoT kills everything instantly"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Corruption does no damage, breaks mechanic"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Corruption HEALS enemies"
+      }
+    ]
+  },
+  "SHIELDCAPACITY": {
+    "default": 50.0,
+    "viable": {
+      "min": 0.0,
+      "max": 200.0
+    },
+    "extended": {
+      "min": 0.0,
+      "max": 1000.0
+    },
+    "absolute": {
+      "min": 0.0,
+      "max": 10000.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 5000",
+        "reason": "Massive extra HP pool, trivializes damage"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Shield system disabled, breaks shield-dependent builds"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Negative shield capacity, undefined behavior"
+      }
+    ]
+  },
+  "REFLECTDAMAGE": {
+    "default": 0.0,
+    "viable": {
+      "min": 0.0,
+      "max": 0.2
+    },
+    "extended": {
+      "min": 0.0,
+      "max": 0.5
+    },
+    "absolute": {
+      "min": 0.0,
+      "max": 0.75
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 1.0",
+        "reason": "Enemies take MORE damage than they deal"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Reflected damage HEALS attackers"
+      },
+      {
+        "threshold": "> 10",
+        "reason": "Overflow in damage calculation"
+      }
+    ]
+  },
+  "PROCRANGE": {
+    "default": null,
+    "viable": {
+      "min": 0.0,
+      "max": 10.0
+    },
+    "extended": {
+      "min": 0.0,
+      "max": 20.0
+    },
+    "absolute": {
+      "min": 0.0,
+      "max": 30.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 50",
+        "reason": "Screen-wide status effects"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Procs hit nothing"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Negative range"
+      }
+    ]
+  },
+  "CRITCHANCE": {
+    "default": 0.05,
+    "viable": {
+      "min": 0.0,
+      "max": 0.5
+    },
+    "extended": {
+      "min": 0.0,
+      "max": 0.75
+    },
+    "absolute": {
+      "min": 0.0,
+      "max": 0.95
+    },
+    "balance_breaking": [
+      {
+        "threshold": "< 0",
+        "reason": "Negative probability is nonsensical"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "May cause negative probability checks, undefined RNG behavior"
+      },
+      {
+        "threshold": "> 1.0",
+        "reason": "If not clamped, could break probability roll logic"
+      },
+      {
+        "threshold": "NaN/Inf",
+        "reason": "RNG systems typically crash on non-numeric values"
+      }
+    ]
+  },
+  "ENERGYREGEN": {
+    "default": 10.0,
+    "viable": {
+      "min": 5.0,
+      "max": 30.0
+    },
+    "extended": {
+      "min": 2.0,
+      "max": 100.0
+    },
+    "absolute": {
+      "min": 0.0,
+      "max": 1000.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 1000",
+        "reason": "Infinite energy for practical purposes"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Energy never regenerates, ability-locked after first use"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Energy DRAINS over time, eventual softlock"
+      }
+    ]
+  },
+  "JUMPSTRENGTH": {
+    "default": null,
+    "viable": {
+      "min": 0.8,
+      "max": 2.0
+    },
+    "extended": {
+      "min": 0.5,
+      "max": 5.0
+    },
+    "absolute": {
+      "min": 0.5,
+      "max": 20.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 50",
+        "reason": "Jump into skybox, out of bounds"
+      },
+      {
+        "threshold": "< 0.5",
+        "reason": "Cannot jump over basic obstacles"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Cannot jump, softlock if jumping required"
+      },
+      {
+        "threshold": "< 0",
+        "reason": "Jump pushes player DOWN (hilarious but broken)"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Negative jump force, downward thrust, may clip through floor"
+      }
+    ]
+  },
+  "DASHSPEED": {
+    "default": null,
+    "viable": {
+      "min": 10.0,
+      "max": 40.0
+    },
+    "extended": {
+      "min": 5.0,
+      "max": 80.0
+    },
+    "absolute": {
+      "min": 5.0,
+      "max": 100.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 100",
+        "reason": "Dash clips through walls, out of bounds"
+      },
+      {
+        "threshold": "< 5",
+        "reason": "Dash barely moves, useless"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Dash doesn't move player"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Dash moves backward, confusing/broken"
+      }
+    ]
+  },
+  "RESOURCEEFFICIENCY": {
+    "default": 0.0,
+    "viable": {
+      "min": 0.0,
+      "max": 0.4
+    },
+    "extended": {
+      "min": 0.0,
+      "max": 0.7
+    },
+    "absolute": {
+      "min": 0.0,
+      "max": 0.95
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 1.0",
+        "reason": "Abilities GIVE resources when used"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Abilities cost MORE resources, softlock risk"
+      },
+      {
+        "threshold": "> 1.0",
+        "reason": "Negative resource costs, infinite resource generation exploit"
+      }
+    ]
+  },
+  "MELEECRITCHANCE": {
+    "default": null,
+    "viable": {
+      "min": 0.0,
+      "max": 0.5
+    },
+    "extended": {
+      "min": 0.0,
+      "max": 0.75
+    },
+    "absolute": {
+      "min": 0.0,
+      "max": 0.95
+    },
+    "balance_breaking": [],
+    "crash_risk": []
+  },
+  "MAXHPPERCENTBONUS": {
+    "default": 0.0,
+    "viable": {
+      "min": -0.2,
+      "max": 1.0
+    },
+    "extended": {
+      "min": -0.4,
+      "max": 3.0
+    },
+    "absolute": {
+      "min": -0.5,
+      "max": 10.0
+    },
+    "balance_breaking": [],
+    "crash_risk": [
+      {
+        "threshold": "< -1.0",
+        "reason": "Negative max HP, **CRITICAL CRASH RISK**"
+      },
+      {
+        "threshold": "= -1.0",
+        "reason": "If formula is `base_hp * (1 + bonus)`, max HP = 0, divide-by-zero in HP% calculations"
+      }
+    ]
+  },
+  "CHAINLIGHTNING": {
+    "default": 0.0,
+    "viable": {
+      "min": 0.0,
+      "max": 5.0
+    },
+    "extended": {
+      "min": 0.0,
+      "max": 10.0
+    },
+    "absolute": {
+      "min": 0.0,
+      "max": 20.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 20",
+        "reason": "Wipes entire battlefield, trivializes all encounters"
+      },
+      {
+        "threshold": "> 100",
+        "reason": "Massive performance hit from recursive chain calculations"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Negative chain count, undefined loop behavior"
+      },
+      {
+        "threshold": "> 1000",
+        "reason": "Stack overflow if recursive chain implementation"
+      }
+    ]
+  },
+  "ENERGYCAPACITY": {
+    "default": 100.0,
+    "viable": {
+      "min": 50.0,
+      "max": 300.0
+    },
+    "extended": {
+      "min": 30.0,
+      "max": 1000.0
+    },
+    "absolute": {
+      "min": 10.0,
+      "max": 5000.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 5000",
+        "reason": "Infinite energy for practical purposes"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Cannot use abilities, softlock if abilities required"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Negative max energy, undefined behavior"
+      }
+    ]
+  },
+  "ACCURACY": {
+    "default": null,
+    "viable": {
+      "min": null,
+      "max": null
+    },
+    "extended": {
+      "min": null,
+      "max": null
+    },
+    "absolute": {
+      "min": null,
+      "max": null
+    },
+    "balance_breaking": [
+      {
+        "threshold": "< 0",
+        "reason": "Negative accuracy (inverted aim?)"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Negative spread angle, undefined"
+      }
+    ]
+  },
+  "LIFESTEAL": {
+    "default": 0.0,
+    "viable": {
+      "min": 0.0,
+      "max": 0.2
+    },
+    "extended": {
+      "min": 0.0,
+      "max": 0.4
+    },
+    "absolute": {
+      "min": 0.0,
+      "max": 0.75
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 1.0",
+        "reason": "Heal MORE than damage dealt, exponential HP growth"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Damage REDUCES your HP, instadeath spiral"
+      },
+      {
+        "threshold": "> 10",
+        "reason": "HP overflow to negative (integer wraparound)"
+      }
+    ]
+  },
+  "DAMAGEABSORPTION": {
+    "default": 0.0,
+    "viable": {
+      "min": 0.0,
+      "max": 20.0
+    },
+    "extended": {
+      "min": 0.0,
+      "max": 50.0
+    },
+    "absolute": {
+      "min": 0.0,
+      "max": 500.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 1000",
+        "reason": "All small hits negated, only extreme damage matters"
+      },
+      {
+        "threshold": "> damage_values",
+        "reason": "If absorption > incoming damage, player takes zero damage from most sources"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "INCREASES all damage taken (catastrophic)"
+      }
+    ]
+  },
+  "SPRINTSPEED": {
+    "default": null,
+    "viable": {
+      "min": 1.2,
+      "max": 2.0
+    },
+    "extended": {
+      "min": 1.1,
+      "max": 3.0
+    },
+    "absolute": {
+      "min": 1.0,
+      "max": 5.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 10",
+        "reason": "Sprint is too fast to control"
+      },
+      {
+        "threshold": "< 1.0",
+        "reason": "Sprint is slower than walk, breaks mechanic"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Cannot sprint"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Negative sprint speed"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "If division formula, crash"
+      }
+    ]
+  },
+  "MINIONDAMAGE": {
+    "default": 1.0,
+    "viable": {
+      "min": 0.5,
+      "max": 3.0
+    },
+    "extended": {
+      "min": 0.25,
+      "max": 7.0
+    },
+    "absolute": {
+      "min": 0.1,
+      "max": 20.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 100",
+        "reason": "Minions one-shot everything"
+      },
+      {
+        "threshold": "< 0.1",
+        "reason": "Minions deal negligible damage, useless"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Minions cannot damage, breaks summoner builds"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Minions HEAL enemies"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "If formula uses division by minion damage, **CRASH**"
+      }
+    ]
+  },
+  "SHOTSPERSEC": {
+    "default": null,
+    "viable": {
+      "min": 0.5,
+      "max": 10.0
+    },
+    "extended": {
+      "min": 0.2,
+      "max": 25.0
+    },
+    "absolute": {
+      "min": 0.1,
+      "max": 50.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 100",
+        "reason": "Machine gun fire, trivializes combat"
+      },
+      {
+        "threshold": "< 0.1",
+        "reason": "One shot per 10 seconds, unusable"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Cannot fire weapon"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Negative fire rate, undefined"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "**DIVIDE BY ZERO** if formula is `1.0 / shots_per_sec` to get delay"
+      }
+    ]
+  },
+  "THORNDAMAGE": {
+    "default": 0.0,
+    "viable": {
+      "min": 0.0,
+      "max": 20.0
+    },
+    "extended": {
+      "min": 0.0,
+      "max": 100.0
+    },
+    "absolute": {
+      "min": 0.0,
+      "max": 500.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 1000",
+        "reason": "Enemies kill themselves attacking you"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Thorn damage HEALS attackers (breaks mechanic)"
+      }
+    ]
+  },
+  "SHIELDREGENRATE": {
+    "default": 5.0,
+    "viable": {
+      "min": 0.0,
+      "max": 20.0
+    },
+    "extended": {
+      "min": 0.0,
+      "max": 100.0
+    },
+    "absolute": {
+      "min": 0.0,
+      "max": 500.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 500",
+        "reason": "Shield fully regenerates faster than enemies can damage it"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Shield never regenerates, breaks shield mechanic"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Shield LOSES HP over time, death spiral"
+      }
+    ]
+  },
+  "PIERCINGSHOTS": {
+    "default": 0.0,
+    "viable": {
+      "min": 0.0,
+      "max": 5.0
+    },
+    "extended": {
+      "min": 0.0,
+      "max": 10.0
+    },
+    "absolute": {
+      "min": 0.0,
+      "max": 50.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 20",
+        "reason": "Wipes entire enemy waves with single shot, trivializes group content"
+      },
+      {
+        "threshold": "> 100",
+        "reason": "Performance issues from checking 100+ collision targets per projectile"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Negative pierce count, undefined behavior in loop iteration"
+      },
+      {
+        "threshold": "> 1000",
+        "reason": "Could cause infinite loop if implementation uses `while (pierce-- > 0)`"
+      }
+    ]
+  },
+  "CRITDAMAGE": {
+    "default": 1.5,
+    "viable": {
+      "min": 1.5,
+      "max": 3.0
+    },
+    "extended": {
+      "min": 1.5,
+      "max": 5.0
+    },
+    "absolute": {
+      "min": 1.0,
+      "max": 20.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "< 1.0",
+        "reason": "Crits deal LESS damage than normal hits (anti-pattern)"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Critical hits deal zero damage (breaks crit system)"
+      },
+      {
+        "threshold": "< 0",
+        "reason": "Critical hits HEAL enemies (catastrophic)"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Negative damage multiplier could cause overflow in damage calculations"
+      },
+      {
+        "threshold": "> 10000",
+        "reason": "Risk of integer overflow: `damage * 10000` exceeds 32-bit limits"
+      }
+    ]
+  },
+  "EXPLOSIONRADIUS": {
+    "default": null,
+    "viable": {
+      "min": 2.0,
+      "max": 15.0
+    },
+    "extended": {
+      "min": 1.0,
+      "max": 35.0
+    },
+    "absolute": {
+      "min": 1.0,
+      "max": 50.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 100",
+        "reason": "Screen-wide explosions, trivializes all content"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Explosion hits nothing"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Negative radius, undefined collision check"
+      }
+    ]
+  },
+  "GUNDAMAGE": {
+    "default": null,
+    "viable": {
+      "min": 5.0,
+      "max": 200.0
+    },
+    "extended": {
+      "min": 2.0,
+      "max": 1000.0
+    },
+    "absolute": {
+      "min": 1.0,
+      "max": 10000.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 10000",
+        "reason": "One-shot everything"
+      },
+      {
+        "threshold": "< 1",
+        "reason": "Cannot kill enemies, game unwinnable"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Weapon deals no damage, softlock"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Weapons HEAL enemies"
+      }
+    ]
+  },
+  "ARMOR": {
+    "default": 50.0,
+    "viable": {
+      "min": 0.0,
+      "max": 200.0
+    },
+    "extended": {
+      "min": 0.0,
+      "max": 500.0
+    },
+    "absolute": {
+      "min": 0.0,
+      "max": 2000.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 1000",
+        "reason": "Near-invulnerability depending on damage formula"
+      },
+      {
+        "threshold": "< 0",
+        "reason": "INCREASES damage taken, instadeath"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "If formula is `damage * (1 - armor/(armor+100))`, negative armor causes damage amplification spiral"
+      }
+    ]
+  },
+  "RANGE": {
+    "default": null,
+    "viable": {
+      "min": 15.0,
+      "max": 500.0
+    },
+    "extended": {
+      "min": 10.0,
+      "max": 2000.0
+    },
+    "absolute": {
+      "min": 10.0,
+      "max": 5000.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 10000",
+        "reason": "Snipe across entire map, breaks encounter design"
+      },
+      {
+        "threshold": "< 5",
+        "reason": "Melee-range gun, unusable"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Projectile despawns instantly"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Negative range, bullets spawn behind player?"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Projectile spawns and immediately despawns"
+      }
+    ]
+  },
+  "ELEMENTALPENETRATION": {
+    "default": 0.0,
+    "viable": {
+      "min": 0.0,
+      "max": 0.4
+    },
+    "extended": {
+      "min": 0.0,
+      "max": 0.65
+    },
+    "absolute": {
+      "min": 0.0,
+      "max": 0.85
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 1.0",
+        "reason": "Elemental damage AMPLIFIED by enemy resistances (inverted)"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "INCREASES enemy resistances, inverted mechanic"
+      }
+    ]
+  },
+  "IGNITESPREAD": {
+    "default": 0.0,
+    "viable": {
+      "min": 0.0,
+      "max": 5.0
+    },
+    "extended": {
+      "min": 0.0,
+      "max": 10.0
+    },
+    "absolute": {
+      "min": 0.0,
+      "max": 15.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 10",
+        "reason": "Ignite spreads across entire map"
+      },
+      {
+        "threshold": "> 100",
+        "reason": "Performance issues from range checks"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Negative spread range, undefined behavior"
+      }
+    ]
+  },
+  "PLAYERSPEED": {
+    "default": null,
+    "viable": {
+      "min": 3.0,
+      "max": 15.0
+    },
+    "extended": {
+      "min": 2.0,
+      "max": 30.0
+    },
+    "absolute": {
+      "min": 1.0,
+      "max": 50.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 50",
+        "reason": "Too fast to control, clips through walls"
+      },
+      {
+        "threshold": "< 1",
+        "reason": "Unbearably slow, game unplayable"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Cannot move, softlock"
+      },
+      {
+        "threshold": "< 0",
+        "reason": "Inverted controls (move backward when pressing forward)"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Negative speed, physics engine may not handle"
+      }
+    ]
+  },
+  "AMMOCAPACITY": {
+    "default": 30.0,
+    "viable": {
+      "min": 10.0,
+      "max": 100.0
+    },
+    "extended": {
+      "min": 5.0,
+      "max": 300.0
+    },
+    "absolute": {
+      "min": 1.0,
+      "max": 500.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 1000",
+        "reason": "Never need to reload, negates reload mechanic"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Cannot fire weapon, softlock if no other weapons"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Negative ammo, may cause unsigned integer underflow to max value"
+      }
+    ]
+  },
+  "MINIONHP": {
+    "default": 1.0,
+    "viable": {
+      "min": 0.5,
+      "max": 3.0
+    },
+    "extended": {
+      "min": 0.25,
+      "max": 7.0
+    },
+    "absolute": {
+      "min": 0.1,
+      "max": 20.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 100",
+        "reason": "Unkillable minions"
+      },
+      {
+        "threshold": "< 0.1",
+        "reason": "Minions die instantly, useless"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Minions spawn with 0 HP, instantly die"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Negative max HP, minion spawn crash"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Minions spawn dead, potential null reference errors"
+      }
+    ]
+  },
+  "STAMINAREGEN": {
+    "default": null,
+    "viable": {
+      "min": 5.0,
+      "max": 30.0
+    },
+    "extended": {
+      "min": 2.0,
+      "max": 100.0
+    },
+    "absolute": {
+      "min": 0.0,
+      "max": 1000.0
+    },
+    "balance_breaking": [],
+    "crash_risk": []
+  },
+  "SHIELDONKILL": {
+    "default": 0.0,
+    "viable": {
+      "min": 0.0,
+      "max": 20.0
+    },
+    "extended": {
+      "min": 0.0,
+      "max": 100.0
+    },
+    "absolute": {
+      "min": 0.0,
+      "max": 500.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 1000",
+        "reason": "Full shield on every kill, unkillable"
+      },
+      {
+        "threshold": "< 0",
+        "reason": "Killing enemies REDUCES shield"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Shield drain on kill"
+      }
+    ]
+  },
+  "DODGECHANCE": {
+    "default": 0.0,
+    "viable": {
+      "min": 0.0,
+      "max": 0.3
+    },
+    "extended": {
+      "min": 0.0,
+      "max": 0.6
+    },
+    "absolute": {
+      "min": 0.0,
+      "max": 0.85
+    },
+    "balance_breaking": [],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Negative probability, undefined RNG behavior"
+      },
+      {
+        "threshold": "> 1.0",
+        "reason": "If not clamped, breaks probability checks"
+      }
+    ]
+  },
+  "HPREGEN": {
+    "default": null,
+    "viable": {
+      "min": 0.0,
+      "max": 10.0
+    },
+    "extended": {
+      "min": 0.0,
+      "max": 50.0
+    },
+    "absolute": {
+      "min": 0.0,
+      "max": 1000.0
+    },
+    "balance_breaking": [],
+    "crash_risk": []
+  },
+  "NUMMINIONS": {
+    "default": null,
+    "viable": {
+      "min": 1.0,
+      "max": 10.0
+    },
+    "extended": {
+      "min": 1.0,
+      "max": 25.0
+    },
+    "absolute": {
+      "min": 0.0,
+      "max": 50.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 50",
+        "reason": "Lag from too many AI agents"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Cannot summon, breaks summoner builds"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Negative minion count, undefined"
+      },
+      {
+        "threshold": "> 1000",
+        "reason": "Memory/performance crash from spawning too many entities"
+      }
+    ]
+  },
+  "COOLDOWNREDUCTION": {
+    "default": 0.0,
+    "viable": {
+      "min": 0.0,
+      "max": 0.4
+    },
+    "extended": {
+      "min": 0.0,
+      "max": 0.7
+    },
+    "absolute": {
+      "min": 0.0,
+      "max": 0.95
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 1.0",
+        "reason": "Abilities have NEGATIVE cooldown (???)"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "= 1.0",
+        "reason": "If formula is `base_cd / (1 - reduction)`, **DIVIDE BY ZERO CRASH**"
+      },
+      {
+        "threshold": "> 1.0",
+        "reason": "Negative cooldown values, timer underflow"
+      },
+      {
+        "threshold": "< 0",
+        "reason": "INCREASES cooldowns (anti-pattern)"
+      }
+    ]
+  },
+  "PROCRATE": {
+    "default": null,
+    "viable": {
+      "min": 0.0,
+      "max": 0.4
+    },
+    "extended": {
+      "min": 0.0,
+      "max": 0.7
+    },
+    "absolute": {
+      "min": 0.0,
+      "max": 0.95
+    },
+    "balance_breaking": [],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Negative probability"
+      },
+      {
+        "threshold": "> 1.0",
+        "reason": "Breaks probability checks"
+      }
+    ]
+  },
+  "HP": {
+    "default": null,
+    "viable": {
+      "min": 50.0,
+      "max": 500.0
+    },
+    "extended": {
+      "min": 25.0,
+      "max": 2000.0
+    },
+    "absolute": {
+      "min": 1.0,
+      "max": 100000.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 100000",
+        "reason": "Unkillable"
+      },
+      {
+        "threshold": "< 10",
+        "reason": "Die to single hit"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "<= 0",
+        "reason": "**CRITICAL CRASH RISK** - Dead player, death screen trigger, null references"
+      }
+    ]
+  },
+  "BULLETSFIRED": {
+    "default": 1.0,
+    "viable": {
+      "min": 1.0,
+      "max": 5.0
+    },
+    "extended": {
+      "min": 1.0,
+      "max": 12.0
+    },
+    "absolute": {
+      "min": 1.0,
+      "max": 20.0
+    },
+    "balance_breaking": [
+      {
+        "threshold": "> 20",
+        "reason": "Shotgun effect, trivializes combat"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Weapon fires nothing"
+      }
+    ],
+    "crash_risk": [
+      {
+        "threshold": "< 0",
+        "reason": "Negative bullet count, undefined"
+      },
+      {
+        "threshold": "= 0",
+        "reason": "Weapon fires no projectiles, softlock if only weapon"
+      }
+    ]
+  }
+}

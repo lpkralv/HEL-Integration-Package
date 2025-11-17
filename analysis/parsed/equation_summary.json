@@ -1,0 +1,57 @@
+{
+  "total_mods": 156,
+  "total_stats_modified": 58,
+  "prefix_usage": {
+    "M_": 333,
+    "B_": 141,
+    "U_": 4,
+    "A_": 1,
+    "Z_": 1
+  },
+  "parameter_usage": {
+    "val1": 134,
+    "val2": 70
+  },
+  "most_modified_stats": [
+    {
+      "stat": "GUNDAMAGE",
+      "mod_count": 59
+    },
+    {
+      "stat": "SHOTSPERSEC",
+      "mod_count": 37
+    },
+    {
+      "stat": "HP",
+      "mod_count": 33
+    },
+    {
+      "stat": "MELEEDAMAGE",
+      "mod_count": 29
+    },
+    {
+      "stat": "PLAYERSPEED",
+      "mod_count": 23
+    },
+    {
+      "stat": "ARMOR",
+      "mod_count": 21
+    },
+    {
+      "stat": "ACCURACY",
+      "mod_count": 16
+    },
+    {
+      "stat": "HPREGEN",
+      "mod_count": 16
+    },
+    {
+      "stat": "CRITCHANCE",
+      "mod_count": 13
+    },
+    {
+      "stat": "IGNITECHANCE",
+      "mod_count": 12
+    }
+  ]
+}
