@@ -1,0 +1,785 @@
+# HEL Equations Extracted from DELIVERABLE-ModsData.asset
+# Total Mods: 156
+# Format: Mod ID | Mod Name | HEL Equation
+====================================================================================================
+
+Mod ID: 515
+Name: COHERENT LIGHT PROJECTOR
+Equation: M_ACCURACY = M_ACCURACY -val1 +; B_BULLETSPEED = B_BULLETSPEED 9999 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 516
+Name: PLASMA DISCHARGE RIFLE
+Equation: M_GUNDAMAGE = M_GUNDAMAGE val1 +; M_SHOTSPERSEC = M_SHOTSPERSEC -val2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 517
+Name: PULSE LASER ARRAY
+Equation: B_BULLETSFIRED = B_BULLETSFIRED val1 +; M_CRITCHANCE = M_CRITCHANCE val2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 518
+Name: DIRECTED ENERGY BEAM
+Equation: M_GUNDAMAGE = M_GUNDAMAGE val1 +; B_ENERGYCAPACITY = B_ENERGYCAPACITY -50 +; M_ENERGYREGEN = M_ENERGYREGEN -val2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 519
+Name: THERMAL LANCE EMITTER
+Equation: B_IGNITECHANCE = B_IGNITECHANCE val1 +; B_IGNITESPREAD = B_IGNITESPREAD val2 +; M_GUNDAMAGE = M_GUNDAMAGE 0.2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 520
+Name: ARC DISCHARGE ARRAY
+Equation: B_CHARGECHANCE = B_CHARGECHANCE val1 +; B_CHAINLIGHTNING = B_CHAINLIGHTNING val2 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.15 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 521
+Name: PHOTONIC ACCELERATOR RIFLE
+Equation: M_CRITCHANCE = M_CRITCHANCE val1 +; M_CRITDAMAGE = M_CRITDAMAGE T_ACCURACY 0.9 > val2 * +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 522
+Name: PENETRATING BEAM PROJECTOR
+Equation: B_PIERCINGSHOTS = B_PIERCINGSHOTS val1 +; B_ELEMENTALPENETRATION = B_ELEMENTALPENETRATION val2 +; M_GUNDAMAGE = M_GUNDAMAGE T_PIERCINGSHOTS val2 0.1 * * +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 523
+Name: STORM CALLER ARRAY
+Equation: B_CHAINLIGHTNING = B_CHAINLIGHTNING val1 +; B_CHARGECHANCE = B_CHARGECHANCE val2 +; B_ENERGYCAPACITY = B_ENERGYCAPACITY -30 +; M_GUNDAMAGE = M_GUNDAMAGE 0.15 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 524
+Name: CHROMATIC MATRIX CONVERTER
+Equation: B_IGNITECHANCE = B_IGNITECHANCE val1 +; B_IGNITESPREAD = B_IGNITESPREAD val2 +; M_GUNDAMAGE = M_GUNDAMAGE 0.5 +; B_ENERGYCAPACITY = B_ENERGYCAPACITY -80 +; M_ENERGYREGEN = M_ENERGYREGEN -0.25 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1000
+Name: KINETIC ACCELERATOR MATRIX
+Equation: M_GUNDAMAGE = M_GUNDAMAGE val1 +; M_SHOTSPERSEC = M_SHOTSPERSEC val2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1001
+Name: RAPID CYCLE PROJECTOR
+Equation: B_SHOTSPERSEC = B_SHOTSPERSEC val1 +; M_GUNDAMAGE = M_GUNDAMAGE -val2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1002
+Name: SCATTER ARRAY PROJECTOR
+Equation: B_BULLETSFIRED = B_BULLETSFIRED val1 +; M_ACCURACY = M_ACCURACY val2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1003
+Name: PRECISION EMITTER ASSEMBLY
+Equation: M_PROJECTILESPEED = M_PROJECTILESPEED val1 +; M_ACCURACY = M_ACCURACY -val2 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.3 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1004
+Name: BURST PROTOCOL MATRIX
+Equation: B_BULLETSFIRED = B_BULLETSFIRED val1 +; M_GUNDAMAGE = M_GUNDAMAGE val2 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.25 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1005
+Name: TACTICAL CARBINE ASSEMBLY
+Equation: M_PLAYERSPEED = M_PLAYERSPEED val1 +; M_GUNDAMAGE = M_GUNDAMAGE -val2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1006
+Name: ARMOR BREACH PROJECTOR
+Equation: B_PIERCINGSHOTS = B_PIERCINGSHOTS val1 +; M_GUNDAMAGE = M_GUNDAMAGE val2 +; M_RELOADSPEED = M_RELOADSPEED -val2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1007
+Name: HYPERKINETIC STRIKER
+Equation: M_PROJECTILESPEED = M_PROJECTILESPEED val1 +; M_CRITCHANCE = M_CRITCHANCE val2 +; M_AMMOCAPACITY = M_AMMOCAPACITY -0.4 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1008
+Name: SUSTAINED BARRAGE PLATFORM
+Equation: M_AMMOCAPACITY = M_AMMOCAPACITY val1 +; M_RELOADSPEED = M_RELOADSPEED val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.25 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1009
+Name: CRITICAL STRIKE ACCELERATOR
+Equation: M_CRITCHANCE = M_CRITCHANCE val1 +; M_CRITDAMAGE = M_CRITDAMAGE val2 +; M_SHOTSPERSEC = M_SHOTSPERSEC -val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1010
+Name: HYPERVELOCITY IMPACT CANNON
+Equation: M_PROJECTILESPEED = M_PROJECTILESPEED val1 +; M_GUNDAMAGE = M_GUNDAMAGE val2 +; M_ACCURACY = M_ACCURACY 0.6 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1011
+Name: FRAGMENTATION PROJECTOR ARRAY
+Equation: B_PIERCINGSHOTS = B_PIERCINGSHOTS val1 +; B_BULLETSFIRED = B_BULLETSFIRED val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.3 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1012
+Name: OVERCHARGE KINETIC CORE
+Equation: M_GUNDAMAGE = M_GUNDAMAGE T_ACCURACY val1 * 10 / +; M_SHOTSPERSEC = M_SHOTSPERSEC -val2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1013
+Name: ADAPTIVE BALLISTIC NEXUS
+Equation: M_SHOTSPERSEC = M_SHOTSPERSEC T_CRITDAMAGE val1 * 0.1 * +; B_LIFESTEAL = B_LIFESTEAL T_SHOTSPERSEC val2 * 0.01 * +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1014
+Name: NANITE RECYCLER DEVASTATOR
+Equation: B_LIFESTEAL = B_LIFESTEAL val1 +; M_RELOADSPEED = M_RELOADSPEED val2 +; M_GUNDAMAGE = M_GUNDAMAGE T_AMMOCAPACITY 10 / 0.01 * +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1025
+Name: FRAGMENTATION LAUNCHER
+Equation: B_EXPLOSIONRADIUS=val1;M_SHOTSPERSEC=-0.6;M_PROJECTILESPEED=-0.5
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1026
+Name: IMPACT CHARGES
+Equation: M_GUNDAMAGE=val1;B_EXPLOSIONRADIUS=1.2;M_ACCURACY=-val2;M_SHOTSPERSEC=-0.4
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1027
+Name: PROXIMITY MINE DEPLOYER
+Equation: B_EXPLOSIONRADIUS=val1;M_SHOTSPERSEC=-0.7;M_PROJECTILESPEED=-0.8;B_GUNDAMAGE=15
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1028
+Name: THERMAL WARHEAD ARRAY
+Equation: B_EXPLOSIONRADIUS=val1;M_IGNITECHANCE=val2;M_HP=-0.15;M_SHOTSPERSEC=-0.5;M_PROJECTILESPEED=-0.4
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1029
+Name: ELECTRIC BURST ORDNANCE
+Equation: B_EXPLOSIONRADIUS=val1;M_CHARGECHANCE=val2;M_PLAYERSPEED=-0.2;M_SHOTSPERSEC=-0.55;B_GUNDAMAGE=8
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1030
+Name: CORRUPTION PAYLOAD LAUNCHER
+Equation: B_EXPLOSIONRADIUS=val1;B_CORRUPTIONCHANCE=0.6;M_ACCURACY=-val2;M_SHOTSPERSEC=-0.65;M_HPREGEN=-0.1
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1031
+Name: CLUSTER STORM PROJECTOR
+Equation: B_BULLETSFIRED=val1;B_EXPLOSIONRADIUS=val2;M_SHOTSPERSEC=-0.75;M_ACCURACY=-0.5;M_HP=-0.2;B_GUNDAMAGE=20
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1032
+Name: CHAIN REACTION MATRIX
+Equation: B_EXPLOSIONRADIUS=val1;M_GUNDAMAGE=0.4;M_SHOTSPERSEC=-0.7;M_PLAYERSPEED=-val2;M_PROJECTILESPEED=-0.6;B_PIERCINGSHOTS=2
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1033
+Name: NANITE CASCADE BOMB
+Equation: B_EXPLOSIONRADIUS=val1;U_SHOTSPERSEC=val2;M_HP=-0.25;M_GUNDAMAGE=0.8;B_PIERCINGSHOTS=5;M_ACCURACY=-0.7;M_PROJECTILESPEED=-0.9
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1034
+Name: BASIC COMBAT DRONE ASSEMBLY
+Equation: B_NUMMINIONS = B_NUMMINIONS val1 +; M_GUNDAMAGE = M_GUNDAMAGE -val2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1035
+Name: DEFENSIVE CONSTRUCT PLATFORM
+Equation: B_NUMMINIONS = B_NUMMINIONS val1 +; M_MINIONHP = M_MINIONHP val2 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.3 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1036
+Name: SCOUT DRONE ARRAY
+Equation: B_NUMMINIONS = B_NUMMINIONS val1 +; M_MINIONATTACKSPEED = M_MINIONATTACKSPEED val2 +; M_HP = M_HP -0.2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1037
+Name: ASSAULT CONSTRUCTOR FRAMEWORK
+Equation: B_NUMMINIONS = B_NUMMINIONS val1 +; M_MINIONDAMAGE = M_MINIONDAMAGE val2 +; M_ACCURACY = M_ACCURACY 0.4 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1038
+Name: HEAVY SIEGE PLATFORM
+Equation: B_NUMMINIONS = B_NUMMINIONS val1 +; M_MINIONDAMAGE = M_MINIONDAMAGE val2 +; M_MINIONHP = M_MINIONHP 0.5 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.4 +; M_PLAYERSPEED = M_PLAYERSPEED -0.2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1039
+Name: RAPID FABRICATOR NETWORK
+Equation: B_NUMMINIONS = B_NUMMINIONS val1 +; M_MINIONATTACKSPEED = M_MINIONATTACKSPEED val2 +; M_CRITCHANCE = M_CRITCHANCE -0.5 +; M_RELOADSPEED = M_RELOADSPEED -0.3 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1040
+Name: SYNCHRONIZED CONSTRUCT ARRAY
+Equation: B_NUMMINIONS = B_NUMMINIONS val1 +; M_MINIONDAMAGE = M_MINIONDAMAGE val2 +; M_MINIONHP = M_MINIONHP val2 +; M_MINIONATTACKSPEED = M_MINIONATTACKSPEED val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.35 +; M_HP = M_HP -0.15 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1041
+Name: ADAPTIVE SWARM NEXUS
+Equation: B_NUMMINIONS = B_NUMMINIONS val1 +; M_MINIONDAMAGE = M_MINIONDAMAGE T_GUNDAMAGE 100 / val2 * +; M_MINIONHP = M_MINIONHP T_ARMOR 0.005 * +; M_GUNDAMAGE = M_GUNDAMAGE -0.5 +; M_ACCURACY = M_ACCURACY 0.6 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1042
+Name: AUTONOMOUS COMMAND MATRIX
+Equation: B_NUMMINIONS = B_NUMMINIONS val1 +; M_MINIONDAMAGE = M_MINIONDAMAGE val2 + T_NUMMINIONS 0.01 * +; M_MINIONHP = M_MINIONHP T_NUMMINIONS 0.01 * +; M_MINIONATTACKSPEED = M_MINIONATTACKSPEED T_NUMMINIONS 0.01 * +; M_GUNDAMAGE = M_GUNDAMAGE -0.4 +; M_HP = M_HP -0.3 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1043
+Name: SELF-REPLICATING NANITE NEXUS
+Equation: B_NUMMINIONS = B_NUMMINIONS val1 +; M_MINIONDAMAGE = M_MINIONDAMAGE (T_HP S_HP /) 1 - val2 * 10 * + +; M_MINIONATTACKSPEED = M_MINIONATTACKSPEED T_ENERGYCAPACITY 5 / 0.01 * +; M_GUNDAMAGE = M_GUNDAMAGE -0.6 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.6 +; M_HPREGEN = M_HPREGEN -0.8 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1044
+Name: DUAL-MODE COMBAT MATRIX
+Equation: M_GUNDAMAGE = M_GUNDAMAGE T_ACCURACY 0.7 > val1 * +; M_SHOTSPERSEC = M_SHOTSPERSEC T_ACCURACY 0.7 < val2 * +; M_ACCURACY = M_ACCURACY -0.15 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1045
+Name: TRI-PHASE EMITTER ARRAY
+Equation: B_PIERCINGSHOTS = B_PIERCINGSHOTS 2 +; B_IGNITECHANCE = B_IGNITECHANCE 0.3 +; B_EXPLOSIONRADIUS = B_EXPLOSIONRADIUS 1.5 +; M_GUNDAMAGE = M_GUNDAMAGE val2 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.25 +; M_RELOADSPEED = M_RELOADSPEED -0.3 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1046
+Name: ADAPTIVE SCALAR PLATFORM
+Equation: M_GUNDAMAGE = M_GUNDAMAGE T_PLAYERSPEED val1 * 0.01 * +; M_SHOTSPERSEC = M_SHOTSPERSEC T_HP val2 * 0.1 * +; M_CRITCHANCE = M_CRITCHANCE T_ACCURACY 0.5 * +; M_PROJECTILESPEED = M_PROJECTILESPEED 0.4 +; M_HP = M_HP -0.1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1047
+Name: OMNIPHASE DEVASTATOR
+Equation: B_PIERCINGSHOTS = B_PIERCINGSHOTS val1 +; B_EXPLOSIONRADIUS = B_EXPLOSIONRADIUS 2.0 +; B_IGNITECHANCE = B_IGNITECHANCE 0.4 +; B_CHARGECHANCE = B_CHARGECHANCE 0.4 +; M_GUNDAMAGE = M_GUNDAMAGE 0.7 +; U_SHOTSPERSEC = U_SHOTSPERSEC val2 +; M_HP = M_HP -0.2 +; M_AMMOCAPACITY = M_AMMOCAPACITY -0.4 +; B_LIFESTEAL = B_LIFESTEAL 0.15 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1048
+Name: KINETIC BLADE MATRIX
+Equation: M_MELEEDAMAGE = M_MELEEDAMAGE val1 +; M_MELEESPEED = M_MELEESPEED val2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1049
+Name: VELOCITY STRIKER ASSEMBLY
+Equation: M_MELEESPEED = M_MELEESPEED val1 +; M_PLAYERSPEED = M_PLAYERSPEED val2 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1050
+Name: IMPACT EDGE CONSTRUCT
+Equation: M_MELEEDAMAGE = M_MELEEDAMAGE val1 +; M_MELEESPEED = M_MELEESPEED -val2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1051
+Name: THERMAL EDGE PROJECTOR
+Equation: B_IGNITECHANCE = B_IGNITECHANCE val1 +; B_LIFESTEAL = B_LIFESTEAL val2 +; M_HP = M_HP -0.1 +; M_MELEEDAMAGE = M_MELEEDAMAGE 0.3 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1052
+Name: VAMPIRIC STRIKE MATRIX
+Equation: B_LIFESTEAL = B_LIFESTEAL val1 +; M_MELEESPEED = M_MELEESPEED val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.4 +; M_MELEEDAMAGE = M_MELEEDAMAGE 0.35 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1053
+Name: RETRIBUTION BLADE ARRAY
+Equation: B_THORNDAMAGE = B_THORNDAMAGE val1 +; B_SHIELDONKILL = B_SHIELDONKILL val2 +; M_PLAYERSPEED = M_PLAYERSPEED -0.2 +; M_MELEESPEED = M_MELEESPEED -0.15 +; M_MELEEDAMAGE = M_MELEEDAMAGE 0.4 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 1054
+Name: CHROMATIC COHERENCE EDGE
+Equation: A_MELEEDAMAGE = A_MELEEDAMAGE T_GUNDAMAGE val1 * +; M_MELEECRITCHANCE = M_MELEECRITCHANCE val2 +; M_GUNDAMAGE = M_GUNDAMAGE -10 +; M_HP = M_HP -0.15 +; M_MELEERANGE = M_MELEERANGE 0.4 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2000
+Name: REINFORCED NANITE SHELL
+Equation: M_HP = M_HP val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2001
+Name: ABLATIVE PLATING MATRIX
+Equation: M_ARMOR = M_ARMOR val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2002
+Name: STRUCTURAL REINFORCEMENT PROTOCOLS
+Equation: M_HP = M_HP val1 +; M_ARMOR = M_ARMOR val2 +; M_PLAYERSPEED = M_PLAYERSPEED -0.1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2003
+Name: HARDPOINT ABSORPTION BARRIER
+Equation: M_HP = M_HP val1 +; B_DAMAGEABSORPTION = B_DAMAGEABSORPTION val2 +; M_MAXSTAMINA = M_MAXSTAMINA -0.15 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2004
+Name: REACTIVE PLATING ASSEMBLY
+Equation: M_ARMOR = M_ARMOR val1 +; B_REFLECTDAMAGE = B_REFLECTDAMAGE val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.2 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2005
+Name: ADAPTIVE REGENERATION CORE
+Equation: B_HPREGEN = B_HPREGEN val1 +; B_HPREGEN = B_HPREGEN T_ARMOR val2 * 0.01 * +; M_MAXSTAMINA = M_MAXSTAMINA -0.25 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2006
+Name: RETRIBUTION FRAMEWORK
+Equation: B_THORNDAMAGE = B_THORNDAMAGE val1 +; B_THORNDAMAGE = B_THORNDAMAGE T_HP val2 * 0.01 * +; M_PLAYERSPEED = M_PLAYERSPEED -0.15 +; M_SPRINTSPEED = M_SPRINTSPEED -0.3 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2007
+Name: FORTRESS DEVASTATOR CORE
+Equation: B_MAXHPPERCENTBONUS = B_MAXHPPERCENTBONUS val1 +; M_GUNDAMAGE = M_GUNDAMAGE T_HP val2 * 0.02 * +; M_MELEEDAMAGE = M_MELEEDAMAGE T_HP val2 * 0.02 * +; M_PLAYERSPEED = M_PLAYERSPEED -0.4 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.35 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2008
+Name: KINETIC ACCELERATOR NANITES
+Equation: M_PLAYERSPEED = M_PLAYERSPEED val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2009
+Name: SPRINT EFFICIENCY MATRIX
+Equation: M_SPRINTSPEED = M_SPRINTSPEED val1 +; M_PLAYERSPEED = M_PLAYERSPEED -val2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2010
+Name: VERTICAL PROPULSION NANITES
+Equation: M_JUMPSTRENGTH = M_JUMPSTRENGTH val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2011
+Name: RAPID DISPLACEMENT ACCELERATOR
+Equation: B_DASHCOOLDOWN = B_DASHCOOLDOWN -val1 +; M_DASHSPEED = M_DASHSPEED val2 +; M_HP = M_HP -val2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2012
+Name: MOMENTUM CONVERSION MATRIX
+Equation: M_PLAYERSPEED = M_PLAYERSPEED val1 +; M_STAMINAREGEN = M_STAMINAREGEN val2 +; M_ARMOR = M_ARMOR -0.3 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2013
+Name: VELOCITY DAMAGE AMPLIFIER
+Equation: M_GUNDAMAGE = M_GUNDAMAGE T_PLAYERSPEED 100 / val1 * +; B_DODGECHANCE = B_DODGECHANCE T_PLAYERSPEED 200 / val2 * +; M_HP = M_HP -0.25 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2014
+Name: UNSTABLE PROPULSION CORE
+Equation: M_PLAYERSPEED = M_PLAYERSPEED val1 +; B_DASHCOOLDOWN = B_DASHCOOLDOWN -val2 +; M_HP = M_HP -val1 +; M_HPREGEN = M_HPREGEN -1.0 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2015
+Name: NANITE RECONSTRUCTION MATRIX
+Equation: B_HPREGEN = B_HPREGEN val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2016
+Name: STAMINA RECOVERY PROTOCOLS
+Equation: B_STAMINAREGEN = B_STAMINAREGEN val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2017
+Name: INTEGRATED SELF-REPAIR SYSTEM
+Equation: B_HPREGEN = B_HPREGEN val1 +; B_STAMINAREGEN = B_STAMINAREGEN val2 +; M_HP = M_HP -0.1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2018
+Name: ADAPTIVE RESTORATION CORE
+Equation: B_HPREGEN = B_HPREGEN val1 +; B_STAMINAREGEN = B_STAMINAREGEN val2 +; M_SHIELDREGENRATE = M_SHIELDREGENRATE 0.25 +; M_GUNDAMAGE = M_GUNDAMAGE -0.15 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.15 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2019
+Name: PERCENTAGE-BASED RECONSTRUCTION FIELD
+Equation: B_HPREGEN = B_HPREGEN T_HP val1 * 0.01 * +; B_STAMINAREGEN = B_STAMINAREGEN T_MAXSTAMINA val2 * 0.01 * +; M_ARMOR = M_ARMOR -0.25 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2020
+Name: CRITICAL MASS REGENERATOR
+Equation: B_HPREGEN = B_HPREGEN T_HP T_HP 0.3 * < val1 * +; M_GUNDAMAGE = M_GUNDAMAGE T_HPREGEN val2 * 0.01 * +; M_MELEEDAMAGE = M_MELEEDAMAGE T_HPREGEN val2 * 0.01 * +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2021
+Name: PRECISION TARGETING MATRIX
+Equation: M_CRITCHANCE = M_CRITCHANCE val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2022
+Name: DAMAGE AMPLIFIER CORE
+Equation: M_GUNDAMAGE = M_GUNDAMAGE val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2023
+Name: PROC ENHANCEMENT PROTOCOLS
+Equation: M_PROCRATE = M_PROCRATE val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2024
+Name: CRITICAL STRIKE ASSEMBLY
+Equation: M_CRITCHANCE = M_CRITCHANCE val1 +; M_CRITDAMAGE = M_CRITDAMAGE val2 +; M_ARMOR = M_ARMOR -0.3 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2025
+Name: OFFENSIVE OVERLOAD MATRIX
+Equation: M_GUNDAMAGE = M_GUNDAMAGE val1 +; M_PROCRATE = M_PROCRATE val2 +; M_HP = M_HP -0.25 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2026
+Name: FULL INTEGRITY PROTOCOL
+Equation: M_CRITCHANCE = M_CRITCHANCE T_HP T_HP < -1.0 * val1 * +; M_GUNDAMAGE = M_GUNDAMAGE T_HP T_HP < -1.0 * val2 * +; M_MELEEDAMAGE = M_MELEEDAMAGE T_HP T_HP < -1.0 * val2 * +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2027
+Name: BERSERKER SURGE CORE
+Equation: M_GUNDAMAGE = M_GUNDAMAGE T_HP T_HP / (-1.0) + val1 * 10 * +; M_MELEEDAMAGE = M_MELEEDAMAGE T_HP T_HP / (-1.0) + val1 * 10 * +; M_ARMOR = M_ARMOR -0.2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2028
+Name: ABSOLUTE DESTRUCTION CORE
+Equation: M_CRITCHANCE = M_CRITCHANCE val1 +; M_CRITDAMAGE = M_CRITDAMAGE val2 +; M_HP = M_HP -0.5 +; M_ARMOR = M_ARMOR -0.6 +; M_PLAYERSPEED = M_PLAYERSPEED -0.25 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2029
+Name: THERMAL INSULATION MATRIX
+Equation: M_FIRERESISTANCE = M_FIRERESISTANCE val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2030
+Name: ELECTRIC INSULATION GRID
+Equation: M_ELECTRICRESISTANCE = M_ELECTRICRESISTANCE val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2031
+Name: CORRUPTION BARRIER PROTOCOL
+Equation: M_CORRUPTIONRESISTANCE = M_CORRUPTIONRESISTANCE val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2032
+Name: TRI-ELEMENT RESISTANCE CORE
+Equation: M_FIRERESISTANCE = M_FIRERESISTANCE val1 +; M_ELECTRICRESISTANCE = M_ELECTRICRESISTANCE val1 +; M_CORRUPTIONRESISTANCE = M_CORRUPTIONRESISTANCE val1 +; M_HP = M_HP -0.15 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2033
+Name: ELEMENTAL PENETRATION CONVERTER
+Equation: B_ELEMENTALPENETRATION = B_ELEMENTALPENETRATION val2 +; B_ELEMENTALPENETRATION = B_ELEMENTALPENETRATION T_FIRERESISTANCE T_ELECTRICRESISTANCE + T_CORRUPTIONRESISTANCE + val1 * 0.01 * +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.25 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2034
+Name: ELEMENTAL ABSORPTION DEVASTATOR
+Equation: M_FIRERESISTANCE = M_FIRERESISTANCE val1 +; M_ELECTRICRESISTANCE = M_ELECTRICRESISTANCE val1 +; M_CORRUPTIONRESISTANCE = M_CORRUPTIONRESISTANCE val1 +; M_GUNDAMAGE = M_GUNDAMAGE T_FIRERESISTANCE T_ELECTRICRESISTANCE + T_CORRUPTIONRESISTANCE + 0.02 * +; M_MELEEDAMAGE = M_MELEEDAMAGE T_FIRERESISTANCE T_ELECTRICRESISTANCE + T_CORRUPTIONRESISTANCE + 0.02 * +; M_PLAYERSPEED = M_PLAYERSPEED -0.3 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2035
+Name: ENERGY MATRIX AMPLIFIER
+Equation: M_ENERGYCAPACITY = M_ENERGYCAPACITY val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2036
+Name: REACTOR OPTIMIZATION CORE
+Equation: B_ENERGYREGEN = B_ENERGYREGEN val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2037
+Name: COOLDOWN CALIBRATOR
+Equation: B_COOLDOWNREDUCTION = B_COOLDOWNREDUCTION val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2038
+Name: INTEGRATED RESOURCE MANAGER
+Equation: M_ENERGYCAPACITY = M_ENERGYCAPACITY val1 +; B_ENERGYREGEN = B_ENERGYREGEN val2 +; M_MAXSTAMINA = M_MAXSTAMINA -0.2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2039
+Name: EFFICIENCY OPTIMIZATION PROTOCOL
+Equation: B_COOLDOWNREDUCTION = B_COOLDOWNREDUCTION val1 +; B_RESOURCEEFFICIENCY = B_RESOURCEEFFICIENCY val2 +; M_PLAYERSPEED = M_PLAYERSPEED -0.15 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2040
+Name: ENERGY CONVERSION AMPLIFIER
+Equation: B_ENERGYCAPACITY = B_ENERGYCAPACITY val1 +; M_GUNDAMAGE = M_GUNDAMAGE T_ENERGYCAPACITY val2 * 0.001 * +; M_MELEEDAMAGE = M_MELEEDAMAGE T_ENERGYCAPACITY val2 * 0.001 * +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.3 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2041
+Name: TEMPORAL ACCELERATION MATRIX
+Equation: B_COOLDOWNREDUCTION = B_COOLDOWNREDUCTION val1 +; M_IGNITECHANCE = M_IGNITECHANCE T_COOLDOWNREDUCTION val2 * +; M_CHARGECHANCE = M_CHARGECHANCE T_COOLDOWNREDUCTION val2 * +; M_ARMOR = M_ARMOR -0.25 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2042
+Name: INFINITE ENERGY REACTOR
+Equation: B_RESOURCEEFFICIENCY = B_RESOURCEEFFICIENCY val1 +; B_ENERGYREGEN = B_ENERGYREGEN val2 +; B_COOLDOWNREDUCTION = B_COOLDOWNREDUCTION 0.5 +; M_GUNDAMAGE = M_GUNDAMAGE -0.35 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.35 +; M_HP = M_HP -0.2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2043
+Name: NANITE RECYCLER MATRIX
+Equation: B_LIFESTEAL = B_LIFESTEAL val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2044
+Name: PREDICTIVE EVASION CORE
+Equation: B_DODGECHANCE = B_DODGECHANCE val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2045
+Name: REACTIVE PLATING ASSEMBLY
+Equation: B_THORNDAMAGE = B_THORNDAMAGE val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2046
+Name: FEEDBACK AMPLIFIER CORE
+Equation: B_THORNDAMAGE = B_THORNDAMAGE val1 +; B_REFLECTDAMAGE = B_REFLECTDAMAGE val2 +; M_HP = M_HP -0.2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2047
+Name: VAMPIRIC TARGETING ASSEMBLY
+Equation: B_LIFESTEAL = B_LIFESTEAL val1 +; M_CRITDAMAGE = M_CRITDAMAGE val2 +; M_ARMOR = M_ARMOR -0.25 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2048
+Name: DESPERATION PHASING PROTOCOL
+Equation: B_DODGECHANCE = B_DODGECHANCE T_HP T_HP / (-1.0) + val1 * 10 * val2 MIN +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 2049
+Name: ENTROPY INVERSION MATRIX
+Equation: B_LIFESTEAL = B_LIFESTEAL val1 +; M_HP = M_HP -0.4 +; M_ARMOR = M_ARMOR -0.5 +; U_SHIELDCAPACITY = U_SHIELDCAPACITY -5000 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3000
+Name: DAMAGE ENHANCEMENT SERUM
+Equation: M_GUNDAMAGE = M_GUNDAMAGE val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3001
+Name: FIRE RATE STIMULANT
+Equation: B_SHOTSPERSEC = B_SHOTSPERSEC val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3002
+Name: MELEE ACCELERATION INJECTION
+Equation: M_MELEESPEED = M_MELEESPEED val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3003
+Name: PRECISION TARGETING STIMULANT
+Equation: M_CRITCHANCE = M_CRITCHANCE val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3004
+Name: MELEE POWER INJECTION
+Equation: M_MELEEDAMAGE = M_MELEEDAMAGE val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3005
+Name: AGGRESSIVE COMBAT PROTOCOL
+Equation: M_GUNDAMAGE = M_GUNDAMAGE val1 +; B_SHOTSPERSEC = B_SHOTSPERSEC val2 +; M_ARMOR = M_ARMOR -0.15 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3006
+Name: BERSERKER COMBAT STIMULANT
+Equation: M_MELEEDAMAGE = M_MELEEDAMAGE val1 +; M_MELEESPEED = M_MELEESPEED val2 +; M_HP = M_HP -0.1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3007
+Name: CRITICAL PRECISION SERUM
+Equation: M_CRITCHANCE = M_CRITCHANCE val1 +; M_CRITDAMAGE = M_CRITDAMAGE val2 +; M_PLAYERSPEED = M_PLAYERSPEED -0.1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3008
+Name: ESCALATING FURY PROTOCOL
+Equation: M_GUNDAMAGE = M_GUNDAMAGE T_STACKS val1 * +; M_MELEEDAMAGE = M_MELEEDAMAGE T_STACKS val1 * +; M_ARMOR = M_ARMOR -0.15 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3009
+Name: PERMANENT BERSERKER MODE
+Equation: M_GUNDAMAGE = M_GUNDAMAGE val1 +; M_MELEEDAMAGE = M_MELEEDAMAGE val2 +; B_SHOTSPERSEC = B_SHOTSPERSEC val1 +; M_HP = M_HP -0.3 +; M_ARMOR = M_ARMOR -0.4 +; M_HPREGEN = M_HPREGEN -0.6 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3010
+Name: STRUCTURAL FORTIFICATION SERUM
+Equation: M_HP = M_HP val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3011
+Name: ABLATIVE ARMOR NANITES
+Equation: M_ARMOR = M_ARMOR val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3012
+Name: ENERGY BARRIER AMPLIFIER
+Equation: M_SHIELDCAPACITY = M_SHIELDCAPACITY val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3013
+Name: IMPACT DISPERSAL INJECTION
+Equation: B_DAMAGEABSORPTION = B_DAMAGEABSORPTION val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3014
+Name: REINFORCED BATTLE PROTOCOLS
+Equation: M_HP = M_HP val1 +; M_ARMOR = M_ARMOR val2 +; M_PLAYERSPEED = M_PLAYERSPEED -0.1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3015
+Name: ADAPTIVE SHIELD MATRIX
+Equation: M_SHIELDCAPACITY = M_SHIELDCAPACITY val1 +; M_SHIELDREGENRATE = M_SHIELDREGENRATE val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.15 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.15 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3016
+Name: EVASIVE FORTIFICATION SERUM
+Equation: M_HP = M_HP val1 +; B_DODGECHANCE = B_DODGECHANCE val2 +; M_MAXSTAMINA = M_MAXSTAMINA -0.15 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3017
+Name: ADAPTIVE RESISTANCE PROTOCOLS
+Equation: M_ARMOR = M_ARMOR val1 +; M_ARMOR = M_ARMOR T_HP T_HP / 1 - val2 * +; M_HPREGEN = M_HPREGEN -0.2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3018
+Name: SHIELD OVERCHARGE MATRIX
+Equation: U_SHIELDCAPACITY = U_SHIELDCAPACITY T_SHIELDCAPACITY val1 * +; M_SHIELDCAPACITY = M_SHIELDCAPACITY val2 +; M_ARMOR = M_ARMOR -0.25 +; M_PLAYERSPEED = M_PLAYERSPEED -0.2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3019
+Name: CRITICAL THRESHOLD NANITES
+Equation: B_DAMAGEABSORPTION = B_DAMAGEABSORPTION T_HP T_HP 0.2 * < val1 * +; M_HP = M_HP -0.35 +; M_GUNDAMAGE = M_GUNDAMAGE -0.3 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.3 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3020
+Name: REGENERATIVE NANITE INJECTION
+Equation: B_HPREGEN = B_HPREGEN val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3021
+Name: ENDURANCE ENHANCEMENT SERUM
+Equation: B_STAMINAREGEN = B_STAMINAREGEN val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3022
+Name: REACTOR EFFICIENCY BOOSTER
+Equation: B_ENERGYREGEN = B_ENERGYREGEN val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3023
+Name: RAPID RECALIBRATION SERUM
+Equation: B_COOLDOWNREDUCTION = B_COOLDOWNREDUCTION val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3024
+Name: RESOURCE CONSERVATION INJECTOR
+Equation: B_RESOURCEEFFICIENCY = B_RESOURCEEFFICIENCY val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3025
+Name: INTEGRATED RECOVERY MATRIX
+Equation: B_HPREGEN = B_HPREGEN val1 +; B_STAMINAREGEN = B_STAMINAREGEN val2 +; M_HP = M_HP -0.08 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3026
+Name: ABILITY OPTIMIZATION COMPLEX
+Equation: B_ENERGYREGEN = B_ENERGYREGEN val1 +; B_COOLDOWNREDUCTION = B_COOLDOWNREDUCTION val2 +; M_PLAYERSPEED = M_PLAYERSPEED -0.1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3027
+Name: PERPETUAL SUSTAIN INJECTION
+Equation: B_HPREGEN = B_HPREGEN val1 +; B_STAMINAREGEN = B_STAMINAREGEN val2 +; B_ENERGYREGEN = B_ENERGYREGEN 15 +; M_SHIELDREGENRATE = M_SHIELDREGENRATE -0.2 +; M_ARMOR = M_ARMOR -0.12 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3028
+Name: ADAPTIVE METABOLIC AMPLIFIER
+Equation: B_HPREGEN = B_HPREGEN T_HP val1 * 0.01 * +; B_STAMINAREGEN = B_STAMINAREGEN T_MAXSTAMINA val2 * 0.01 * +; B_RESOURCEEFFICIENCY = B_RESOURCEEFFICIENCY T_HPREGEN T_STAMINAREGEN + 10 / 0.01 * +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3029
+Name: PERPETUAL MOTION REACTOR (PROTOTYPE)
+Equation: B_HPREGEN = B_HPREGEN val1 +; B_ENERGYREGEN = B_ENERGYREGEN val2 +; B_RESOURCEEFFICIENCY = B_RESOURCEEFFICIENCY 0.8 +; B_COOLDOWNREDUCTION = B_COOLDOWNREDUCTION 0.45 +; M_GUNDAMAGE = M_GUNDAMAGE -0.3 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.3 +; M_HP = M_HP -0.15 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3030
+Name: THERMAL IGNITION SERUM
+Equation: M_IGNITECHANCE = M_IGNITECHANCE val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3031
+Name: ELECTRIC DISCHARGE SERUM
+Equation: M_CHARGECHANCE = M_CHARGECHANCE val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3032
+Name: VIRAL CORRUPTION SERUM
+Equation: B_CORRUPTIONCHANCE = B_CORRUPTIONCHANCE val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3033
+Name: ELEMENTAL AMPLIFICATION SERUM
+Equation: B_IGNITEDAMAGE = B_IGNITEDAMAGE val1 +; B_CHARGEDAMAGE = B_CHARGEDAMAGE val1 +; B_CORRUPTIONDAMAGE = B_CORRUPTIONDAMAGE val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3034
+Name: DUAL-ELEMENT FUSION PROTOCOL
+Equation: M_IGNITECHANCE = M_IGNITECHANCE val1 +; M_CHARGECHANCE = M_CHARGECHANCE val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.08 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3035
+Name: TRI-ELEMENT DAMAGE CATALYST
+Equation: B_IGNITEDAMAGE = B_IGNITEDAMAGE val1 +; B_CHARGEDAMAGE = B_CHARGEDAMAGE val1 +; B_CORRUPTIONDAMAGE = B_CORRUPTIONDAMAGE val1 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3036
+Name: ELEMENTAL PENETRATION INJECTOR
+Equation: B_ELEMENTALPENETRATION = B_ELEMENTALPENETRATION val1 +; M_IGNITECHANCE = M_IGNITECHANCE val2 +; M_CHARGECHANCE = M_CHARGECHANCE val2 +; B_CORRUPTIONCHANCE = B_CORRUPTIONCHANCE val2 +; M_ARMOR = M_ARMOR -0.15 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3037
+Name: ELEMENTAL CHAIN REACTION PROTOCOL
+Equation: M_IGNITEDAMAGE = M_IGNITEDAMAGE T_IGNITESTACKS val1 * +; M_CHARGEDAMAGE = M_CHARGEDAMAGE T_CHARGESTACKS val1 * +; B_CORRUPTIONDAMAGE = B_CORRUPTIONDAMAGE T_CORRUPTIONSTACKS val1 * +; M_IGNITECHANCE = M_IGNITECHANCE T_IGNITESTACKS val2 * +; M_CHARGECHANCE = M_CHARGECHANCE T_CHARGESTACKS val2 * +; B_CORRUPTIONCHANCE = B_CORRUPTIONCHANCE T_CORRUPTIONSTACKS val2 * +; M_PLAYERSPEED = M_PLAYERSPEED -0.12 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3038
+Name: OMNI-ELEMENTAL CONVERSION CORE
+Equation: M_IGNITECHANCE = M_IGNITECHANCE val1 +; M_CHARGECHANCE = M_CHARGECHANCE val1 +; B_CORRUPTIONCHANCE = B_CORRUPTIONCHANCE val1 +; M_IGNITEDAMAGE = M_IGNITEDAMAGE T_GUNDAMAGE T_MELEEDAMAGE + 1.0 * +; M_CHARGEDAMAGE = M_CHARGEDAMAGE T_GUNDAMAGE T_MELEEDAMAGE + 1.0 * +; B_CORRUPTIONDAMAGE = B_CORRUPTIONDAMAGE T_GUNDAMAGE T_MELEEDAMAGE + 1.0 * +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.25 +; M_PLAYERSPEED = M_PLAYERSPEED -0.2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3039
+Name: TARGETING OPTIMIZATION SERUM
+Equation: M_ACCURACY = M_ACCURACY val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3040
+Name: RANGE EXTENSION SERUM
+Equation: M_RANGE = M_RANGE val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3041
+Name: PROC ZONE EXPANSION SERUM
+Equation: M_PROCRANGE = M_PROCRANGE val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3042
+Name: PROJECTILE VELOCITY SERUM
+Equation: M_PROJECTILESPEED = M_PROJECTILESPEED val1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3043
+Name: MULTI-RANGE OPTIMIZATION PROTOCOL
+Equation: M_RANGE = M_RANGE val1 +; M_MELEERANGE = M_MELEERANGE val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.1 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.1 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3044
+Name: PRECISION BARRAGE PROTOCOL
+Equation: B_BULLETSFIRED = B_BULLETSFIRED val1 +; M_ACCURACY = M_ACCURACY val2 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.15 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3045
+Name: ADAPTIVE TARGETING MATRIX
+Equation: M_ACCURACY = M_ACCURACY val1 +; M_RANGE = M_RANGE val2 +; M_ACCURACY = M_ACCURACY 1 + T_ACCURACY - 0.1 *; M_PLAYERSPEED = M_PLAYERSPEED -0.12 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3046
+Name: PERFECT PRECISION CORE
+Equation: Z_ACCURACY = 1.0; M_RANGE = M_RANGE val1 +; M_PROJECTILESPEED = M_PROJECTILESPEED val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.3 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3047
+Name: BERSERKER RAGE PROTOCOL
+Equation: M_GUNDAMAGE = M_GUNDAMAGE T_HP S_HP 0.5 * < val1 * +; M_MELEEDAMAGE = M_MELEEDAMAGE T_HP S_HP 0.5 * < val2 * +; M_HP = M_HP -0.15 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3048
+Name: CHAOS VARIANCE INJECTOR
+Equation: M_GUNDAMAGE = M_GUNDAMAGE RAND val1 * -0.5 + +; M_MELEEDAMAGE = M_MELEEDAMAGE RAND val1 * -0.5 + +; M_CRITCHANCE = M_CRITCHANCE val2 +; M_ACCURACY = M_ACCURACY -0.2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3049
+Name: VELOCITY DAMAGE CONVERTER
+Equation: M_GUNDAMAGE = M_GUNDAMAGE T_PLAYERSPEED 0.01 * val1 * +; M_MELEEDAMAGE = M_MELEEDAMAGE T_PLAYERSPEED 0.01 * val1 * +; M_GUNDAMAGE = M_GUNDAMAGE -0.25 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.25 +; M_HP = M_HP -0.2 +
+----------------------------------------------------------------------------------------------------
+
+Mod ID: 3050
+Name: ARMOR THORNS AMPLIFIER
+Equation: B_THORNDAMAGE = B_THORNDAMAGE T_ARMOR val1 * +; M_ARMOR = M_ARMOR val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.3 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.25 +
+----------------------------------------------------------------------------------------------------
+
