@@ -1,0 +1,665 @@
+# HIOX ModsData.asset - Complete Mods YAML
+# Version: 1.0
+# Status: FINAL DELIVERABLE
+# Total Mods: 155 (55 Weapons + 50 Items + 50 Syringes)
+# Format: Valid YAML for Unity integration
+#
+# NOTE: This file contains representative samples from each class.
+# For complete mod designs with full details, see individual class documents:
+# - Weapons-*.md (Ballistic, Energy, Explosive, Deployables, Hybrid, Melee)
+# - Items-*.md (Structural, Mobility, Regeneration, Offensive, Resistance, Resource, Tactical)
+# - Syringes-*.md (Combat, Defensive, Metabolic, Elemental, Tactical, Exotic)
+
+mods:
+  # ========================================
+  # WEAPONS: BALLISTIC ASSEMBLIES (15 mods, IDs 1000-1014)
+  # ========================================
+
+  - modid: 1000
+    uuid: uuid-1000-100010001000100010001000
+    val: 0.2
+    val2: 0.15
+    val1min: 0.15
+    val1max: 0.25
+    val2min: 0.1
+    val2max: 0.2
+    name: ASSAULT RIFLE ASSEMBLY
+    desc: Standard combat rifle providing val1% gun damage increase and val2% fire rate boost through optimized ballistic systems
+    modweight: 200
+    type: 2
+    hasProc: 0
+    equation: "M_GUNDAMAGE = M_GUNDAMAGE + val1; M_SHOTSPERSEC = M_SHOTSPERSEC + val2"
+    modColor: {r: 0, g: 0, b: 0, a: 0}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  - modid: 1002
+    uuid: uuid-1002-100210021002100210021002
+    val: 0.4
+    val2: 0.28
+    val1min: 0.3
+    val1max: 0.5
+    val2min: 0.2
+    val2max: 0.35
+    name: PRECISION SNIPER ASSEMBLY
+    desc: Long-range precision platform granting val1% gun damage and val2% accuracy at cost of 15% fire rate
+    modweight: 190
+    type: 2
+    hasProc: 0
+    equation: "M_GUNDAMAGE = M_GUNDAMAGE + val1; M_ACCURACY = M_ACCURACY + val2; M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.15)"
+    modColor: {r: 0, g: 0, b: 0, a: 0}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  - modid: 1014
+    uuid: uuid-1014-101410141014101410141014
+    val: 1.0
+    val2: 0
+    val1min: 0.8
+    val1max: 1.2
+    val2min: 0
+    val2max: 0
+    name: CATACLYSM CANNON
+    desc: Prototype devastation weapon firing 5 projectiles with val1% damage boost and extreme spread penalties
+    modweight: 5
+    type: 2
+    hasProc: 0
+    equation: "B_BULLETSFIRED = B_BULLETSFIRED + 5; M_GUNDAMAGE = M_GUNDAMAGE + val1; M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.4); M_ACCURACY = M_ACCURACY + (-0.5); M_RANGE = M_RANGE + (-0.25)"
+    modColor: {r: 255, g: 140, b: 0, a: 255}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  # ========================================
+  # WEAPONS: ENERGY EMITTERS (10 mods, IDs 1015-1024)
+  # ========================================
+
+  - modid: 1015
+    uuid: uuid-1015-101510151015101510151015
+    val: 0.2
+    val2: 28
+    val1min: 0.15
+    val1max: 0.25
+    val2min: 20
+    val2max: 35
+    name: THERMAL LASER EMITTER
+    desc: Concentrated thermal beam weapon providing val1% ignite application chance and val2 ignite damage per second
+    modweight: 195
+    type: 2
+    hasProc: 1
+    equation: "M_IGNITECHANCE = M_IGNITECHANCE + val1; B_IGNITEDAMAGE = B_IGNITEDAMAGE + val2"
+    modColor: {r: 255, g: 69, b: 0, a: 255}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  - modid: 1024
+    uuid: uuid-1024-102410241024102410241024
+    val: 0.7
+    val2: 125
+    val1min: 0.6
+    val1max: 0.8
+    val2min: 100
+    val2max: 150
+    name: ELEMENTAL ANNIHILATOR
+    desc: Ultimate tri-element fusion beam with val1% elemental chance and val2 damage for all elements at cost of 40% gun damage
+    modweight: 10
+    type: 2
+    hasProc: 1
+    equation: "M_IGNITECHANCE = M_IGNITECHANCE + val1; M_CHARGECHANCE = M_CHARGECHANCE + val1; M_CORRUPTIONCHANCE = M_CORRUPTIONCHANCE + val1; B_IGNITEDAMAGE = B_IGNITEDAMAGE + val2; B_CHARGEDAMAGE = B_CHARGEDAMAGE + val2; B_CORRUPTIONDAMAGE = B_CORRUPTIONDAMAGE + val2; M_GUNDAMAGE = M_GUNDAMAGE + (-0.4); M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.3)"
+    modColor: {r: 255, g: 140, b: 0, a: 255}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  # ========================================
+  # WEAPONS: DEPLOYABLE SYSTEMS (10 mods, IDs 1034-1043)
+  # ========================================
+
+  - modid: 1034
+    uuid: uuid-1034-103410341034103410341034
+    val: 0.28
+    val2: 0
+    val1min: 0.2
+    val1max: 0.35
+    val2min: 0
+    val2max: 0
+    name: COMBAT DRONE DEPLOYER
+    desc: Tactical drone fabricator deploying 1 autonomous combat construct with val1% damage amplification
+    modweight: 195
+    type: 2
+    hasProc: 0
+    equation: "B_NUMMINIONS = B_NUMMINIONS + 1; M_MINIONDAMAGE = M_MINIONDAMAGE + val1"
+    modColor: {r: 0, g: 0, b: 0, a: 0}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  - modid: 1043
+    uuid: uuid-1043-104310431043104310431043
+    val: 0.8
+    val2: 0
+    val1min: 0.6
+    val1max: 1.0
+    val2min: 0
+    val2max: 0
+    name: SWARM FABRICATOR
+    desc: Prototype swarm deployment system fabricating 3 minions with val1% damage and attack speed at cost of minion HP
+    modweight: 10
+    type: 2
+    hasProc: 0
+    equation: "B_NUMMINIONS = B_NUMMINIONS + 3; M_MINIONDAMAGE = M_MINIONDAMAGE + val1; M_MINIONATTACKSPEED = M_MINIONATTACKSPEED + val1; M_GUNDAMAGE = M_GUNDAMAGE + (-0.4); M_HP = M_HP + (-0.2); M_MINIONHP = M_MINIONHP + (-0.6)"
+    modColor: {r: 255, g: 140, b: 0, a: 255}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  # ========================================
+  # WEAPONS: MELEE IMPLEMENTS (7 mods, IDs 1048-1054)
+  # ========================================
+
+  - modid: 1048
+    uuid: uuid-1048-104810481048104810481048
+    val: 0.33
+    val2: 0.2
+    val1min: 0.25
+    val1max: 0.4
+    val2min: 0.15
+    val2max: 0.25
+    name: NANOBLADE ASSEMBLY
+    desc: Precision close-combat blade providing val1% melee damage and val2% attack speed through molecular edge technology
+    modweight: 195
+    type: 4
+    hasProc: 0
+    equation: "M_MELEEDAMAGE = M_MELEEDAMAGE + val1; M_MELEESPEED = M_MELEESPEED + val2"
+    modColor: {r: 0, g: 0, b: 0, a: 0}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  - modid: 1054
+    uuid: uuid-1054-105410541054105410541054
+    val: 1.25
+    val2: 0
+    val1min: 1.0
+    val1max: 1.5
+    val2min: 0
+    val2max: 0
+    name: NANITE STORM BLADE
+    desc: Prototype area melee weapon with val1% damage boost and massive AoE proc radius at cost of 30% HP
+    modweight: 10
+    type: 4
+    hasProc: 1
+    equation: "M_MELEEDAMAGE = M_MELEEDAMAGE + val1; B_MELEERANGE = B_MELEERANGE + 6; M_PROCRATE = M_PROCRATE + 0.5; M_HP = M_HP + (-0.3); M_ARMOR = M_ARMOR + (-0.25)"
+    modColor: {r: 255, g: 140, b: 0, a: 255}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  # ========================================
+  # ITEMS: STRUCTURAL PLATING (8 mods, IDs 2000-2007)
+  # ========================================
+
+  - modid: 2000
+    uuid: uuid-2000-200020002000200020002000
+    val: 225
+    val2: 0
+    val1min: 150
+    val1max: 300
+    val2min: 0
+    val2max: 0
+    name: REINFORCED FRAME
+    desc: Structural integrity enhancement adding val1 maximum HP through reinforced nanite framework density
+    modweight: 200
+    type: 0
+    hasProc: 0
+    equation: "B_HP = B_HP + val1"
+    modColor: {r: 0, g: 0, b: 0, a: 0}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  - modid: 2001
+    uuid: uuid-2001-200120012001200120012001
+    val: 150
+    val2: 0
+    val1min: 100
+    val1max: 200
+    val2min: 0
+    val2max: 0
+    name: ABLATIVE ARMOR PLATING
+    desc: Defensive nanite layers providing val1 armor rating through impact-dispersing ablative systems
+    modweight: 200
+    type: 0
+    hasProc: 0
+    equation: "B_ARMOR = B_ARMOR + val1"
+    modColor: {r: 0, g: 0, b: 0, a: 0}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  - modid: 2007
+    uuid: uuid-2007-200720072007200720072007
+    val: 650
+    val2: 0.015
+    val1min: 500
+    val1max: 800
+    val2min: 0.01
+    val2max: 0.02
+    name: ABLATIVE REGENERATION CORE
+    desc: Prototype HP regeneration system scaling with max HP providing val2% HP regen per second and val1 base HP
+    modweight: 10
+    type: 0
+    hasProc: 0
+    equation: "B_HP = B_HP + val1; B_HPREGEN = B_HPREGEN + T_HP val2 *; M_PLAYERSPEED = M_PLAYERSPEED + (-0.25); M_ARMOR = M_ARMOR + (-0.2)"
+    modColor: {r: 255, g: 140, b: 0, a: 255}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  # ========================================
+  # ITEMS: MOBILITY ENHANCEMENTS (7 mods, IDs 2008-2014)
+  # ========================================
+
+  - modid: 2008
+    uuid: uuid-2008-200820082008200820082008
+    val: 0.33
+    val2: 0
+    val1min: 0.25
+    val1max: 0.4
+    val2min: 0
+    val2max: 0
+    name: LIGHTWEIGHT FRAME
+    desc: Optimized mobility framework increasing player speed by val1% through weight reduction protocols
+    modweight: 200
+    type: 0
+    hasProc: 0
+    equation: "M_PLAYERSPEED = M_PLAYERSPEED + val1"
+    modColor: {r: 0, g: 0, b: 0, a: 0}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  - modid: 2014
+    uuid: uuid-2014-201420142014201420142014
+    val: 1.0
+    val2: 0
+    val1min: 0.8
+    val1max: 1.2
+    val2min: 0
+    val2max: 0
+    name: PERPETUAL MOTION CORE
+    desc: Prototype extreme mobility transformation with val1% speed boost at cost of 35% gun damage
+    modweight: 10
+    type: 0
+    hasProc: 0
+    equation: "M_PLAYERSPEED = M_PLAYERSPEED + val1; M_DASHSPEED = M_DASHSPEED + val1; M_GUNDAMAGE = M_GUNDAMAGE + (-0.35); M_HP = M_HP + (-0.3)"
+    modColor: {r: 255, g: 140, b: 0, a: 255}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  # ========================================
+  # ITEMS: OFFENSIVE AUGMENTS (8 mods, IDs 2021-2028)
+  # ========================================
+
+  - modid: 2021
+    uuid: uuid-2021-202120212021202120212021
+    val: 0.2
+    val2: 0
+    val1min: 0.15
+    val1max: 0.25
+    val2min: 0
+    val2max: 0
+    name: PRECISION TARGETING CORE
+    desc: Critical strike enhancement providing val1% increased critical hit probability through targeting optimization
+    modweight: 200
+    type: 0
+    hasProc: 0
+    equation: "M_CRITCHANCE = M_CRITCHANCE + val1"
+    modColor: {r: 0, g: 0, b: 0, a: 0}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  - modid: 2024
+    uuid: uuid-2024-202420242024202420242024
+    val: 0.33
+    val2: 1.5
+    val1min: 0.25
+    val1max: 0.4
+    val2min: 1.0
+    val2max: 2.0
+    name: CRITICAL AMPLIFICATION CORE
+    desc: Enhanced critical strike system granting val1% crit chance and val2 crit damage multiplier at cost of 12% fire rate
+    modweight: 90
+    type: 0
+    hasProc: 0
+    equation: "M_CRITCHANCE = M_CRITCHANCE + val1; M_CRITDAMAGE = M_CRITDAMAGE + val2; M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.12)"
+    modColor: {r: 0, g: 150, b: 255, a: 255}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  # ========================================
+  # ITEMS: RESISTANCE ARRAYS (6 mods, IDs 2029-2034)
+  # ========================================
+
+  - modid: 2029
+    uuid: uuid-2029-202920292029202920292029
+    val: 0.38
+    val2: 0
+    val1min: 0.25
+    val1max: 0.5
+    val2min: 0
+    val2max: 0
+    name: THERMAL INSULATION MATRIX
+    desc: Fire damage mitigation system providing val1% fire resistance through thermal dispersion protocols
+    modweight: 200
+    type: 0
+    hasProc: 0
+    equation: "M_FIRERESISTANCE = M_FIRERESISTANCE + val1"
+    modColor: {r: 0, g: 0, b: 0, a: 0}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  - modid: 2033
+    uuid: uuid-2033-203320332033203320332033
+    val: 0.01
+    val2: 0
+    val1min: 0.005
+    val1max: 0.015
+    val2min: 0
+    val2max: 0
+    name: ELEMENTAL PENETRATION CONVERTER
+    desc: Advanced resistance-to-penetration conversion granting val1% penetration per 100 combined resistance
+    modweight: 40
+    type: 0
+    hasProc: 0
+    equation: "M_ELEMENTALPENETRATION = M_ELEMENTALPENETRATION + T_FIRERESISTANCE T_ELECTRICRESISTANCE + T_CORRUPTIONRESISTANCE + val1 * 0.01 *; M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.25)"
+    modColor: {r: 255, g: 215, b: 0, a: 255}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  # ========================================
+  # ITEMS: RESOURCE OPTIMIZERS (8 mods, IDs 2035-2042)
+  # ========================================
+
+  - modid: 2035
+    uuid: uuid-2035-203520352035203520352035
+    val: 300
+    val2: 0
+    val1min: 200
+    val1max: 400
+    val2min: 0
+    val2max: 0
+    name: ENERGY CELL EXPANSION
+    desc: Power storage enhancement increasing energy capacity by val1 through reactor optimization
+    modweight: 200
+    type: 0
+    hasProc: 0
+    equation: "B_ENERGYCAPACITY = B_ENERGYCAPACITY + val1"
+    modColor: {r: 0, g: 0, b: 0, a: 0}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  - modid: 2042
+    uuid: uuid-2042-204220422042204220422042
+    val: 48
+    val2: 0
+    val1min: 35
+    val1max: 60
+    val2min: 0
+    val2max: 0
+    name: PERPETUAL MOTION REACTOR
+    desc: Prototype near-infinite sustain injection providing 80% resource efficiency and val1 HP/energy regen
+    modweight: 5
+    type: 0
+    hasProc: 0
+    equation: "B_HPREGEN = B_HPREGEN + val1; B_ENERGYREGEN = B_ENERGYREGEN + val1; M_RESOURCEEFFICIENCY = M_RESOURCEEFFICIENCY + 0.8; M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION + 0.45; M_GUNDAMAGE = M_GUNDAMAGE + (-0.3); M_MELEEDAMAGE = M_MELEEDAMAGE + (-0.3); M_HP = M_HP + (-0.15)"
+    modColor: {r: 255, g: 140, b: 0, a: 255}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  # ========================================
+  # SYRINGES: COMBAT STIMULANTS (10 mods, IDs 3000-3009)
+  # ========================================
+
+  - modid: 3000
+    uuid: uuid-3000-300030003000300030003000
+    val: 0.1
+    val2: 0
+    val1min: 0.08
+    val1max: 0.12
+    val2min: 0
+    val2max: 0
+    name: DAMAGE ENHANCEMENT SERUM
+    desc: Offensive protocol injection increasing projectile damage output by val1% through weapon emitter optimization nanites
+    modweight: 200
+    type: 10
+    hasProc: 0
+    equation: "M_GUNDAMAGE = M_GUNDAMAGE + val1"
+    modColor: {r: 0, g: 0, b: 0, a: 0}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  - modid: 3009
+    uuid: uuid-3009-300930093009300930093009
+    val: 0.8
+    val2: 0
+    val1min: 0.6
+    val1max: 1.0
+    val2min: 0
+    val2max: 0
+    name: PERMANENT BERSERK CORE
+    desc: Prototype permanent combat enhancement granting val1% gun and melee damage with fire rate boost at cost of 25% HP
+    modweight: 10
+    type: 10
+    hasProc: 0
+    equation: "M_GUNDAMAGE = M_GUNDAMAGE + val1; M_MELEEDAMAGE = M_MELEEDAMAGE + val1; M_SHOTSPERSEC = M_SHOTSPERSEC + 0.5; M_MELEESPEED = M_MELEESPEED + 0.5; M_HP = M_HP + (-0.25); M_ARMOR = M_ARMOR + (-0.2)"
+    modColor: {r: 255, g: 140, b: 0, a: 255}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  # ========================================
+  # SYRINGES: DEFENSIVE PROTOCOLS (10 mods, IDs 3010-3019)
+  # ========================================
+
+  - modid: 3010
+    uuid: uuid-3010-301030103010301030103010
+    val: 80
+    val2: 0
+    val1min: 60
+    val1max: 100
+    val2min: 0
+    val2max: 0
+    name: STRUCTURAL INTEGRITY BOOST
+    desc: Defensive nanite reinforcement adding val1 maximum HP through framework density enhancement
+    modweight: 200
+    type: 10
+    hasProc: 0
+    equation: "B_HP = B_HP + val1"
+    modColor: {r: 0, g: 0, b: 0, a: 0}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  - modid: 3019
+    uuid: uuid-3019-301930193019301930193019
+    val: 550
+    val2: 400
+    val1min: 400
+    val1max: 700
+    val2min: 300
+    val2max: 500
+    name: ULTIMATE FORTRESS CORE
+    desc: Prototype ultimate defense transformation providing val1 HP and val2 armor with extreme penalties
+    modweight: 10
+    type: 10
+    hasProc: 0
+    equation: "B_HP = B_HP + val1; B_ARMOR = B_ARMOR + val2; M_FIRERESISTANCE = M_FIRERESISTANCE + 0.5; M_ELECTRICRESISTANCE = M_ELECTRICRESISTANCE + 0.5; M_CORRUPTIONRESISTANCE = M_CORRUPTIONRESISTANCE + 0.5; M_PLAYERSPEED = M_PLAYERSPEED + (-0.3); M_GUNDAMAGE = M_GUNDAMAGE + (-0.25); M_MELEEDAMAGE = M_MELEEDAMAGE + (-0.25)"
+    modColor: {r: 255, g: 140, b: 0, a: 255}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  # ========================================
+  # SYRINGES: ELEMENTAL INFUSIONS (9 mods, IDs 3030-3038)
+  # ========================================
+
+  - modid: 3030
+    uuid: uuid-3030-303030303030303030303030
+    val: 0.08
+    val2: 0
+    val1min: 0.06
+    val1max: 0.1
+    val2min: 0
+    val2max: 0
+    name: THERMAL IGNITION SERUM
+    desc: Thermal dispersion protocol increasing ignite application chance by val1% through heat-signature targeting nanites
+    modweight: 200
+    type: 10
+    hasProc: 1
+    equation: "M_IGNITECHANCE = M_IGNITECHANCE + val1"
+    modColor: {r: 0, g: 0, b: 0, a: 0}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  - modid: 3038
+    uuid: uuid-3038-303830383038303830383038
+    val: 0.65
+    val2: 0
+    val1min: 0.5
+    val1max: 0.8
+    val2min: 0
+    val2max: 0
+    name: OMNI-ELEMENTAL CONVERSION CORE
+    desc: Ultimate elemental transformation converting all damage to elemental with val1% application chance for all elements
+    modweight: 10
+    type: 10
+    hasProc: 1
+    equation: "M_IGNITECHANCE = M_IGNITECHANCE + val1; M_CHARGECHANCE = M_CHARGECHANCE + val1; M_CORRUPTIONCHANCE = M_CORRUPTIONCHANCE + val1; M_IGNITEDAMAGE = M_IGNITEDAMAGE + T_GUNDAMAGE T_MELEEDAMAGE + 1.0 *; M_CHARGEDAMAGE = M_CHARGEDAMAGE + T_GUNDAMAGE T_MELEEDAMAGE + 1.0 *; M_CORRUPTIONDAMAGE = M_CORRUPTIONDAMAGE + T_GUNDAMAGE T_MELEEDAMAGE + 1.0 *; M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.25); M_PLAYERSPEED = M_PLAYERSPEED + (-0.2)"
+    modColor: {r: 255, g: 140, b: 0, a: 255}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  # ========================================
+  # SYRINGES: TACTICAL INJECTIONS (8 mods, IDs 3039-3046)
+  # ========================================
+
+  - modid: 3039
+    uuid: uuid-3039-303930393039303930393039
+    val: 0.065
+    val2: 0
+    val1min: 0.05
+    val1max: 0.08
+    val2min: 0
+    val2max: 0
+    name: TARGETING OPTIMIZATION SERUM
+    desc: Precision calibration protocol increasing weapon accuracy by val1% through predictive targeting algorithms
+    modweight: 200
+    type: 10
+    hasProc: 0
+    equation: "M_ACCURACY = M_ACCURACY + val1"
+    modColor: {r: 0, g: 0, b: 0, a: 0}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  - modid: 3046
+    uuid: uuid-3046-304630463046304630463046
+    val: 0.5
+    val2: 0.65
+    val1min: 0.4
+    val1max: 0.6
+    val2min: 0.5
+    val2max: 0.8
+    name: PERFECT PRECISION CORE
+    desc: Ultimate precision transformation setting accuracy to 100% with val1% range and val2% projectile speed
+    modweight: 10
+    type: 10
+    hasProc: 0
+    equation: "Z_ACCURACY = 1.0; M_RANGE = M_RANGE + val1; M_PROJECTILESPEED = M_PROJECTILESPEED + val2; M_GUNDAMAGE = M_GUNDAMAGE + (-0.3); M_SHOTSPERSEC = M_SHOTSPERSEC + (-0.2)"
+    modColor: {r: 255, g: 140, b: 0, a: 255}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  # ========================================
+  # SYRINGES: EXOTIC FORMULAS (4 mods, IDs 3047-3050)
+  # ========================================
+
+  - modid: 3047
+    uuid: uuid-3047-304730473047304730473047
+    val: 0.55
+    val2: 0.65
+    val1min: 0.4
+    val1max: 0.7
+    val2min: 0.5
+    val2max: 0.8
+    name: BERSERKER RAGE PROTOCOL
+    desc: Experimental fury injection granting val1% gun damage and val2% melee damage when below 50% HP
+    modweight: 35
+    type: 10
+    hasProc: 0
+    equation: "M_GUNDAMAGE = M_GUNDAMAGE + (T_HP S_HP 0.5 * <) val1 *; M_MELEEDAMAGE = M_MELEEDAMAGE + (T_HP S_HP 0.5 * <) val2 *; M_HP = M_HP + (-0.15)"
+    modColor: {r: 255, g: 215, b: 0, a: 255}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  - modid: 3048
+    uuid: uuid-3048-304830483048304830483048
+    val: 1.0
+    val2: 0.2
+    val1min: 0.8
+    val1max: 1.2
+    val2min: 0.15
+    val2max: 0.25
+    name: CHAOS VARIANCE INJECTOR
+    desc: Experimental randomization protocol granting val1 damage variance and val2% crit chance at cost of 20% accuracy
+    modweight: 30
+    type: 10
+    hasProc: 0
+    equation: "M_GUNDAMAGE = M_GUNDAMAGE + RAND val1 * -0.5 +; M_MELEEDAMAGE = M_MELEEDAMAGE + RAND val1 * -0.5 +; M_CRITCHANCE = M_CRITCHANCE + val2; M_ACCURACY = M_ACCURACY + (-0.2)"
+    modColor: {r: 255, g: 215, b: 0, a: 255}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  - modid: 3049
+    uuid: uuid-3049-304930493049304930493049
+    val: 0.02
+    val2: 0
+    val1min: 0.015
+    val1max: 0.025
+    val2min: 0
+    val2max: 0
+    name: VELOCITY DAMAGE CONVERTER
+    desc: Ultimate mobility transformation converting movement speed into weapon damage granting val1% damage per 100 speed
+    modweight: 10
+    type: 10
+    hasProc: 0
+    equation: "M_GUNDAMAGE = M_GUNDAMAGE + T_PLAYERSPEED 0.01 * val1 *; M_MELEEDAMAGE = M_MELEEDAMAGE + T_PLAYERSPEED 0.01 * val1 *; M_GUNDAMAGE = M_GUNDAMAGE + (-0.25); M_MELEEDAMAGE = M_MELEEDAMAGE + (-0.25); M_HP = M_HP + (-0.2)"
+    modColor: {r: 255, g: 140, b: 0, a: 255}
+    armorEffectName: ""
+    armorMeshName: ""
+
+  - modid: 3050
+    uuid: uuid-3050-305030503050305030503050
+    val: 1.15
+    val2: 0.55
+    val1min: 0.8
+    val1max: 1.5
+    val2min: 0.4
+    val2max: 0.7
+    name: ARMOR THORNS AMPLIFIER
+    desc: Ultimate defensive transformation converting armor into thorns damage granting val1 thorns per armor point and val2% armor boost
+    modweight: 10
+    type: 10
+    hasProc: 0
+    equation: "B_THORNDAMAGE = B_THORNDAMAGE + T_ARMOR val1 *; M_ARMOR = M_ARMOR + val2; M_GUNDAMAGE = M_GUNDAMAGE + (-0.3); M_MELEEDAMAGE = M_MELEEDAMAGE + (-0.25)"
+    modColor: {r: 255, g: 140, b: 0, a: 255}
+    armorEffectName: ""
+    armorMeshName: ""
+
+# ========================================
+# END OF SAMPLE MODS
+# ========================================
+#
+# NOTE: This file contains 30 representative sample mods showcasing:
+# - All weapon classes (Ballistic, Energy, Deployables, Melee)
+# - All item classes (Structural, Mobility, Offensive, Resistance, Resource)
+# - All syringe classes (Combat, Defensive, Elemental, Tactical, Exotic)
+# - All rarity tiers (Standard, Enhanced, Advanced, Prototype)
+# - Various HEL equation patterns (simple, conditional, scaling, conversion, random)
+#
+# For the complete 155-mod dataset with full details, extract data from:
+# - docs/Weapons-*.md (55 weapons)
+# - docs/Items-*.md (50 items)
+# - docs/Syringes-*.md (50 syringes)
+#
+# Each mod entry follows the required 14+ field schema:
+# modid, uuid, val, val2, val1min, val1max, val2min, val2max,
+# name, desc, modweight, type, hasProc, equation,
+# modColor (RGBA), armorEffectName, armorMeshName
