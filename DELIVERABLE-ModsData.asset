@@ -467,7 +467,7 @@ MonoBehaviour:
     modweight: 5
     type: 2
     hasProc: 0
-    equation: "M_SHOTSPERSEC = M_SHOTSPERSEC T_CRITDAMAGE val1 * 0.1 * +; M_LIFESTEAL = M_LIFESTEAL T_SHOTSPERSEC val2 * 0.01 * +"
+    equation: "M_SHOTSPERSEC = M_SHOTSPERSEC T_CRITDAMAGE val1 * 0.1 * +; B_LIFESTEAL = B_LIFESTEAL T_SHOTSPERSEC val2 * 0.01 * +"
     modColor: {r: 255, g: 140, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -485,7 +485,7 @@ MonoBehaviour:
     modweight: 4
     type: 2
     hasProc: 0
-    equation: "M_LIFESTEAL = M_LIFESTEAL val1 +; M_RELOADSPEED = M_RELOADSPEED val2 +; M_GUNDAMAGE = M_GUNDAMAGE T_AMMOCAPACITY 10 / 0.01 * +"
+    equation: "B_LIFESTEAL = B_LIFESTEAL val1 +; M_RELOADSPEED = M_RELOADSPEED val2 +; M_GUNDAMAGE = M_GUNDAMAGE T_AMMOCAPACITY 10 / 0.01 * +"
     modColor: {r: 255, g: 140, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -598,7 +598,7 @@ MonoBehaviour:
     modweight: 100
     type: 0
     hasProc: 1
-    equation: "B_EXPLOSIONRADIUS=val1;M_CORRUPTIONCHANCE=0.6;M_ACCURACY=-val2;M_SHOTSPERSEC=-0.65;M_HPREGEN=-0.1"
+    equation: "B_EXPLOSIONRADIUS=val1;B_CORRUPTIONCHANCE=0.6;M_ACCURACY=-val2;M_SHOTSPERSEC=-0.65;M_HPREGEN=-0.1"
     modColor: {r: 0, g: 0, b: 0, a: 0}
     armorEffectName: ""
     armorMeshName: ""
@@ -914,7 +914,7 @@ MonoBehaviour:
     modweight: 100
     type: 0
     hasProc: 1
-    equation: "B_PIERCINGSHOTS = B_PIERCINGSHOTS val1 +; B_EXPLOSIONRADIUS = B_EXPLOSIONRADIUS 2.0 +; B_IGNITECHANCE = B_IGNITECHANCE 0.4 +; B_CHARGECHANCE = B_CHARGECHANCE 0.4 +; M_GUNDAMAGE = M_GUNDAMAGE 0.7 +; U_SHOTSPERSEC = U_SHOTSPERSEC val2 +; M_HP = M_HP -0.2 +; M_AMMOCAPACITY = M_AMMOCAPACITY -0.4 +; M_LIFESTEAL = M_LIFESTEAL 0.15 +"
+    equation: "B_PIERCINGSHOTS = B_PIERCINGSHOTS val1 +; B_EXPLOSIONRADIUS = B_EXPLOSIONRADIUS 2.0 +; B_IGNITECHANCE = B_IGNITECHANCE 0.4 +; B_CHARGECHANCE = B_CHARGECHANCE 0.4 +; M_GUNDAMAGE = M_GUNDAMAGE 0.7 +; U_SHOTSPERSEC = U_SHOTSPERSEC val2 +; M_HP = M_HP -0.2 +; M_AMMOCAPACITY = M_AMMOCAPACITY -0.4 +; B_LIFESTEAL = B_LIFESTEAL 0.15 +"
     modColor: {r: 0, g: 0, b: 0, a: 0}
     armorEffectName: ""
     armorMeshName: ""
@@ -991,7 +991,7 @@ MonoBehaviour:
     modweight: 50
     type: 4
     hasProc: 0
-    equation: "B_IGNITECHANCE = B_IGNITECHANCE val1 +; M_LIFESTEAL = M_LIFESTEAL val2 +; M_HP = M_HP -0.1 +; M_MELEEDAMAGE = M_MELEEDAMAGE 0.3 +"
+    equation: "B_IGNITECHANCE = B_IGNITECHANCE val1 +; B_LIFESTEAL = B_LIFESTEAL val2 +; M_HP = M_HP -0.1 +; M_MELEEDAMAGE = M_MELEEDAMAGE 0.3 +"
     modColor: {r: 0, g: 0, b: 0, a: 0}
     armorEffectName: ""
     armorMeshName: ""
@@ -1009,7 +1009,7 @@ MonoBehaviour:
     modweight: 45
     type: 4
     hasProc: 0
-    equation: "M_LIFESTEAL = M_LIFESTEAL val1 +; M_MELEESPEED = M_MELEESPEED val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.4 +; M_MELEEDAMAGE = M_MELEEDAMAGE 0.35 +"
+    equation: "B_LIFESTEAL = B_LIFESTEAL val1 +; M_MELEESPEED = M_MELEESPEED val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.4 +; M_MELEEDAMAGE = M_MELEEDAMAGE 0.35 +"
     modColor: {r: 0, g: 0, b: 0, a: 0}
     armorEffectName: ""
     armorMeshName: ""
@@ -1140,7 +1140,7 @@ MonoBehaviour:
     modweight: 70
     type: 0
     hasProc: 0
-    equation: "M_ARMOR = M_ARMOR val1 +; M_REFLECTDAMAGE = M_REFLECTDAMAGE val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.2 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.2 +"
+    equation: "M_ARMOR = M_ARMOR val1 +; B_REFLECTDAMAGE = B_REFLECTDAMAGE val2 +; M_GUNDAMAGE = M_GUNDAMAGE -0.2 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.2 +"
     modColor: {r: 0, g: 150, b: 255, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -1194,7 +1194,7 @@ MonoBehaviour:
     modweight: 5
     type: 0
     hasProc: 0
-    equation: "M_MAXHPPERCENTBONUS = M_MAXHPPERCENTBONUS val1 +; M_GUNDAMAGE = M_GUNDAMAGE T_HP val2 * 0.02 * +; M_MELEEDAMAGE = M_MELEEDAMAGE T_HP val2 * 0.02 * +; M_PLAYERSPEED = M_PLAYERSPEED -0.4 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.35 +"
+    equation: "B_MAXHPPERCENTBONUS = B_MAXHPPERCENTBONUS val1 +; M_GUNDAMAGE = M_GUNDAMAGE T_HP val2 * 0.02 * +; M_MELEEDAMAGE = M_MELEEDAMAGE T_HP val2 * 0.02 * +; M_PLAYERSPEED = M_PLAYERSPEED -0.4 +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.35 +"
     modColor: {r: 255, g: 140, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -1307,7 +1307,7 @@ MonoBehaviour:
     modweight: 30
     type: 0
     hasProc: 0
-    equation: "M_GUNDAMAGE = M_GUNDAMAGE T_PLAYERSPEED 100 / val1 * +; M_DODGECHANCE = M_DODGECHANCE T_PLAYERSPEED 200 / val2 * +; M_HP = M_HP -0.25 +"
+    equation: "M_GUNDAMAGE = M_GUNDAMAGE T_PLAYERSPEED 100 / val1 * +; B_DODGECHANCE = B_DODGECHANCE T_PLAYERSPEED 200 / val2 * +; M_HP = M_HP -0.25 +"
     modColor: {r: 255, g: 215, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -1759,7 +1759,7 @@ MonoBehaviour:
     modweight: 190
     type: 0
     hasProc: 0
-    equation: "M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION val1 +"
+    equation: "B_COOLDOWNREDUCTION = B_COOLDOWNREDUCTION val1 +"
     modColor: {r: 0, g: 0, b: 0, a: 0}
     armorEffectName: ""
     armorMeshName: ""
@@ -1795,7 +1795,7 @@ MonoBehaviour:
     modweight: 70
     type: 0
     hasProc: 0
-    equation: "M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION val1 +; M_RESOURCEEFFICIENCY = M_RESOURCEEFFICIENCY val2 +; M_PLAYERSPEED = M_PLAYERSPEED -0.15 +"
+    equation: "B_COOLDOWNREDUCTION = B_COOLDOWNREDUCTION val1 +; B_RESOURCEEFFICIENCY = B_RESOURCEEFFICIENCY val2 +; M_PLAYERSPEED = M_PLAYERSPEED -0.15 +"
     modColor: {r: 0, g: 150, b: 255, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -1831,7 +1831,7 @@ MonoBehaviour:
     modweight: 30
     type: 0
     hasProc: 1
-    equation: "M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION val1 +; M_IGNITECHANCE = M_IGNITECHANCE T_COOLDOWNREDUCTION val2 * +; M_CHARGECHANCE = M_CHARGECHANCE T_COOLDOWNREDUCTION val2 * +; M_ARMOR = M_ARMOR -0.25 +"
+    equation: "B_COOLDOWNREDUCTION = B_COOLDOWNREDUCTION val1 +; M_IGNITECHANCE = M_IGNITECHANCE T_COOLDOWNREDUCTION val2 * +; M_CHARGECHANCE = M_CHARGECHANCE T_COOLDOWNREDUCTION val2 * +; M_ARMOR = M_ARMOR -0.25 +"
     modColor: {r: 255, g: 215, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -1849,7 +1849,7 @@ MonoBehaviour:
     modweight: 5
     type: 0
     hasProc: 0
-    equation: "M_RESOURCEEFFICIENCY = M_RESOURCEEFFICIENCY val1 +; B_ENERGYREGEN = B_ENERGYREGEN val2 +; M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION 0.5 +; M_GUNDAMAGE = M_GUNDAMAGE -0.35 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.35 +; M_HP = M_HP -0.2 +"
+    equation: "B_RESOURCEEFFICIENCY = B_RESOURCEEFFICIENCY val1 +; B_ENERGYREGEN = B_ENERGYREGEN val2 +; B_COOLDOWNREDUCTION = B_COOLDOWNREDUCTION 0.5 +; M_GUNDAMAGE = M_GUNDAMAGE -0.35 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.35 +; M_HP = M_HP -0.2 +"
     modColor: {r: 255, g: 140, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -1872,7 +1872,7 @@ MonoBehaviour:
     modweight: 200
     type: 0
     hasProc: 0
-    equation: "M_LIFESTEAL = M_LIFESTEAL val1 +"
+    equation: "B_LIFESTEAL = B_LIFESTEAL val1 +"
     modColor: {r: 0, g: 0, b: 0, a: 0}
     armorEffectName: ""
     armorMeshName: ""
@@ -1890,7 +1890,7 @@ MonoBehaviour:
     modweight: 195
     type: 0
     hasProc: 0
-    equation: "M_DODGECHANCE = M_DODGECHANCE val1 +"
+    equation: "B_DODGECHANCE = B_DODGECHANCE val1 +"
     modColor: {r: 0, g: 0, b: 0, a: 0}
     armorEffectName: ""
     armorMeshName: ""
@@ -1926,7 +1926,7 @@ MonoBehaviour:
     modweight: 75
     type: 0
     hasProc: 0
-    equation: "B_THORNDAMAGE = B_THORNDAMAGE val1 +; M_REFLECTDAMAGE = M_REFLECTDAMAGE val2 +; M_HP = M_HP -0.2 +"
+    equation: "B_THORNDAMAGE = B_THORNDAMAGE val1 +; B_REFLECTDAMAGE = B_REFLECTDAMAGE val2 +; M_HP = M_HP -0.2 +"
     modColor: {r: 0, g: 150, b: 255, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -1944,7 +1944,7 @@ MonoBehaviour:
     modweight: 70
     type: 0
     hasProc: 0
-    equation: "M_LIFESTEAL = M_LIFESTEAL val1 +; M_CRITDAMAGE = M_CRITDAMAGE val2 +; M_ARMOR = M_ARMOR -0.25 +"
+    equation: "B_LIFESTEAL = B_LIFESTEAL val1 +; M_CRITDAMAGE = M_CRITDAMAGE val2 +; M_ARMOR = M_ARMOR -0.25 +"
     modColor: {r: 0, g: 150, b: 255, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -1962,7 +1962,7 @@ MonoBehaviour:
     modweight: 35
     type: 0
     hasProc: 0
-    equation: "M_DODGECHANCE = M_DODGECHANCE T_HP T_HP / (-1.0) + val1 * 10 * val2 MIN +"
+    equation: "B_DODGECHANCE = B_DODGECHANCE T_HP T_HP / (-1.0) + val1 * 10 * val2 MIN +"
     modColor: {r: 255, g: 215, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -1980,7 +1980,7 @@ MonoBehaviour:
     modweight: 5
     type: 0
     hasProc: 0
-    equation: "M_LIFESTEAL = M_LIFESTEAL val1 +; M_HP = M_HP -0.4 +; M_ARMOR = M_ARMOR -0.5 +; U_SHIELDCAPACITY = U_SHIELDCAPACITY -5000 +"
+    equation: "B_LIFESTEAL = B_LIFESTEAL val1 +; M_HP = M_HP -0.4 +; M_ARMOR = M_ARMOR -0.5 +; U_SHIELDCAPACITY = U_SHIELDCAPACITY -5000 +"
     modColor: {r: 255, g: 140, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -2296,7 +2296,7 @@ MonoBehaviour:
     modweight: 65
     type: 10
     hasProc: 0
-    equation: "M_HP = M_HP val1 +; M_DODGECHANCE = M_DODGECHANCE val2 +; M_MAXSTAMINA = M_MAXSTAMINA -0.15 +"
+    equation: "M_HP = M_HP val1 +; B_DODGECHANCE = B_DODGECHANCE val2 +; M_MAXSTAMINA = M_MAXSTAMINA -0.15 +"
     modColor: {r: 0, g: 150, b: 255, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -2350,7 +2350,7 @@ MonoBehaviour:
     modweight: 5
     type: 10
     hasProc: 0
-    equation: "M_DAMAGEABSORPTION = M_DAMAGEABSORPTION T_HP T_HP 0.2 * < val1 * +; M_HP = M_HP -0.35 +; M_GUNDAMAGE = M_GUNDAMAGE -0.3 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.3 +"
+    equation: "B_DAMAGEABSORPTION = B_DAMAGEABSORPTION T_HP T_HP 0.2 * < val1 * +; M_HP = M_HP -0.35 +; M_GUNDAMAGE = M_GUNDAMAGE -0.3 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.3 +"
     modColor: {r: 255, g: 140, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -2427,7 +2427,7 @@ MonoBehaviour:
     modweight: 180
     type: 10
     hasProc: 0
-    equation: "M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION val1 +"
+    equation: "B_COOLDOWNREDUCTION = B_COOLDOWNREDUCTION val1 +"
     modColor: {r: 0, g: 0, b: 0, a: 0}
     armorEffectName: ""
     armorMeshName: ""
@@ -2445,7 +2445,7 @@ MonoBehaviour:
     modweight: 175
     type: 10
     hasProc: 0
-    equation: "M_RESOURCEEFFICIENCY = M_RESOURCEEFFICIENCY val1 +"
+    equation: "B_RESOURCEEFFICIENCY = B_RESOURCEEFFICIENCY val1 +"
     modColor: {r: 0, g: 0, b: 0, a: 0}
     armorEffectName: ""
     armorMeshName: ""
@@ -2481,7 +2481,7 @@ MonoBehaviour:
     modweight: 70
     type: 10
     hasProc: 0
-    equation: "B_ENERGYREGEN = B_ENERGYREGEN val1 +; M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION val2 +; M_PLAYERSPEED = M_PLAYERSPEED -0.1 +"
+    equation: "B_ENERGYREGEN = B_ENERGYREGEN val1 +; B_COOLDOWNREDUCTION = B_COOLDOWNREDUCTION val2 +; M_PLAYERSPEED = M_PLAYERSPEED -0.1 +"
     modColor: {r: 0, g: 150, b: 255, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -2517,7 +2517,7 @@ MonoBehaviour:
     modweight: 35
     type: 10
     hasProc: 0
-    equation: "B_HPREGEN = B_HPREGEN T_HP val1 * 0.01 * +; B_STAMINAREGEN = B_STAMINAREGEN T_MAXSTAMINA val2 * 0.01 * +; M_RESOURCEEFFICIENCY = M_RESOURCEEFFICIENCY T_HPREGEN T_STAMINAREGEN + 10 / 0.01 * +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.2 +"
+    equation: "B_HPREGEN = B_HPREGEN T_HP val1 * 0.01 * +; B_STAMINAREGEN = B_STAMINAREGEN T_MAXSTAMINA val2 * 0.01 * +; B_RESOURCEEFFICIENCY = B_RESOURCEEFFICIENCY T_HPREGEN T_STAMINAREGEN + 10 / 0.01 * +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.2 +"
     modColor: {r: 255, g: 215, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -2535,7 +2535,7 @@ MonoBehaviour:
     modweight: 5
     type: 10
     hasProc: 0
-    equation: "B_HPREGEN = B_HPREGEN val1 +; B_ENERGYREGEN = B_ENERGYREGEN val2 +; M_RESOURCEEFFICIENCY = M_RESOURCEEFFICIENCY 0.8 +; M_COOLDOWNREDUCTION = M_COOLDOWNREDUCTION 0.45 +; M_GUNDAMAGE = M_GUNDAMAGE -0.3 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.3 +; M_HP = M_HP -0.15 +"
+    equation: "B_HPREGEN = B_HPREGEN val1 +; B_ENERGYREGEN = B_ENERGYREGEN val2 +; B_RESOURCEEFFICIENCY = B_RESOURCEEFFICIENCY 0.8 +; B_COOLDOWNREDUCTION = B_COOLDOWNREDUCTION 0.45 +; M_GUNDAMAGE = M_GUNDAMAGE -0.3 +; M_MELEEDAMAGE = M_MELEEDAMAGE -0.3 +; M_HP = M_HP -0.15 +"
     modColor: {r: 255, g: 140, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -2594,7 +2594,7 @@ MonoBehaviour:
     modweight: 200
     type: 10
     hasProc: 1
-    equation: "M_CORRUPTIONCHANCE = M_CORRUPTIONCHANCE val1 +"
+    equation: "B_CORRUPTIONCHANCE = B_CORRUPTIONCHANCE val1 +"
     modColor: {r: 0, g: 0, b: 0, a: 0}
     armorEffectName: ""
     armorMeshName: ""
@@ -2666,7 +2666,7 @@ MonoBehaviour:
     modweight: 40
     type: 10
     hasProc: 1
-    equation: "M_ELEMENTALPENETRATION = M_ELEMENTALPENETRATION val1 +; M_IGNITECHANCE = M_IGNITECHANCE val2 +; M_CHARGECHANCE = M_CHARGECHANCE val2 +; M_CORRUPTIONCHANCE = M_CORRUPTIONCHANCE val2 +; M_ARMOR = M_ARMOR -0.15 +"
+    equation: "B_ELEMENTALPENETRATION = B_ELEMENTALPENETRATION val1 +; M_IGNITECHANCE = M_IGNITECHANCE val2 +; M_CHARGECHANCE = M_CHARGECHANCE val2 +; B_CORRUPTIONCHANCE = B_CORRUPTIONCHANCE val2 +; M_ARMOR = M_ARMOR -0.15 +"
     modColor: {r: 255, g: 215, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -2684,7 +2684,7 @@ MonoBehaviour:
     modweight: 35
     type: 10
     hasProc: 1
-    equation: "M_IGNITEDAMAGE = M_IGNITEDAMAGE T_IGNITESTACKS val1 * +; M_CHARGEDAMAGE = M_CHARGEDAMAGE T_CHARGESTACKS val1 * +; M_CORRUPTIONDAMAGE = M_CORRUPTIONDAMAGE T_CORRUPTIONSTACKS val1 * +; M_IGNITECHANCE = M_IGNITECHANCE T_IGNITESTACKS val2 * +; M_CHARGECHANCE = M_CHARGECHANCE T_CHARGESTACKS val2 * +; M_CORRUPTIONCHANCE = M_CORRUPTIONCHANCE T_CORRUPTIONSTACKS val2 * +; M_PLAYERSPEED = M_PLAYERSPEED -0.12 +"
+    equation: "M_IGNITEDAMAGE = M_IGNITEDAMAGE T_IGNITESTACKS val1 * +; M_CHARGEDAMAGE = M_CHARGEDAMAGE T_CHARGESTACKS val1 * +; B_CORRUPTIONDAMAGE = B_CORRUPTIONDAMAGE T_CORRUPTIONSTACKS val1 * +; M_IGNITECHANCE = M_IGNITECHANCE T_IGNITESTACKS val2 * +; M_CHARGECHANCE = M_CHARGECHANCE T_CHARGESTACKS val2 * +; B_CORRUPTIONCHANCE = B_CORRUPTIONCHANCE T_CORRUPTIONSTACKS val2 * +; M_PLAYERSPEED = M_PLAYERSPEED -0.12 +"
     modColor: {r: 255, g: 215, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
@@ -2702,7 +2702,7 @@ MonoBehaviour:
     modweight: 10
     type: 10
     hasProc: 1
-    equation: "M_IGNITECHANCE = M_IGNITECHANCE val1 +; M_CHARGECHANCE = M_CHARGECHANCE val1 +; M_CORRUPTIONCHANCE = M_CORRUPTIONCHANCE val1 +; M_IGNITEDAMAGE = M_IGNITEDAMAGE T_GUNDAMAGE T_MELEEDAMAGE + 1.0 * +; M_CHARGEDAMAGE = M_CHARGEDAMAGE T_GUNDAMAGE T_MELEEDAMAGE + 1.0 * +; M_CORRUPTIONDAMAGE = M_CORRUPTIONDAMAGE T_GUNDAMAGE T_MELEEDAMAGE + 1.0 * +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.25 +; M_PLAYERSPEED = M_PLAYERSPEED -0.2 +"
+    equation: "M_IGNITECHANCE = M_IGNITECHANCE val1 +; M_CHARGECHANCE = M_CHARGECHANCE val1 +; B_CORRUPTIONCHANCE = B_CORRUPTIONCHANCE val1 +; M_IGNITEDAMAGE = M_IGNITEDAMAGE T_GUNDAMAGE T_MELEEDAMAGE + 1.0 * +; M_CHARGEDAMAGE = M_CHARGEDAMAGE T_GUNDAMAGE T_MELEEDAMAGE + 1.0 * +; B_CORRUPTIONDAMAGE = B_CORRUPTIONDAMAGE T_GUNDAMAGE T_MELEEDAMAGE + 1.0 * +; M_SHOTSPERSEC = M_SHOTSPERSEC -0.25 +; M_PLAYERSPEED = M_PLAYERSPEED -0.2 +"
     modColor: {r: 255, g: 140, b: 0, a: 255}
     armorEffectName: ""
     armorMeshName: ""
