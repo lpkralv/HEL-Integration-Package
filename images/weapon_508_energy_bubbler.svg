@@ -1,0 +1,31 @@
+<svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="100" fill="#1a1a1a"/>
+
+  <!-- Gun body -->
+  <rect x="35" y="45" width="80" height="18" fill="#2a4a4a" stroke="#4a6a6a" stroke-width="2"/>
+
+  <!-- Bubble chamber -->
+  <circle cx="95" cy="45" r="15" fill="#1a3a3a" stroke="#3a5a5a" stroke-width="2"/>
+  <circle cx="95" cy="45" r="12" fill="none" stroke="#44ffff" stroke-width="1" opacity="0.6"/>
+
+  <!-- Emitter nozzle -->
+  <circle cx="115" cy="54" r="10" fill="#1a3a3a" stroke="#3a5a5a" stroke-width="2"/>
+  <circle cx="115" cy="54" r="7" fill="none" stroke="#44ffff" stroke-width="1"/>
+
+  <!-- Energy bubbles -->
+  <circle cx="130" cy="48" r="8" fill="#44ffff" opacity="0.3" stroke="#44ffff" stroke-width="2"/>
+  <circle cx="145" cy="52" r="6" fill="#44ffff" opacity="0.25" stroke="#44ffff" stroke-width="1.5"/>
+  <circle cx="158" cy="50" r="4" fill="#44ffff" opacity="0.2" stroke="#44ffff" stroke-width="1"/>
+
+  <!-- Micro bubbles -->
+  <circle cx="135" cy="58" r="3" fill="#44ffff" opacity="0.4"/>
+  <circle cx="150" cy="45" r="2.5" fill="#44ffff" opacity="0.35"/>
+  <circle cx="140" cy="42" r="2" fill="#44ffff" opacity="0.3"/>
+
+  <!-- Handle -->
+  <rect x="50" y="63" width="14" height="25" fill="#1a2a2a" stroke="#3a4a4a" stroke-width="2"/>
+
+  <!-- Label -->
+  <text x="100" y="20" font-family="Arial" font-size="12" fill="#ffffff" text-anchor="middle">ENERGY BUBBLER</text>
+  <text x="100" y="95" font-family="Arial" font-size="10" fill="#aaaaaa" text-anchor="middle">ID: 508</text>
+</svg>

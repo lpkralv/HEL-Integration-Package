@@ -1,0 +1,37 @@
+<svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="100" fill="#1a1a1a"/>
+
+  <!-- Gun body (organic looking) -->
+  <ellipse cx="75" cy="52" rx="40" ry="15" fill="#2a4a2a" stroke="#4a6a4a" stroke-width="2"/>
+
+  <!-- Virus chamber -->
+  <ellipse cx="90" cy="50" rx="18" ry="12" fill="#1a3a1a" stroke="#3a5a3a" stroke-width="2"/>
+  <circle cx="90" cy="50" r="8" fill="#44ff44" opacity="0.4"/>
+
+  <!-- Emitter -->
+  <ellipse cx="115" cy="52" rx="10" ry="8" fill="#2a3a2a" stroke="#4a5a4a" stroke-width="1"/>
+
+  <!-- Virus cloud -->
+  <ellipse cx="140" cy="50" rx="20" ry="15" fill="#44ff44" opacity="0.2" stroke="#44ff44" stroke-width="1"/>
+  <ellipse cx="160" cy="52" rx="15" ry="12" fill="#44ff44" opacity="0.15" stroke="#44ff44" stroke-width="1"/>
+
+  <!-- Virus particles -->
+  <circle cx="135" cy="48" r="2" fill="#44ff44" opacity="0.6"/>
+  <circle cx="145" cy="53" r="2.5" fill="#44ff44" opacity="0.5"/>
+  <circle cx="152" cy="47" r="2" fill="#44ff44" opacity="0.5"/>
+  <circle cx="140" cy="56" r="1.5" fill="#44ff44" opacity="0.6"/>
+  <circle cx="148" cy="50" r="1.5" fill="#44ff44" opacity="0.5"/>
+  <circle cx="155" cy="55" r="2" fill="#44ff44" opacity="0.4"/>
+  <circle cx="163" cy="50" r="1.5" fill="#44ff44" opacity="0.4"/>
+
+  <!-- Organic tendrils -->
+  <path d="M 75 65 Q 78 70 80 75" stroke="#3a5a3a" stroke-width="2" fill="none"/>
+  <path d="M 85 64 Q 88 68 90 72" stroke="#3a5a3a" stroke-width="2" fill="none"/>
+
+  <!-- Handle -->
+  <rect x="55" y="67" width="12" height="22" fill="#1a2a1a" stroke="#3a4a3a" stroke-width="2"/>
+
+  <!-- Label -->
+  <text x="100" y="20" font-family="Arial" font-size="12" fill="#ffffff" text-anchor="middle">CORRUPTING VIRUS</text>
+  <text x="100" y="95" font-family="Arial" font-size="10" fill="#aaaaaa" text-anchor="middle">ID: 509</text>
+</svg>
