@@ -83,3 +83,8 @@ crashlytics-build.properties
 
 # Python cache
 __pycache__/
+
+# Large analysis output files (too big for git)
+analysis/combinations/
+analysis/results/violations_*.json
+simulation_output.log
