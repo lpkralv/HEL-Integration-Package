@@ -88,3 +88,7 @@ __pycache__/
 analysis/combinations/
 analysis/results/violations_*.json
 simulation_output.log
+
+# Compressed archives for download
+*.tar.gz
+*.zip
